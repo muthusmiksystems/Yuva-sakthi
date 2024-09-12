@@ -1,0 +1,568 @@
+@media screen and (min-width:1200px) and (max-width:1300px) {
+    .t_head_list ul li {
+        margin: 10px 13px;
+        font-size: 12px
+    }
+    .enroll_btn {
+        margin: 10px auto
+    }
+    .download_btn p a {
+        padding: 5px 30px;
+        line-height: 25px
+    }
+    .download_btn {
+        margin: 10px auto
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1199px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px
+    }
+    .t_head .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+    .t_head_list ul li {
+        margin: 10px 8px;
+        font-size: 11px
+    }
+    .t_head_list ul li::after {
+        right: -10px
+    }
+    section {
+        padding: 20px 0
+    }
+    .enroll_btn a {
+        line-height: 25px;
+        font-size: 12px
+    }
+    .download_btn a {
+        padding: 5px 20px;
+        line-height: 25px;
+        font-size: 12px
+    }
+    .banner_title h1 {
+        font-size: 30px
+    }
+    .batchday {
+        font-size: 13px
+    }
+    .batchdate {
+        width: 18%
+    }
+    .batchdate::after {
+        position: absolute;
+        right: 0
+    }
+    .batchdate i {
+        font-size: 14px;
+        margin: 0 5px
+    }
+    .batchdate {
+        font-size: 14px
+    }
+    .batchday i {
+        font-size: 10px
+    }
+    .batch_btn {
+        padding: 8px 10px;
+        font-size: 13px
+    }
+    .batchdate {
+        font-size: 12px
+    }
+    .req_right h4 {
+        font-size: 20px
+    }
+    .cus_badge {
+        font-size: 8px;
+        margin-right: 10px
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:999px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px
+    }
+    .req_right h4 {
+        font-size: 18px
+    }
+    section {
+        padding: 20px 0
+    }
+    .copy_list li a {
+        font-size: 12px
+    }
+}
+
+@media screen and (max-width:992px) {
+    .course_contents {
+        padding: 15px
+    }
+    .banner_read a {
+        font-size: 16px
+    }
+    .banner_title h1 {
+        font-size: 28px
+    }
+    .quote_left .fa.fa-phone-square {
+        font-size: 26px
+    }
+    .expertsright a {
+        font-size: 16px
+    }
+    .form-group label {
+        font-size: 14px
+    }
+    .footer_row {
+        padding: 20px 0
+    }
+}
+
+@media screen and (max-width:991px) {
+    .t_head {
+        padding: 0
+    }
+    .combo_cntctdiv {
+        background: #0f5eb7;
+        padding: 20px;
+        line-height: 20px
+    }
+    .t_head a {
+        border-right: none;
+        margin-bottom: 10px
+    }
+    .container-fluid {
+        padding-right: 12px;
+        padding-left: 12px
+    }
+    .logo {
+        width: 50%
+    }
+    .dropdown-menu>.active>a,
+    .dropdown-menu>.active>a:focus,
+    .dropdown-menu>.active>a:hover {
+        background-color: #0864a8
+    }
+    .dropdown-menu a {
+        border-bottom: 1px solid #0f72bb !important
+    }
+    .dropdown-toggle::after {
+        position: absolute;
+        right: 20px;
+        top: 23px
+    }
+    .dropdown-menu .dropdown-toggle::after {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transform: rotate(90deg);
+        color: #fff
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        font-size: 1rem;
+        color: #fff !important;
+        text-align: left;
+        list-style: none;
+        background-color: #0f7ccc !important;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: .25rem
+    }
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1.5rem;
+        clear: both;
+        font-weight: 400;
+        color: #fff;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        font-size: 14px
+    }
+    section {
+        padding: 10px 0
+    }
+    p {
+        padding: 5px 0
+    }
+    .custom_menus {
+        float: none;
+        display: block
+    }
+    .custom_menus .navbar-toggler {
+        padding: .1rem .2rem;
+        font-size: 1rem;
+        line-height: 1;
+        background-color: #0c1923;
+        border: 1px solid #0c1923;
+        border-radius: 0;
+        margin-right: 5px;
+        float: right;
+        margin-top: -2.5rem
+    }
+    .custom_menus .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    }
+    .custom_menus .navbar-nav {
+        display: block
+    }
+    .custom_menus .navbar-collapse {
+        background: #0c1923
+    }
+    .custom_menus .navbar-nav .nav-item {
+        margin: 0;
+        position: relative
+    }
+    .thirumenu_bg {
+        border-radius: 0
+    }
+    .custom_menus .nav-link {
+        padding: 8px 15px !important;
+        border-bottom: 1px solid #424242;
+        color: #fff;
+        font-size: 14px
+    }
+    .custom_menus .nav-item .dropdown-menu {
+        padding: 0;
+        min-width: 210px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        margin-top: 0
+    }
+    .dropdown-menu .dropdown-toggle::after {
+        top: 10px
+    }
+    .custom_menus .nav-link:hover {
+        background: #0858b0 !important
+    }
+    .custom_menus .nav-link:active,
+    .custom_menus .nav-link:focus {
+        background: #1b4879 !important
+    }
+    .custom_menus .dropdown-menu .dropdown .dropdown-menu {
+        min-width: 100%;
+        box-shadow: none;
+        padding: 0 0 10px 0;
+        border-radius: 0;
+        border: none;
+        background: #064f9b !important
+    }
+}
+
+@media (max-width:767px) {
+    .career_box {
+        padding: 20px 0
+    }
+    .row_padding {
+        padding: 10px 0
+    }
+    .thiru_trainrecomlist li {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 0
+    }
+    .thiru_trainrecomlist li a {
+        margin-bottom: 10px;
+        min-height: auto
+    }
+    .thiru_trainrecomlist li a::before {
+        top: 20%
+    }
+    .chennai_footerlist li {
+        margin: 0 10px 10px 0
+    }
+    .ss_links li {
+        max-width: 100%
+    }
+    .bt_discountdiv {
+        display: block;
+        width: 100%;
+        margin: 10px 0
+    }
+    .bt_discdetails {
+        width: 100%
+    }
+    .bt_discdetails .bt_discbtn {
+        margin: 10px auto
+    }
+    .bt_discdetails h3 {
+        font-size: 20px
+    }
+    .bt_discdetails p {
+        line-height: 20px
+    }
+    .fixed_request {
+        display: none
+    }
+    .bt_commonenq {
+        padding: 15px;
+        display: block
+    }
+    .bt_commonenqleft {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-bottom: 15px
+    }
+    .bt_commonenqright {
+        display: none
+    }
+    .bt_commonenqleft h4 {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 10px
+    }
+    .bt_commonenqbtnone {
+        display: table;
+        margin: 0 auto 0
+    }
+    .bt_whatsappdiv {
+        bottom: 60px
+    }
+    .offer_head {
+        padding: 5px;
+        line-height: 20px
+    }
+    .bannershow {
+        line-height: 27px
+    }
+    .course_contents {
+        border: none;
+        box-shadow: none
+    }
+    .d_syllabus {
+        float: none
+    }
+    .course_offerwidgets {
+        padding: 10px
+    }
+    .course_offerwidgets h4 {
+        width: 100%;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 5px 0
+    }
+    .course_offerwidgets h4 i {
+        font-size: 22px
+    }
+    .course_offerwidgets a {
+        margin: 5px 0 5px;
+        line-height: 20px
+    }
+    .column-2 {
+        column-count: 1
+    }
+    .master_enquiry a {
+        margin: 0 10px 0 0
+    }
+    .course_contents li {
+        padding: 5px 0;
+        line-height: 25px
+    }
+    .thiru_schedule li {
+        padding: 10px 3px
+    }
+    .batch_btn {
+        display: none
+    }
+    .left_div::after {
+        display: none
+    }
+    .offer_head .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important
+    }
+    .t_head_offer p {
+        font-size: 10px;
+        padding: 5px 35px 5px 20px;
+        line-height: 18px;
+        text-align: left
+    }
+    .offer_btns {
+        font-size: 12px
+    }
+    .on_discount {
+        font-size: 12px
+    }
+    .lazy.lazy-loaded {
+        width: 100%;
+        height: 100%
+    }
+    html {
+        overflow-x: hidden
+    }
+    body {
+        overflow-x: hidden
+    }
+    .select_branch span {
+        display: block
+    }
+    .contact-Enq {
+        display: none
+    }
+    .logo {
+        width: 70%
+    }
+    .quotes {
+        padding-left: 70px;
+        padding-right: 70px
+    }
+    .banner_read a {
+        font-size: 12px;
+        margin: 5px 10px 5px 0;
+        padding: 10px;
+        height: 42px;
+        line-height: 25px
+    }
+    .course_banner {
+        padding: 15px 0
+    }
+    .banner_title h1 {
+        font-size: 22px
+    }
+    .course_contents h2 {
+        font-size: 20px;
+        margin-bottom: 10px
+    }
+    .course_contents h4 {
+        font-size: 16px
+    }
+    .course_contents h5 {
+        font-size: 14px
+    }
+    .course_contents h6 {
+        font-size: 13px
+    }
+    .content_widgets {
+        padding: 5px
+    }
+    footer {
+        padding: 20px 0 50px
+    }
+    #toTop {
+        bottom: 13%
+    }
+    .batchdate {
+        width: 28%;
+        font-size: 12px;
+        margin: 0 5px
+    }
+    .batchdate::after {
+        right: -3px;
+        top: 0px;
+    }
+    .batchday {
+        width: 40%;
+        font-size: 13px;
+        line-height: 15px;
+        margin: 0 5px
+    }
+    .batchday::after {
+        display: none
+    }
+    .batchday i {
+        font-size: 9px
+    }
+    .batchtime {
+        width: 50%;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0 5px
+    }
+    .batchtime i {
+        font-size: 9px;
+        line-height: 12px
+    }
+    .batch_title h2 {
+        font-size: 18px
+    }
+    .req_left {
+        display: none
+    }
+    .req_right {
+        width: 50%;
+        padding: 0 5px
+    }
+    .req_right h4 {
+        font-size: 14px;
+        line-height: 18px
+    }
+    .req_btn {
+        padding: 0 5px
+    }
+    .req_btn .btn.btn-primary {
+        font-size: 11px;
+        padding: 10px 8px
+    }
+    .request_batch {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0
+    }
+    .fixed_menu {
+        background: #fff !important
+    }
+    .common_sections {
+        padding: 10px
+    }
+    .bt_offericon {
+        display: none
+    }
+    .bt_support {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:359px) {
+    .video_widget {
+        width: 300px
+    }
+    .navbar-brand {
+        margin-right: 0;
+        width: 80%
+    }
+    .enroll_btn {
+        min-width: auto
+    }
+    .enroll_btn p a {
+        padding: 5px 15px;
+        font-size: 13px
+    }
+    .quotes {
+        padding-left: 50px;
+        padding-right: 50px
+    }
+    .quote_right p a {
+        font-size: 16px
+    }
+    .container-fluid {
+        padding-right: 10px;
+        padding-left: 10px
+    }
+    .btn-demo {
+        padding: 12px;
+        margin: 8px
+    }
+    .bt_support {
+        padding: 30px;
+    }
+}

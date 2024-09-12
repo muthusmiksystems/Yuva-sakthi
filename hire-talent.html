@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) {
+            var href = document.location.href;
+            if (!href.match(/[?&]nowprocket/)) {
+                if (href.indexOf("?") == -1) {
+                    if (href.indexOf("#") == -1) {
+                        document.location.href = href + "?nowprocket=1"
+                    } else {
+                        document.location.href = href.replace("#", "?nowprocket=1#")
+                    }
+                } else {
+                    if (href.indexOf("#") == -1) {
+                        document.location.href = href + "&nowprocket=1"
+                    } else {
+                        document.location.href = href.replace("#", "&nowprocket=1#")
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        (() => {
+            class RocketLazyLoadScripts {
+                constructor() {
+                    this.v = "1.2.5.1", this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this.t.bind(this), this.touchStartHandler = this.i.bind(this), this.touchMoveHandler = this.o.bind(this), this.touchEndHandler = this.h.bind(this), this.clickHandler = this.u.bind(this), this.interceptedClicks = [], this.interceptedClickListeners = [], this.l(this), window.addEventListener("pageshow", (t => {
+                        this.persisted = t.persisted, this.everythingLoaded && this.m()
+                    })), document.addEventListener("DOMContentLoaded", (() => {
+                        this.p()
+                    })), this.delayedScripts = {
+                        normal: [],
+                        async: [],
+                        defer: []
+                    }, this.trash = [], this.allJQueries = []
+                }
+                k(t) {
+                    document.hidden ? t.t() : (this.triggerEvents.forEach((e => window.addEventListener(e, t.userEventHandler, {
+                        passive: !0
+                    }))), window.addEventListener("touchstart", t.touchStartHandler, {
+                        passive: !0
+                    }), window.addEventListener("mousedown", t.touchStartHandler), document.addEventListener("visibilitychange", t.userEventHandler))
+                }
+                _() {
+                    this.triggerEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, {
+                        passive: !0
+                    }))), document.removeEventListener("visibilitychange", this.userEventHandler)
+                }
+                i(t) {
+                    "HTML" !== t.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, {
+                        passive: !0
+                    }), window.addEventListener("mousemove", this.touchMoveHandler), t.target.addEventListener("click", this.clickHandler), this.L(t.target, !0), this.M(t.target, "onclick", "rocket-onclick"), this.C())
+                }
+                o(t) {
+                    window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, {
+                        passive: !0
+                    }), window.removeEventListener("mousemove", this.touchMoveHandler), t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.O()
+                }
+                h() {
+                    window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, {
+                        passive: !0
+                    }), window.removeEventListener("mousemove", this.touchMoveHandler)
+                }
+                u(t) {
+                    t.target.removeEventListener("click", this.clickHandler), this.L(t.target, !1), this.M(t.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(t), t.preventDefault(), t.stopPropagation(), t.stopImmediatePropagation(), this.O()
+                }
+                D() {
+                    window.removeEventListener("touchstart", this.touchStartHandler, {
+                        passive: !0
+                    }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((t => {
+                        t.target.dispatchEvent(new MouseEvent("click", {
+                            view: t.view,
+                            bubbles: !0,
+                            cancelable: !0
+                        }))
+                    }))
+                }
+                l(t) {
+                    EventTarget.prototype.addEventListenerBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (e, i, o) {
+                        "click" !== e || t.windowLoaded || i === t.clickHandler || t.interceptedClickListeners.push({
+                            target: this,
+                            func: i,
+                            options: o
+                        }), (this || window).addEventListenerBase(e, i, o)
+                    }
+                }
+                L(t, e) {
+                    this.interceptedClickListeners.forEach((i => {
+                        i.target === t && (e ? t.removeEventListener("click", i.func, i.options) : t.addEventListener("click", i.func, i.options))
+                    })), t.parentNode !== document.documentElement && this.L(t.parentNode, e)
+                }
+                S() {
+                    return new Promise((t => {
+                        this.T ? this.O = t : t()
+                    }))
+                }
+                C() {
+                    this.T = !0
+                }
+                O() {
+                    this.T = !1
+                }
+                M(t, e, i) {
+                    t.hasAttribute && t.hasAttribute(e) && (event.target.setAttribute(i, event.target.getAttribute(e)), event.target.removeAttribute(e))
+                }
+                t() {
+                    this._(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this.R.bind(this)) : this.R()
+                }
+                p() {
+                    let t = [];
+                    document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e => {
+                        let i = e.getAttribute("data-rocket-src");
+                        if (i && 0 !== i.indexOf("data:")) {
+                            0 === i.indexOf("//") && (i = location.protocol + i);
+                            try {
+                                const o = new URL(i).origin;
+                                o !== location.origin && t.push({
+                                    src: o,
+                                    crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type")
+                                })
+                            } catch (t) { }
+                        }
+                    })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.j(t, "preconnect")
+                }
+                async R() {
+                    this.lastBreath = Date.now(), this.P(this), this.F(this), this.q(), this.A(), this.I(), await this.U(this.delayedScripts.normal), await this.U(this.delayedScripts.defer), await this.U(this.delayedScripts.async);
+                    try {
+                        await this.W(), await this.H(this), await this.J()
+                    } catch (t) {
+                        console.error(t)
+                    }
+                    window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.S().then((() => {
+                        this.D()
+                    })), this.N()
+                }
+                A() {
+                    document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => {
+                        t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t)
+                    }))
+                }
+                async B(t) {
+                    if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => {
+                        let i;
+
+                        function o() {
+                            (i || t).setAttribute("data-rocket-status", "executed"), e()
+                        }
+                        try {
+                            if (navigator.userAgent.indexOf("Firefox/") > 0 || "" === navigator.vendor) i = document.createElement("script"), [...t.attributes].forEach((t => {
+                                let e = t.nodeName;
+                                "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue))
+                            })), t.text && (i.text = t.text), i.hasAttribute("src") ? (i.addEventListener("load", o), i.addEventListener("error", (function () {
+                                i.setAttribute("data-rocket-status", "failed"), e()
+                            })), setTimeout((() => {
+                                i.isConnected || e()
+                            }), 1)) : (i.text = t.text, o()), t.parentNode.replaceChild(i, t);
+                            else {
+                                const i = t.getAttribute("data-rocket-type"),
+                                    n = t.getAttribute("data-rocket-src");
+                                i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o), t.addEventListener("error", (function () {
+                                    t.setAttribute("data-rocket-status", "failed"), e()
+                                })), n ? (t.removeAttribute("data-rocket-src"), t.src = n) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text)))
+                            }
+                        } catch (i) {
+                            t.setAttribute("data-rocket-status", "failed"), e()
+                        }
+                    }));
+                    t.setAttribute("data-rocket-status", "skipped")
+                }
+                async U(t) {
+                    const e = t.shift();
+                    return e && e.isConnected ? (await this.B(e), this.U(t)) : Promise.resolve()
+                }
+                I() {
+                    this.j([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload")
+                }
+                j(t, e) {
+                    var i = document.createDocumentFragment();
+                    t.forEach((t => {
+                        const o = t.getAttribute && t.getAttribute("data-rocket-src") || t.src;
+                        if (o) {
+                            const n = document.createElement("link");
+                            n.href = o, n.rel = e, "preconnect" !== e && (n.as = "script"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (n.crossOrigin = !0), t.crossOrigin && (n.crossOrigin = t.crossOrigin), t.integrity && (n.integrity = t.integrity), i.appendChild(n), this.trash.push(n)
+                        }
+                    })), document.head.appendChild(i)
+                }
+                P(t) {
+                    let e = {};
+
+                    function i(i, o) {
+                        return e[o].eventsToRewrite.indexOf(i) >= 0 && !t.everythingLoaded ? "rocket-" + i : i
+                    }
+
+                    function o(t, o) {
+                        ! function (t) {
+                            e[t] || (e[t] = {
+                                originalFunctions: {
+                                    add: t.addEventListener,
+                                    remove: t.removeEventListener
+                                },
+                                eventsToRewrite: []
+                            }, t.addEventListener = function () {
+                                arguments[0] = i(arguments[0], t), e[t].originalFunctions.add.apply(t, arguments)
+                            }, t.removeEventListener = function () {
+                                arguments[0] = i(arguments[0], t), e[t].originalFunctions.remove.apply(t, arguments)
+                            })
+                        }(t), e[t].eventsToRewrite.push(o)
+                    }
+
+                    function n(e, i) {
+                        let o = e[i];
+                        e[i] = null, Object.defineProperty(e, i, {
+                            get: () => o || function () { },
+                            set(n) {
+                                t.everythingLoaded ? o = n : e["rocket" + i] = o = n
+                            }
+                        })
+                    }
+                    o(document, "DOMContentLoaded"), o(window, "DOMContentLoaded"), o(window, "load"), o(window, "pageshow"), o(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow")
+                }
+                F(t) {
+                    let e;
+
+                    function i(e) {
+                        return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || 0 === t.indexOf("load.") ? "rocket-jquery-load" : t)).join(" ")
+                    }
+
+                    function o(o) {
+                        if (o && o.fn && !t.allJQueries.includes(o)) {
+                            o.fn.ready = o.fn.init.prototype.ready = function (e) {
+                                return t.domReadyFired ? e.bind(document)(o) : document.addEventListener("rocket-DOMContentLoaded", (() => e.bind(document)(o))), o([])
+                            };
+                            const e = o.fn.on;
+                            o.fn.on = o.fn.init.prototype.on = function () {
+                                return this[0] === window && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => {
+                                    const e = arguments[0][t];
+                                    delete arguments[0][t], arguments[0][i(t)] = e
+                                }))), e.apply(this, arguments), this
+                            }, t.allJQueries.push(o)
+                        }
+                        e = o
+                    }
+                    o(window.jQuery), Object.defineProperty(window, "jQuery", {
+                        get: () => e,
+                        set(t) {
+                            o(t)
+                        }
+                    })
+                }
+                async H(t) {
+                    const e = document.querySelector("script[data-webpack]");
+                    e && (await async function () {
+                        return new Promise((t => {
+                            e.addEventListener("load", t), e.addEventListener("error", t)
+                        }))
+                    }(), await t.K(), await t.H(t))
+                }
+                async W() {
+                    this.domReadyFired = !0, await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded"))
+                }
+                async J() {
+                    await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G();
+                    const t = new Event("rocket-pageshow");
+                    t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({
+                        persisted: this.persisted
+                    }), this.windowLoaded = !0
+                }
+                m() {
+                    document.onreadystatechange && document.onreadystatechange(), window.onload && window.onload(), window.onpageshow && window.onpageshow({
+                        persisted: this.persisted
+                    })
+                }
+                q() {
+                    const t = new Map;
+                    document.write = document.writeln = function (e) {
+                        const i = document.currentScript;
+                        i || console.error("WPRocket unable to document.write this: " + e);
+                        const o = document.createRange(),
+                            n = i.parentElement;
+                        let s = t.get(i);
+                        void 0 === s && (s = i.nextSibling, t.set(i, s));
+                        const c = document.createDocumentFragment();
+                        o.setStart(c, 0), c.appendChild(o.createContextualFragment(e)), n.insertBefore(c, s)
+                    }
+                }
+                async G() {
+                    Date.now() - this.lastBreath > 45 && (await this.K(), this.lastBreath = Date.now())
+                }
+                async K() {
+                    return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t)))
+                }
+                N() {
+                    this.trash.forEach((t => t.remove()))
+                }
+                static run() {
+                    const t = new RocketLazyLoadScripts;
+                    t.k(t)
+                }
+            }
+            RocketLazyLoadScripts.run()
+        })();
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="p:domain_verify" content="ca280439ae739ce624450dca7a438025" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#2389f2" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <link rel="canonical" href="https://yuvasakthiacademy.com/" />
+    <link rel="preconnect" href="https://www.google-analytics.com/" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com/" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/yuvapopup.css" />
+    <link rel="stylesheet" id="app-css" href="./css/app.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="tablepress-default-css" href="./css/tablepress-combined.min.css" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="tablepress-responsive-tables-css" href="./css/tablepress-responsive.min.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet" id="wp-customer-reviews-3-frontend-css" href="./css/customer-reviews.css" type="text/css"
+        media="all" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <!-- <link rel="stylesheet" href="./css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="./css/hire-talent.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> -->
+    <title>Hire From Yuva Sakthi Academy</title>
+
+    <meta name="description"
+        content="Yuva Sakthi Academy is the best booming certification training provider affiliated with over 1500+ technology-based companies to accord the best training for aspirers." />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Hire From Yuva Sakthi Academy" />
+    <meta property="og:description"
+        content="Yuva Sakthi Academy, is a leading certification training provider. Partnered with over 1500+ tech companies, we offer top-notch training for ambitious learners." />
+
+    <meta property="og:url" content="https://yuvasakthiacademy.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yuva Sakthi Academy">
+    <meta property="article:modified_time" content="2023-01-01T12:00:00Z" id="modified-time">
+
+    <!-- Twitter Card Meta Tags (optional, but recommended) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:title" content="Your Website Title">
+        <meta name="twitter:description" content="Description of your website content.">
+        <meta name="twitter:image" content="https://www.yourwebsite.com/images/your-image.jpg"> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="dns-prefetch" href="//s.w.org" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- <meta property="article:publisher" content="https://www.facebook.com/fitaAcademy" />
+    <meta property="article:modified_time" content="2022-09-27T11:35:12+00:00" /> -->
+    <!-- <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@fitaacademy" /> -->
+    <!-- / Yoast SEO Premium plugin. -->
+
+
+
+
+    <!-- <link rel="alternate" type="application/rss+xml" title="FITA Academy &raquo; Feed"
+        href="https://www.fita.in/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="FITA Academy &raquo; Comments Feed"
+        href="https://www.fita.in/comments/feed/" />
+    <style id='classic-theme-styles-inline-css' type='text/css'></style>
+    <style id='global-styles-inline-css' type='text/css'></style>
+    <style id='rocket-lazyload-inline-css' type='text/css'>
+        .rll-youtube-player {
+            position: relative;
+            padding-bottom: 56.23%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .rll-youtube-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: 0 0
+        }
+
+        .rll-youtube-player img {
+            bottom: 0;
+            display: block;
+            left: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            height: auto;
+            cursor: pointer;
+            -webkit-transition: .4s all;
+            -moz-transition: .4s all;
+            transition: .4s all
+        }
+
+        .rll-youtube-player img:hover {
+            -webkit-filter: brightness(75%)
+        }
+
+        .rll-youtube-player .play {
+            height: 72px;
+            width: 72px;
+            left: 50%;
+            top: 50%;
+            margin-left: -36px;
+            margin-top: -36px;
+            position: absolute;
+            background: var(--wpr-bg-c3efda22-922e-46c9-9825-f954d513fe3c) no-repeat;
+            cursor: pointer
+        }
+    </style> -->
+    <!-- <script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+        data-rocket-src="https://www.fita.in/wp-content/themes/zeft/landing/js/jquery.min.js" id="jquery-js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript" defer="defer"
+        data-rocket-src="https://www.fita.in/wp-content/plugins/wp-customer-reviews/js/wp-customer-reviews.js"
+        id="wp-customer-reviews-3-frontend-js"></script>
+    <link rel="https://api.w.org/" href="https://www.fita.in/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://www.fita.in/wp-json/wp/v2/pages/81270" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.fita.in/xmlrpc.php?rsd" />
+
+    <link rel='shortlink' href='https://www.fita.in/?p=81270' /> -->
+    <script type="rocketlazyloadscript">
+
+        function isScriptLoaded(src){ return document.querySelector('script[src="' + src + '"]') ? true : false; } document.getElementsByClassName("comment-reply-link").onclick = function() { if(!(isScriptLoaded("/wp-includes/js/comment-reply.min.js"))){ var
+        script = document.createElement('script'); script.src = "/wp-includes/js/comment-reply.min.js"; script.onload = emRepClick($(this).attr('data-commentid')); document.head.appendChild(script); } } //Function waits 50 ms before it emulates a click
+        on the relevant reply link now that the reply script is loaded function emRepClick(comId) { sleep(50).then(() => { document.querySelectorAll('[data-commentid="'+comId+'"]')[0].dispatchEvent(new Event('click')); }); } //Function does nothing, for
+        a given amount of time function sleep (time) { return new Promise((resolve) => setTimeout(resolve, time)); }
+    </script>
+    <!-- <link rel="icon" href="https://www.fita.in/wp-content/uploads/2022/06/cropped-cropped-favicvon-1-32x32-1-32x32.png"
+        sizes="32x32" />
+    <link rel="icon"
+        href="https://www.fita.in/wp-content/uploads/2022/06/cropped-cropped-favicvon-1-32x32-1-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://www.fita.in/wp-content/uploads/2022/06/cropped-cropped-favicvon-1-32x32-1-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://www.fita.in/wp-content/uploads/2022/06/cropped-cropped-favicvon-1-32x32-1-270x270.png" /> -->
+    <!-- <noscript>
+        <style id="rocket-lazyload-nojs-css">
+            .rll-youtube-player,
+            [data-lazy-src] {
+                display: none !important;
+            }
+        </style>
+    </noscript> -->
+    <!-- Font awesome css -->
+
+
+
+
+    <!-- <link rel="dns-prefetch" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"  type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet';" crossorigin="anonymous"/> -->
+
+
+
+    <style>
+        .error-msg {
+            color: red;
+            font-size: 0.875em;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+
+
+
+    <!-- <script type="rocketlazyloadscript" data-rocket-src="https://www.fita.in/includes/assets/js/jquery.min.js"
+        data-rocket-type="text/javascript" crossorigin="anonymous"></script> -->
+
+
+
+
+
+
+
+
+    <!-- <style id="wpr-lazyload-bg-container"></style>
+    <style id="wpr-lazyload-bg-exclusion"></style>
+    <noscript>
+        <style id="wpr-lazyload-bg-nostyle">
+            div.wpcr3_rating_style1_base {
+                --wpr-bg-83bc0df0-bf81-4b75-b2d9-9280658eb658: url('https://www.fita.in/wp-content/plugins/wp-customer-reviews/css/newstars.png');
+            }
+
+            div.wpcr3_rating_style1_average {
+                --wpr-bg-12c0ab5b-8e79-4940-a3d3-a53e2ecc8c08: url('https://www.fita.in/wp-content/plugins/wp-customer-reviews/css/newstars.png');
+            }
+
+            div.wpcr3_rating_style1_score {
+                --wpr-bg-6c782c25-f227-4f6f-84b1-ec7c90174b22: url('https://www.fita.in/wp-content/plugins/wp-customer-reviews/css/newstars.png');
+            }
+
+            div.wpcr3_rating_style1_score div:hover {
+                --wpr-bg-f165a406-f3d0-462e-a190-d91edf297858: url('https://www.fita.in/wp-content/plugins/wp-customer-reviews/css/newstars.png');
+            }
+
+            .slick-loading .slick-list {
+                --wpr-bg-4e99a5a0-52cf-468a-94c6-695b27c8d7b6: url('https://www.fita.in/wp-content/themes/zeft/landing/vendor/slick/ajax-loader.gif');
+            }
+
+            .hire-p {
+                --wpr-bg-02989cae-1242-48f3-854b-0ffbe76fc0f9: url('https://www.fita.in/wp-content/uploads/2022/09/hire-from-fita.jpg');
+            }
+
+            .rll-youtube-player .play {
+                --wpr-bg-c3efda22-922e-46c9-9825-f954d513fe3c: url('https://www.fita.in/wp-content/plugins/rocket-lazy-load/assets/img/youtube.png');
+            }
+        </style>
+    </noscript>
+    <script type="application/javascript">
+        const rocket_pairs = [{
+            "selector": "div.wpcr3_rating_style1_base",
+            "style": "div.wpcr3_rating_style1_base{--wpr-bg-83bc0df0-bf81-4b75-b2d9-9280658eb658: url('https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png');}",
+            "hash": "83bc0df0-bf81-4b75-b2d9-9280658eb658",
+            "url": "https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png"
+        }, {
+            "selector": "div.wpcr3_rating_style1_average",
+            "style": "div.wpcr3_rating_style1_average{--wpr-bg-12c0ab5b-8e79-4940-a3d3-a53e2ecc8c08: url('https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png');}",
+            "hash": "12c0ab5b-8e79-4940-a3d3-a53e2ecc8c08",
+            "url": "https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png"
+        }, {
+            "selector": "div.wpcr3_rating_style1_score",
+            "style": "div.wpcr3_rating_style1_score{--wpr-bg-6c782c25-f227-4f6f-84b1-ec7c90174b22: url('https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png');}",
+            "hash": "6c782c25-f227-4f6f-84b1-ec7c90174b22",
+            "url": "https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png"
+        }, {
+            "selector": "div.wpcr3_rating_style1_score div",
+            "style": "div.wpcr3_rating_style1_score div:hover{--wpr-bg-f165a406-f3d0-462e-a190-d91edf297858: url('https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png');}",
+            "hash": "f165a406-f3d0-462e-a190-d91edf297858",
+            "url": "https:\/\/www.fita.in\/wp-content\/plugins\/wp-customer-reviews\/css\/newstars.png"
+        }, {
+            "selector": ".slick-loading .slick-list",
+            "style": ".slick-loading .slick-list{--wpr-bg-4e99a5a0-52cf-468a-94c6-695b27c8d7b6: url('https:\/\/www.fita.in\/wp-content\/themes\/zeft\/landing\/vendor\/slick\/ajax-loader.gif');}",
+            "hash": "4e99a5a0-52cf-468a-94c6-695b27c8d7b6",
+            "url": "https:\/\/www.fita.in\/wp-content\/themes\/zeft\/landing\/vendor\/slick\/ajax-loader.gif"
+        }, {
+            "selector": ".hire-p",
+            "style": ".hire-p{--wpr-bg-02989cae-1242-48f3-854b-0ffbe76fc0f9: url('https:\/\/www.fita.in\/wp-content\/uploads\/2022\/09\/hire-from-fita.jpg');}",
+            "hash": "02989cae-1242-48f3-854b-0ffbe76fc0f9",
+            "url": "https:\/\/www.fita.in\/wp-content\/uploads\/2022\/09\/hire-from-fita.jpg"
+        }, {
+            "selector": ".rll-youtube-player .play",
+            "style": ".rll-youtube-player .play{--wpr-bg-c3efda22-922e-46c9-9825-f954d513fe3c: url('https:\/\/www.fita.in\/wp-content\/plugins\/rocket-lazy-load\/assets\/img\/youtube.png');}",
+            "hash": "c3efda22-922e-46c9-9825-f954d513fe3c",
+            "url": "https:\/\/www.fita.in\/wp-content\/plugins\/rocket-lazy-load\/assets\/img\/youtube.png"
+        }];
+        const rocket_excluded_pairs = [];
+    </script> -->
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ESWPF36X6"></script>
+
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'G-0ESWPF36X6');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ5GR7Z5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script>
+        $(function () {
+            $("#includedContent").load("header.html");
+        });
+    </script>
+    <div id="includedContent" class="sticky-top"></div>
+    <div style="height: 100vh;">
+        <section class="section bannerSec hire-p" style="min-height: 284px;text-align: center;">
+            <div class="container-fluid">
+                <div class="bannerInnerSec">
+                    <h1 align="center" class="">Hire From Yuva Sakthi Academy</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid mt-5">
+
+            <div class="carousel-container">
+                <!-- <button id="prev-btn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button> -->
+                <button id="prev-btn" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                        width="22" height="22">
+                        <path fill="#818181"
+                            d="M34.9 239l194.3-194.3c4.7-4.7 12.3-4.7 17 0L281 80.6c4.7 4.7 4.7 12.3 0 17L121 258.6l160 160c4.7 4.7 4.7 12.3 0 17L246.3 467c-4.7 4.7-12.3 4.7-17 0L34.9 272.1c-4.7-4.7-4.7-12.3 0-17.1z" />
+                    </svg></button>
+                <div id="project-carousel-2" class="carousel ">
+
+                </div>
+                <!-- <button id="next-btn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button> -->
+                <button id="next-btn" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                        width="22" height="22">
+                        <path fill="#818181"
+                            d="M285.5 273L91.2 467.3c-4.7 4.7-12.3 4.7-17 0L39 432.6c-4.7-4.7-4.7-12.3 0-17L199 256 39 96.4c-4.7-4.7-4.7-12.3 0-17L74.2 44.7c4.7-4.7 12.3-4.7 17 0l194.3 194.3c4.7 4.7 4.7 12.3 0 17z" />
+                    </svg></button>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script> -->
+            <script src="./js/project.js"></script>
+        </section>
+
+
+        <section class="w-100">
+            <div class="bg-secondary my-4">
+                <h1 class="text-light text-center py-5">Yuva Sakthi Academy</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6  d-flex justify-content-center align-items-center ">
+                    <img src="./image/hiring.jpg" alt="hiring">
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-fluid aboutcontent1 text-justify text-center">
+                    <p style="text-align: justify">Yuva Sakthi Academy is a leading name in certification
+                        training, renowned for its strong affiliation with over 1500+ technology-driven
+                        companies. Our commitment to delivering top-quality training ensures that our students
+                        consistently secure positions in prestigious MNCs. We specialize in offering hands-on
+                        training coupled with comprehensive placement support, guided by experienced mentors.
+                        Our instructors are industry veterans with extensive expertise and credentials from
+                        esteemed institutions. </p>
+                    <p class="text-justify"> At Yuva Sakthi Academy, we pride ourselves on providing a
+                        state-of-the-art learning environment that accelerates the acquisition of new skills.
+                        Our exclusive courses are
+                        designed to offer unique learning opportunities not available elsewhere. Furthermore,
+                        our dedicated placement team works tirelessly to connect students with top industry
+                        employers, ensuring they are well-prepared to thrive in their careers.</p>
+                    <p class="text-justify"> Yuva Sakthi Academy stands out for its tailored approach to education,
+                        which adapts to the evolving needs of the technology sector. We offer a diverse range of
+                        courses, from cutting-edge programming languages to emerging technologies, ensuring that our
+                        curriculum stays relevant and forward-thinking. Our hands-on projects and real-world simulations
+                        provide practical experience, enabling students to apply their knowledge in realistic scenarios.
+                        This approach not only enhances learning but also builds confidence, preparing students to
+                        tackle complex challenges in their future careers.</p>
+                    <p class="text-justify"> In addition to our top-notch training programs, Yuva Sakthi Academy places
+                        a strong emphasis on fostering a collaborative learning community. We believe that learning
+                        extends beyond the classroom, which is why we encourage networking and interaction among
+                        students, alumni, and industry professionals. Our regular workshops, seminars, and guest
+                        lectures provide valuable insights and industry perspectives, helping students stay updated on
+                        current trends and innovations. This holistic approach ensures that our graduates arse not only
+                        skilled professionals but also well-rounded individuals ready to make a significant impact in
+                        their chosen fields.</p>
+
+
+                </div>
+            </div>
+
+        </section>
+        <!--
+        <section class="section syllabusSec" id="syllabus">
+            <div class="container-fluid">
+                <div class="row"> -->
+
+
+        <section class="container-fluid mt-5">
+            <div class="carousel-container">
+                <!-- <button id="prev-btn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button> -->
+                <button id="prev-btn" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                        width="22" height="22">
+                        <path fill="#818181"
+                            d="M34.9 239l194.3-194.3c4.7-4.7 12.3-4.7 17 0L281 80.6c4.7 4.7 4.7 12.3 0 17L121 258.6l160 160c4.7 4.7 4.7 12.3 0 17L246.3 467c-4.7 4.7-12.3 4.7-17 0L34.9 272.1c-4.7-4.7-4.7-12.3 0-17.1z" />
+                    </svg></button>
+
+                <div id="project-carousel" class="carousel ">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+                <!-- <button id="next-btn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button> -->
+                <button id="next-btn" class="carousel-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                        width="22" height="22">
+                        <path fill="#818181"
+                            d="M285.5 273L91.2 467.3c-4.7 4.7-12.3 4.7-17 0L39 432.6c-4.7-4.7-4.7-12.3 0-17L199 256 39 96.4c-4.7-4.7-4.7-12.3 0-17L74.2 44.7c4.7-4.7 12.3-4.7 17 0l194.3 194.3c4.7 4.7 4.7 12.3 0 17z" />
+                    </svg></button>
+
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script> -->
+            <script src="./js/project.js"></script>
+        </section>
+        <section>
+            <div class="bg-secondary my-4">
+                <h1 class="text-light text-center py-5">Hire from Us</h1>
+            </div>
+            <div class="formsec d-flex justify-content-center bg-info p-5" id="formsec">
+                <!-- <div class="form-main" id="myform" style="margin-top:0px;"> -->
+
+                <form action="./hire-talent.php" class="w-50 " method="post" role="form" id="enquiryForm">
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="JobTitle">Job Title*</label>
+                            <input type="text" name="JobTitle" class="form-control" id="JobTitle"
+                                placeholder="Job Title*" data-rule="minlen:4"
+                                data-msg="Please enter at least 4 chars" />
+                            <span id="JobTitleError" class="error-msg">Job Title is Required</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="NumberofVacancies">Number of Vacancies*</label>
+                            <input type="text" class="form-control" name="NumberofVacancies" id="NumberofVacancies"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                autocomplete="tel" data-msg="Please enter Number" placeholder="Number of Vacancies*" />
+                            <span id="NumberofVacanciesError" class="error-msg">Number of Vacancies is
+                                Required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="JobDescription">Job Description*</label>
+                            <input type="text" name="JobDescription" class="form-control" id="JobDescription"
+                                placeholder="Job Description*" data-rule="minlen:1" />
+                            <span id="JobDescriptionError" class="error-msg">Job Description is Required</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="KeySkills">Key Skills*</label>
+                            <input type="text" name="KeySkills" class="form-control" id="KeySkills"
+                                placeholder="Key Skills*" data-rule="minlen:1" />
+                            <span id="KeySkillsError" class="error-msg">Key Skills is Required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="WorkExperience">Work Experience*</label>
+                            <select name="WorkExperience" id="WorkExperience" class="form-control">
+                                <option value="" selected disabled>Work Experience*</option>
+                                <optgroup label="Work Experience">
+                                    <option value="0 to 1">0-1 Years</option>
+                                    <option value="1 to 3">1-3 Years</option>
+                                    <option value="3 to 6">3-6 Years</option>
+                                    <option value="6 to 10">6-10 Years</option>
+                                    <option value="10 to 15">10-15 Years</option>
+                                    <option value="More than 15">15 Years and More</option>
+                                </optgroup>
+                            </select>
+                            <span id="WorkExperienceError" class="error-msg">Work Experience is Required</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="EmailAddress">Email Address*</label>
+                            <input type="email" name="EmailAddress" class="form-control" id="EmailAddress"
+                                placeholder="Email Address*" data-rule="minlen:1" />
+                            <span id="EmailAddressError" class="error-msg">Email Address is Required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="Location">Location*</label>
+                            <input type="text" name="Location" class="form-control" id="Location"
+                                placeholder="Location*" data-rule="minlen:1" />
+                            <span id="LocationError" class="error-msg">Location is Required</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="CompanyName">Company Name*</label>
+                            <input type="text" name="CompanyName" class="form-control" id="CompanyName"
+                                placeholder="Company Name*" data-rule="minlen:1" />
+                            <span id="CompanyNameError" class="error-msg">Company Name is Required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="FirstName">First Name*</label>
+                            <input type="text" name="FirstName" class="form-control" id="FirstName"
+                                placeholder="First Name*" data-rule="minlen:1" />
+                            <span id="FirstNameError" class="error-msg">First Name is Required</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="MobileNumber">Mobile Number*</label>
+                            <input type="text" class="form-control" name="MobileNumber" id="MobileNumber"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                autocomplete="tel" data-msg="Please enter Number" placeholder="Mobile Number*" />
+                            <span id="MobileNumberError" class="error-msg">Mobile Number is Required</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-url">Website URL*</label>
+                        <input type="text" class="form-control" name="company-url" id="company-url"
+                            placeholder="Website URL*" />
+                        <span id="CompanyURLError" class="error-msg">Company URL is Required</span>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                            <div class="bt_hireform">
+                                <div class="g-recaptcha" data-sitekey="6LfI4R8qAAAAAKpqNOjZxaId0GbR_rjJnbLaoDXN"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn button-86 ">Submit</button>
+                    </div>
+                </form>
+                <!-- </div> -->
+            </div>
+            <!-- </div>
+    </div> -->
+        </section>
+
+
+
+
+
+
+    </div>
+</body>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" defer>
+    jQuery(function($) {
+        document.addEventListener('wpcf7mailsent', function(event) {
+
+            console.log("@@@@@");
+            if ('90603' == event.detail.contactFormId) {
+                location = 'https://www.fita.in/thank-you-registration/';
+            } else {
+                location = 'https://www.fita.in/thank-you-registration/';
+            }
+        }, false);
+    });
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "FITA Academy",
+        "image": "https://www.fita.in/wp-content/uploads/2019/07/site-logo-2.png",
+        "description": "FITA is a leading Training and Placement company managed by IT veterans with more than a decade of experience in leading MNC companies. We are spread across cities like Chennai, Bangalore, Madurai, and Coimbatore.",
+        "mpn": "001",
+        "sku": "9345045466",
+        "brand": {
+            "@type": "brand",
+            "name": "FITA Academy"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.fita.in/",
+            "priceCurrency": "INR",
+            "price": "10000",
+            "priceValidUntil": "2024-11-10",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "41483",
+            "reviewCount": "41483"
+        },
+
+        "review": {
+            "@type": "Review",
+            "name": "Prashanth",
+            "reviewBody": "I joined in FITA to pursue Expertise in Digital Marketing. The training they had given to me is wonderful and they taught more tools and working knowledge in digital marketing. Efficient trainer. He gave me many tips and tricks on how to handle and survive in the field of digital marketing. Overall its a best place to learn Digital marketing course.",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "datePublished": "2023-12-11",
+            "author": {
+                "@type": "Person",
+                "name": "FITA Academy"
+            }
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FITA Academy",
+        "url": "https://www.fita.in",
+        "logo": "https://www.fita.in/wp-content/uploads/2020/07/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "93450 45466",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": "en"
+        },
+        "sameAs": [
+            "https://www.facebook.com/fitaAcademy/",
+            "https://twitter.com/fitaacademy",
+            "https://www.instagram.com/fita_Academy/",
+            "https://www.youtube.com/channel/UCIbVc86kI5Jnq4Ez_8_hhIg?view_as=subscriber",
+            "https://www.linkedin.com/company/9223636/admin/"
+        ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "FITA Academy Student Video Review",
+        "description": "FITA Academy Student Shares her Experience at FITA. She says she feels lucky to learn at FITA and explains about the placement support provided by FITA through which she got placed in a reputed company.",
+        "thumbnailUrl": "https://i9.ytimg.com/vi_webp/U_lDU_01KMI/mqdefault.webp?time=1604646600000&sqp=CMjtk_0F&rs=AOn4CLB5GGDXSaTxC7nJFmpnAOKPnC0vNw",
+        "uploadDate": "2020-07-01T19:00:00+05:30",
+        "duration": "PT1M0S",
+        "contentUrl": "https://youtu.be/U_lDU_01KMI"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "FITA Academy",
+        "image": "https://www.fita.in/wp-content/uploads/2023/10/FITA-Logo.webp",
+        "@id": "",
+        "url": "https://www.fita.in/",
+        "telephone": "9345045466",
+        "priceRange": "10000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plot No 7, 2nd floor, Vadivelan Nagar, Velachery Main Road, Velachery",
+            "addressLocality": "Chennai",
+            "postalCode": "600042",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9699926,
+            "longitude": 80.2180458
+        },
+        "sameAs": [
+            "https://www.facebook.com/fitaacademy/",
+            "https://www.instagram.com/fita_academy/",
+            "https://www.youtube.com/channel/UCIbVc86kI5Jnq4Ez_8_hhIg?view_as=subscriber",
+            "https://www.linkedin.com/company/9223636/admin/feed/posts/",
+            "https://in.linkedin.com/company/fitaofficial"
+        ]
+    }
+</script>
+<!-- jQuery -->
+<script type="rocketlazyloadscript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/landing/vendor/jquery/jquery.js" defer="true"></script>
+<script type="rocketlazyloadscript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/landing/vendor/jquery/jquery.sticky.js"
+    defer="true"></script>
+<script type="rocketlazyloadscript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/landing/vendor/slick/slick.min.js"
+    data-rocket-type="text/javascript" charset="utf-8" defer="true"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://www.fita.in/wp-content/themes/zeft/landing/js/common.js"
+    defer="true"></script>
+<script type="rocketlazyloadscript">
+    document.addEventListener("contextmenu", function(e){ e.preventDefault(); }, false);
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+    /* <![CDATA[ */
+    "use strict";
+    var _createClass = function() {
+        function defineProperties(target, props) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor)
+            }
+        }
+        return function(Constructor, protoProps, staticProps) {
+            return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor
+        }
+    }();
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function")
+    }
+    var RocketBrowserCompatibilityChecker = function() {
+        function RocketBrowserCompatibilityChecker(options) {
+            _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options
+        }
+        return _createClass(RocketBrowserCompatibilityChecker, [{
+            key: "_checkPassiveOption",
+            value: function(self) {
+                try {
+                    var options = {
+                        get passive() {
+                            return !(self.passiveSupported = !0)
+                        }
+                    };
+                    window.addEventListener("test", null, options), window.removeEventListener("test", null, options)
+                } catch (err) {
+                    self.passiveSupported = !1
+                }
+            }
+        }, {
+            key: "initRequestIdleCallback",
+            value: function() {
+                !1 in window && (window.requestIdleCallback = function(cb) {
+                    var start = Date.now();
+                    return setTimeout(function() {
+                        cb({
+                            didTimeout: !1,
+                            timeRemaining: function() {
+                                return Math.max(0, 50 - (Date.now() - start))
+                            }
+                        })
+                    }, 1)
+                }), !1 in window && (window.cancelIdleCallback = function(id) {
+                    return clearTimeout(id)
+                })
+            }
+        }, {
+            key: "isDataSaverModeOn",
+            value: function() {
+                return "connection" in navigator && !0 === navigator.connection.saveData
+            }
+        }, {
+            key: "supportsLinkPrefetch",
+            value: function() {
+                var elem = document.createElement("link");
+                return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype
+            }
+        }, {
+            key: "isSlowConnection",
+            value: function() {
+                return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType)
+            }
+        }]), RocketBrowserCompatibilityChecker
+    }();
+    /* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+    /* <![CDATA[ */
+    var RocketPreloadLinksConfig = {
+        "excludeUris": "\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/",
+        "usesTrailingSlash": "1",
+        "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php",
+        "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm",
+        "siteUrl": "https:\/\/www.fita.in",
+        "onHoverDelay": "100",
+        "rateThrottle": "3"
+    };
+    /* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+    /* <![CDATA[ */
+    (function() {
+        "use strict";
+        var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                return typeof e
+            } : function(e) {
+                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+            },
+            e = function() {
+                function i(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var i = t[n];
+                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                    }
+                }
+                return function(e, t, n) {
+                    return t && i(e.prototype, t), n && i(e, n), e
+                }
+            }();
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+        var t = function() {
+            function n(e, t) {
+                i(this, n), this.browser = e, this.config = t, this.options = this.browser.options, this.prefetched = new Set, this.eventTime = null, this.threshold = 1111, this.numOnHover = 0
+            }
+            return e(n, [{
+                key: "init",
+                value: function() {
+                    !this.browser.supportsLinkPrefetch() || this.browser.isDataSaverModeOn() || this.browser.isSlowConnection() || (this.regex = {
+                        excludeUris: RegExp(this.config.excludeUris, "i"),
+                        images: RegExp(".(" + this.config.imageExt + ")$", "i"),
+                        fileExt: RegExp(".(" + this.config.fileExt + ")$", "i")
+                    }, this._initListeners(this))
+                }
+            }, {
+                key: "_initListeners",
+                value: function(e) {
+                    -1 < this.config.onHoverDelay && document.addEventListener("mouseover", e.listener.bind(e), e.listenerOptions), document.addEventListener("mousedown", e.listener.bind(e), e.listenerOptions), document.addEventListener("touchstart", e.listener.bind(e), e.listenerOptions)
+                }
+            }, {
+                key: "listener",
+                value: function(e) {
+                    var t = e.target.closest("a"),
+                        n = this._prepareUrl(t);
+                    if (null !== n) switch (e.type) {
+                        case "mousedown":
+                        case "touchstart":
+                            this._addPrefetchLink(n);
+                            break;
+                        case "mouseover":
+                            this._earlyPrefetch(t, n, "mouseout")
+                    }
+                }
+            }, {
+                key: "_earlyPrefetch",
+                value: function(t, e, n) {
+                    var i = this,
+                        r = setTimeout(function() {
+                            if (r = null, 0 === i.numOnHover) setTimeout(function() {
+                                return i.numOnHover = 0
+                            }, 1e3);
+                            else if (i.numOnHover > i.config.rateThrottle) return;
+                            i.numOnHover++, i._addPrefetchLink(e)
+                        }, this.config.onHoverDelay);
+                    t.addEventListener(n, function e() {
+                        t.removeEventListener(n, e, {
+                            passive: !0
+                        }), null !== r && (clearTimeout(r), r = null)
+                    }, {
+                        passive: !0
+                    })
+                }
+            }, {
+                key: "_addPrefetchLink",
+                value: function(i) {
+                    return this.prefetched.add(i.href), new Promise(function(e, t) {
+                        var n = document.createElement("link");
+                        n.rel = "prefetch", n.href = i.href, n.onload = e, n.onerror = t, document.head.appendChild(n)
+                    }).catch(function() {})
+                }
+            }, {
+                key: "_prepareUrl",
+                value: function(e) {
+                    if (null === e || "object" !== (void 0 === e ? "undefined" : r(e)) || !1 in e || -1 === ["http:", "https:"].indexOf(e.protocol)) return null;
+                    var t = e.href.substring(0, this.config.siteUrl.length),
+                        n = this._getPathname(e.href, t),
+                        i = {
+                            original: e.href,
+                            protocol: e.protocol,
+                            origin: t,
+                            pathname: n,
+                            href: t + n
+                        };
+                    return this._isLinkOk(i) ? i : null
+                }
+            }, {
+                key: "_getPathname",
+                value: function(e, t) {
+                    var n = t ? e.substring(this.config.siteUrl.length) : e;
+                    return n.startsWith("/") || (n = "/" + n), this._shouldAddTrailingSlash(n) ? n + "/" : n
+                }
+            }, {
+                key: "_shouldAddTrailingSlash",
+                value: function(e) {
+                    return this.config.usesTrailingSlash && !e.endsWith("/") && !this.regex.fileExt.test(e)
+                }
+            }, {
+                key: "_isLinkOk",
+                value: function(e) {
+                    return null !== e && "object" === (void 0 === e ? "undefined" : r(e)) && (!this.prefetched.has(e.href) && e.origin === this.config.siteUrl && -1 === e.href.indexOf("?") && -1 === e.href.indexOf("#") && !this.regex.excludeUris.test(e.href) && !this.regex.images.test(e.href))
+                }
+            }], [{
+                key: "run",
+                value: function() {
+                    "undefined" != typeof RocketPreloadLinksConfig && new n(new RocketBrowserCompatibilityChecker({
+                        capture: !0,
+                        passive: !0
+                    }), RocketPreloadLinksConfig).init()
+                }
+            }]), n
+        }();
+        t.run();
+    }());
+    /* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+    /* <![CDATA[ */
+    var rocket_lazyload_css_data = {
+        "threshold": "300"
+    };
+    /* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+    /* <![CDATA[ */ ! function o(n, c, a) {
+        function s(t, e) {
+            if (!c[t]) {
+                if (!n[t]) {
+                    var r = "function" == typeof require && require;
+                    if (!e && r) return r(t, !0);
+                    if (u) return u(t, !0);
+                    throw (r = new Error("Cannot find module '" + t + "'")).code = "MODULE_NOT_FOUND", r
+                }
+                r = c[t] = {
+                    exports: {}
+                }, n[t][0].call(r.exports, function (e) {
+                    return s(n[t][1][e] || e)
+                }, r, r.exports, o, n, c, a)
+            }
+            return c[t].exports
+        }
+        for (var u = "function" == typeof require && require, e = 0; e < a.length; e++) s(a[e]);
+        return s
+    }({
+        1: [function (e, t, r) {
+            "use strict";
+            ! function () {
+                const r = "undefined" == typeof rocket_pairs ? [] : rocket_pairs,
+                    e = "undefined" == typeof rocket_excluded_pairs ? [] : rocket_excluded_pairs;
+                e.map(t => {
+                    var e = t.selector;
+                    const r = document.querySelectorAll(e);
+                    r.forEach(e => {
+                        e.setAttribute("data-rocket-lazy-bg-".concat(t.hash), "excluded")
+                    })
+                });
+                const o = document.querySelector("#wpr-lazyload-bg-container");
+                var t = rocket_lazyload_css_data.threshold || 300;
+                const n = new IntersectionObserver(e => {
+                    e.forEach(t => {
+                        if (t.isIntersecting) {
+                            const e = r.filter(e => t.target.matches(e.selector));
+                            e.map(t => {
+                                var e;
+                                t && ((e = document.createElement("style")).textContent = t.style, o.insertAdjacentElement("afterend", e), t.elements.forEach(e => {
+                                    n.unobserve(e), e.setAttribute("data-rocket-lazy-bg-".concat(t.hash), "loaded")
+                                }))
+                            })
+                        }
+                    })
+                }, {
+                    rootMargin: t + "px"
+                });
+
+                function c() {
+                    0 < (0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : []).length && r.forEach(t => {
+                        try {
+                            const e = document.querySelectorAll(t.selector);
+                            e.forEach(e => {
+                                "loaded" !== e.getAttribute("data-rocket-lazy-bg-".concat(t.hash)) && "excluded" !== e.getAttribute("data-rocket-lazy-bg-".concat(t.hash)) && (n.observe(e), (t.elements || (t.elements = [])).push(e))
+                            })
+                        } catch (e) {
+                            console.error(e)
+                        }
+                    })
+                }
+                c();
+                const a = function () {
+                    const o = window.MutationObserver;
+                    return function (e, t) {
+                        if (e && 1 === e.nodeType) {
+                            const r = new o(t);
+                            return r.observe(e, {
+                                attributes: !0,
+                                childList: !0,
+                                subtree: !0
+                            }), r
+                        }
+                    }
+                }();
+                t = document.querySelector("body"), a(t, c)
+            }()
+        }, {}]
+    }, {}, [1]);
+    //# sourceMappingURL=lazyload-css.min.js.map
+    /* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/js/bootstrap-better-nav.js"
+    id="ultrabootstrap-better-nav-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/js/script.js" id="ultrabootstrap-scripts-js"></script>
+<script>
+    window.lazyLoadOptions = {
+        elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",
+        data_src: "lazy-src",
+        data_srcset: "lazy-srcset",
+        data_sizes: "lazy-sizes",
+        class_loading: "lazyloading",
+        class_loaded: "lazyloaded",
+        threshold: 300,
+        callback_loaded: function (element) {
+            if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") {
+                if (element.classList.contains("lazyloaded")) {
+                    if (typeof window.jQuery != "undefined") {
+                        if (jQuery.fn.fitVids) {
+                            jQuery(element).parent().fitVids();
+                        }
+                    }
+                }
+            }
+        }
+    };
+    window.addEventListener('LazyLoad::Initialized', function (e) {
+        var lazyLoadInstance = e.detail.instance;
+
+        if (window.MutationObserver) {
+            var observer = new MutationObserver(function (mutations) {
+                var image_count = 0;
+                var iframe_count = 0;
+                var rocketlazy_count = 0;
+
+                mutations.forEach(function (mutation) {
+                    for (i = 0; i < mutation.addedNodes.length; i++) {
+                        if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+                            return;
+                        }
+
+                        if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+                            return;
+                        }
+
+                        images = mutation.addedNodes[i].getElementsByTagName('img');
+                        is_image = mutation.addedNodes[i].tagName == "IMG";
+                        iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+                        is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+                        rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+
+                        image_count += images.length;
+                        iframe_count += iframes.length;
+                        rocketlazy_count += rocket_lazy.length;
+
+                        if (is_image) {
+                            image_count += 1;
+                        }
+
+                        if (is_iframe) {
+                            iframe_count += 1;
+                        }
+                    }
+                });
+
+                if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) {
+                    lazyLoadInstance.update();
+                }
+            });
+
+            var b = document.getElementsByTagName("body")[0];
+            var config = {
+                childList: true,
+                subtree: true
+            };
+
+            observer.observe(b, config);
+        }
+    }, false);
+</script>
+<script data-no-minify="1" async
+    src="https://www.fita.in/wp-content/plugins/rocket-lazy-load/assets/js/16.1/lazyload.min.js"></script>
+<script>
+    function lazyLoadThumb(e) {
+        var t = '<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',
+            a = '<div class="play"></div>';
+        return t.replace("ID", e) + a
+    }
+
+    function lazyLoadYoutubeIframe() {
+        var e = document.createElement("iframe"),
+            t = "ID?autoplay=1";
+        t += 0 === this.dataset.query.length ? '' : '&' + this.dataset.query;
+        e.setAttribute("src", t.replace("ID", this.dataset.src)), e.setAttribute("frameborder", "0"), e.setAttribute("allowfullscreen", "1"), e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"), this.parentNode.replaceChild(e, this)
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        var e, t, a = document.getElementsByClassName("rll-youtube-player");
+        for (t = 0; t < a.length; t++) e = document.createElement("div"), e.setAttribute("data-id", a[t].dataset.id), e.setAttribute("data-query", a[t].dataset.query), e.setAttribute("data-src", a[t].dataset.src), e.innerHTML = lazyLoadThumb(a[t].dataset.id), e.onclick = lazyLoadYoutubeIframe, a[t].appendChild(e)
+    });
+</script>
+<!-- Bootstrap -->
+<!-- Vendor JS Files -->
+
+<script type="rocketlazyloadscript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/includes/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
+    defer="true"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    let myScript = document.createElement("script");
+    myScript.setAttribute("src", "https://www.fita.in/includes/assets/js/jquery-2.2.0.min.js");
+    document.body.appendChild(myScript);
+</script>
+<!--<script type="rocketlazyloadscript" defer="true">hljs.initHighlightingOnLoad();</script> -->
+<!-- Template Main JS File -->
+<script type="rocketlazyloadscript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/includes/assets/js/main.js" defer="true"></script>
+<script type="rocketlazyloadscript">
+
+    function enquiryValidation() { var leadsquaredFirstName = $('#FirstName').val(); var hasError = false; var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; var leadsquaredEmailAddress = $('#EmailAddress').val(); var leadsquaredMobile = $('#contactphone2').val();
+    var MobileCountrycode = $('#select2-contactphcode2-container').text(); var leadsquaredmx_Branch = $('#mx_Branch').val(); var leadsquaredmx_Course = $('#mx_Course').val(); var leadsquaredmx_Batch_Time = $('#mx_Batch_Time').val(); $(".error-msg").hide();
+    // Honeypot field var honeypotValue = $('#honeypot').val(); if (honeypotValue !== "") { // Honeypot field is filled, consider it as spam alert("Spam detected! Please try again."); return; } if (leadsquaredFirstName == "") { $("#FirstNameError").show();
+    hasError = true; } else if (leadsquaredEmailAddress == "" || !emailReg.test(leadsquaredEmailAddress)) { $("#EmailAddressError").show(); hasError = true; } else if ( leadsquaredMobile == "" || leadsquaredMobile == undefined || leadsquaredMobile ==
+    null || MobileCountrycode == "" || MobileCountrycode == undefined || MobileCountrycode == null ) { $("#MobileError").show(); hasError = true; } else if (!/^[0-9]+$/.test(leadsquaredMobile)) { // Check if the phone number contains only numeric characters
+    $("#MobileError").show(); hasError = true; } else { // Validation rules for specific countries var countryValidationRules = { '+91': { length: 10, // India }, // Add more countries as needed }; var countryRules = countryValidationRules[MobileCountrycode];
+    if (countryRules) { if (countryRules.length > 0 && leadsquaredMobile.length !== countryRules.length) { $("#MobileError").show(); hasError = true; } } else { // For all other countries, set the minimum length to 6 and maximum length to 15 if (leadsquaredMobile.length
+    < 6 || leadsquaredMobile.length> 15) { $("#MobileError").show(); hasError = true; } } } if (leadsquaredmx_Branch == "" || leadsquaredmx_Branch == null) { $("#mx_BranchError").show(); hasError = true; } else if (leadsquaredmx_Course == "" || leadsquaredmx_Course == null) { $("#mx_CourseError").show();
+        hasError = true; } else if (leadsquaredmx_Batch_Time == "" || leadsquaredmx_Batch_Time == null) { $("#mx_Batch_TimeError").show(); hasError = true; } // Hide the button if there are no errors if (!hasError) { $(".s-btn.btn").hide(); const thankYouMessage
+        = document.querySelector('#thank-you-message'); thankYouMessage.classList.add('show'); var countrynumber2 = jQuery('#select2-contactphcode2-container').text(); var mobileNumber2 = $("#contactphone2").val(); $("#MobileData2").val(countrynumber2
+        + mobileNumber2); // Submit the form programmatically $("#enquiryForm").submit(); $(".error-msg").hide(); } } //Popup Form Start function popupValidation() { var haspopupError = false; var leadsquaredFirstName = $('#FirstName_popup').val(); var
+        popupemailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; var leadsquaredEmailAddress = $('#EmailAddress_popup').val(); var leadsquaredMobile = $('.phonebox #contactphone1').val(); var MobileCountrycode = $('.phonebox #select2-contactphcode-container').text();
+        var leadsquaredmx_Branch = $('#mx_Branch_popup').val(); // Honeypot field var honeypotValue = $('#honeypot_popup').val(); if (honeypotValue !== "") { // Honeypot field is filled, consider it as spam alert("Spam detected! Please try again."); return;
+        } // Hide any previous error messages $(".error-msg").hide(); if (leadsquaredFirstName == "") { $("#FirstName_popupError").show(); haspopupError = true; } else if (leadsquaredEmailAddress == "" || !popupemailReg.test(leadsquaredEmailAddress))
+        { $("#EmailAddress_popupError").show(); haspopupError = true; } else if ( leadsquaredMobile == "" || leadsquaredMobile == undefined || leadsquaredMobile == null || MobileCountrycode == "" || MobileCountrycode == undefined || MobileCountrycode
+        == null ) { $("#Mobile_popupError").show(); haspopupError = true; } else { // Check if the phone number contains only numeric characters var phoneRegex = /^[0-9]+$/; if (!phoneRegex.test(leadsquaredMobile)) { $("#Mobile_popupError").show(); haspopupError
+        = true; } else if (MobileCountrycode === '+91' && leadsquaredMobile.length !== 10) { $("#Mobile_popupError").show(); haspopupError = true; } } if (leadsquaredmx_Branch == "" || leadsquaredmx_Branch == null) { $("#mx_Branch_popupError").show();
+        haspopupError = true; } else { var leadsquaredmx_Course = $('#mx_Course_popup').val(); var leadsquaredmx_Batch_Time = $('#mx_Batch_Time_popup').val(); if (leadsquaredmx_Course == "" || leadsquaredmx_Course == null) { $("#mx_Course_popupError").show();
+        haspopupError = true; } else if (leadsquaredmx_Batch_Time == "" || leadsquaredmx_Batch_Time == null) { $("#mx_Batch_Time_popupError").show(); haspopupError = true; } } // Hide the button if there are no errors if (!haspopupError) { $(".s-btn.btn").hide();
+        $(".thank-you-message").show(); var countrynumber = jQuery('#select2-contactphcode-container').text(); var mobileNumber = $("#contactphone1").val(); $("#MobileData").val(countrynumber + mobileNumber); // Submit the form programmatically $("#popupForm").submit();
+        } } /************* HFF Form validation start*********************/ function quickEnquiryValidation(){ var JobTitle = $('#JobTitle').val(); var NumberofVacancies = $('#NumberofVacancies').val(); var JobDescription = $('#JobDescription').val();
+        var KeySkills = $('#KeySkills').val(); var WorkExperience = $('#WorkExperience').val(); var Location = $('#Location').val(); var CompanyName = $('#CompanyName').val(); var FirstName = $('#FirstName').val(); var EmailAddress = $('#EmailAddress').val();
+        var MobileNumber = $('#MobileNumber').val(); var honeypotValue = $('#honeypot').val(); var hasError = false; var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Honeypot field if (honeypotValue !== "") { alert("Spam detected! Please try again.");
+        return; } // Validate fields if (JobTitle == "") { $("#JobTitleError").show(); hasError = true; } else { $("#JobTitleError").hide(); } if (NumberofVacancies == "") { $("#NumberofVacanciesError").show(); hasError = true; } else { $("#NumberofVacanciesError").hide();
+        } if (JobDescription == "") { $("#JobDescriptionError").show(); hasError = true; } else { $("#JobDescriptionError").hide(); } if (KeySkills == "") { $("#KeySkillsError").show(); hasError = true; } else { $("#KeySkillsError").hide(); } if (WorkExperience
+        == "" || WorkExperience == null) { $("#WorkExperienceError").show(); hasError = true; } else { $("#WorkExperienceError").hide(); } if (Location == "") { $("#LocationError").show(); hasError = true; } else { $("#LocationError").hide(); } if (CompanyName
+        == "") { $("#CompanyNameError").show(); hasError = true; } else { $("#CompanyNameError").hide(); } if (FirstName == "") { $("#FirstNameError").show(); hasError = true; } else { $("#FirstNameError").hide(); } if (MobileNumber == "" || isNaN(MobileNumber)
+        || MobileNumber.length
+        < 8) { $( "#MobileNumberError").show(); hasError=t rue; } else { $( "#MobileNumberError").hide(); } if (EmailAddress=="" || !emailReg.test(EmailAddress)) { $( "#EmailAddressError").show(); hasError=t rue; } else { $(
+            "#EmailAddressError").hide(); } if (!hasError) { $( "#enquiryForm").submit(); } } /*************New Quick Enquiry Form validation End *********************/ /************* Careers Form validation start*********************/ function careerEnquiryValidation(){ //alert(
+            "check"); var FirstName=$ ( '#FirstName').val(); var hasError=f alse; var emailReg=/ ^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; var EmailAddress=$ ( '#EmailAddress').val(); var MobileNumber=$ ( '#MobileNumber').val(); var Experience=$ ( '#Experience').val();
+            var EducationQualification=$ ( '#EducationQualification').val(); var Location=$ ( '#Location').val(); // Honeypot field var honeypotValue=$ ( '#honeypot').val(); if (honeypotValue !=="" ) { // Honeypot field is filled, consider it as spam alert(
+            "Spam detected! Please try again."); return; } if(FirstName=="" ){ $( "#FirstNameError").show(); }else if(MobileNumber=="" || isNaN(MobileNumber) ){ $( "#MobileNumberError").show(); }else if(EmailAddress=="" || !emailReg.test(EmailAddress)){ $( "#EmailAddressError").show(); hasError=t
+            rue; }else if(Experience=="" ){ $( "#ExperienceError").show(); }else if(EducationQualification=="" ){ $( "#EducationQualificationError").show(); }else if(Location=="" ){ $( "#LocationError").show(); }else{ //alert(
+            "Form Submitted Successfully"); $( "#enquiryForm").submit(); $( ".error-msg" ).hide(); } } /*************Careers Form validation End *********************/ /************* BAI Form validation start*********************/ function instructorEnquiryValidation(){ //alert(
+            "check BAI Form"); var FirstName=$ ( '#FirstName').val(); var hasError=f alse; var emailReg=/ ^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; var EmailAddress=$ ( '#EmailAddress').val(); var MobileNumber=$ ( '#MobileNumber').val(); var Experience=$ ( '#Experience').val();
+            var Branch=$( '#Branch').val(); var Course=$ ( '#Course').val(); // Honeypot field var honeypotValue=$ ( '#honeypot').val(); if (honeypotValue !=="" ) { // Honeypot field is filled, consider it as spam alert( "Spam detected! Please try again.");
+            return; } if(FirstName=="" ){ $( "#FirstNameError").show(); }else if(MobileNumber=="" || isNaN(MobileNumber) ){ $( "#MobileNumberError").show(); }else if(EmailAddress=="" || !emailReg.test(EmailAddress)){ $( "#EmailAddressError").show(); hasError=t
+            rue; }else if(Experience=="" ){ $( "#ExperienceError").show(); }else if(Branch=="" || Branch==n ull ){ $( "#BranchError").show(); }else if(Course=="" || Course==n ull){ $( "#CourseError").show(); }else{ //alert( "Form Submitted Successfully");
+            $( "#enquiryForm").submit(); $( ".error-msg" ).hide(); } } /************* BAI Form validation End *********************/ /************* FRANCHISE Form validation start*********************/ function FranchiseValidation(){ //alert( "check"); var
+            FirstName=$ ( '#FirstName').val(); var hasError=f alse; var emailReg=/ ^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; var EmailAddress=$ ( '#EmailAddress').val(); var MobileNumber=$ ( '#MobileNumber').val(); var Location=$ ( '#Location').val(); // Honeypot
+            field var honeypotValue=$ ( '#honeypot').val(); if (honeypotValue !=="" ) { // Honeypot field is filled, consider it as spam alert( "Spam detected! Please try again."); return; } if(FirstName=="" ){ $( "#FirstNameError").show(); }else if(MobileNumber==""
+            || isNaN(MobileNumber) ){ $( "#MobileNumberError").show(); }else if(EmailAddress=="" || !emailReg.test(EmailAddress)){ $( "#EmailAddressError").show(); hasError=t rue; }else if(Location=="" ){ $( "#LocationError").show(); }else{ //alert(
+            "Form Submitted Successfully"); $( "#enquiryForm").submit(); $( ".error-msg" ).hide(); } } /************* Franchise Form validation End *********************/ /* $(document).ready(function() { var stickyTop=$ ( '.sticky2').offset().top; $(window).scroll(function() { var
+            windowTop=$ (window).scrollTop(); if (stickyTop < windowTop && $( ".testing-from-div").height() + $( ".testing-from-div").offset().top - $( ".sticky2").height()> windowTop) { //alert("fixed"); $('.sticky2').css({'position': 'fixed', 'padding-top': '70px' ,'top': '0', 'right': '39px', 'width': '30%'}); } else { // alert("relative"); $('.sticky2').css({'position': 'relative', 'padding-top': '40px', 'right':
+            '0', 'width': '100%'}); } }); }); */
+</script>
+<!------------- New Quick Enquiry Form error hidden action--------------- -->
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    $('#JobTitle').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#NumberofVacancies').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#JobDescription').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#KeySkills').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $(function() {
+        $("#WorkExperience").change(function() {
+            $("#WorkExperienceError").html("").removeClass("error-msg");
+        });
+    });
+
+    $('#Location').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#CompanyName').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#FirstName').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#MobileNumber').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#EmailAddress').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#Experience').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $(function() {
+        $("#Branch").change(function() {
+            $("#BranchError").html("").removeClass("error-msg");
+        });
+    });
+    $(function() {
+        $("#Course").change(function() {
+            $("#CourseError").html("").removeClass("error-msg");
+        });
+    });
+    $('#EducationQualification').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#g-recaptcha1').keyup(function() {
+        $('.error-msg').hide();
+    });
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    $('#FirstName').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#EmailAddress').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#Mobile').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#Notes').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $(function() {
+        $("#mx_Branch").change(function() {
+            $("#mx_BranchError").html("").removeClass("error-msg");
+        });
+
+        $("#mx_Course").change(function() {
+            $("#mx_CourseError").html("").removeClass("error-msg");
+        });
+        $("#mx_Batch_Time").change(function() {
+            $("#mx_Batch_TimeError").html("").removeClass("error-msg");
+        });
+    });
+    //popupform validation error hiding section
+    $('#FirstName_popup').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#EmailAddress_popup').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#Mobile_popup').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $('#Notes_popup').keyup(function() {
+        $('.error-msg').hide();
+    });
+    $(function() {
+        $("#mx_Branch_popup").change(function() {
+            $("#mx_Branch_popupError").html("").removeClass("error-msg");
+        });
+
+        $("#mx_Course_popup").change(function() {
+            $("#mx_Course_popupError").html("").removeClass("error-msg");
+        });
+        $("#mx_Batch_Time_popup").change(function() {
+            $("#mx_Batch_Time_popupError").html("").removeClass("error-msg");
+        });
+    });
+</script>
+
+<!-- <script type="rocketlazyloadscript" data-rocket-type="text/javascript" defer>
+   var CaptchaCallback = function() {
+      if ( $('#g-recaptcha1').length ) {
+          grecaptcha.render('g-recaptcha1', {'sitekey' : '6LcsTFAaAAAAAPQulxF7XB0gp39CDY8S_egZHNlK'
+          });
+      }
+      if ( $('#<g-recaptcha>2').length ) {
+         grecaptcha.render('g-recaptcha2', {'sitekey' : '6LcsTFAaAAAAAPQulxF7XB0gp39CDY8S_egZHNlK'
+         });
+      }
+   };
+</script>  -->
+<script type="rocketlazyloadscript">
+    (()=>{ if( "fonts" in document ) { // Optimization for Repeat Views if( sessionStorage.fl ) { document.documentElement.className += " fl"; return; } document.fonts.load("1em myFontSubset").then(() => { document.documentElement.className += " flsubset";
+    // Load font Promise.all([ document.fonts.load("1em myFont"), document.fonts.load("700 1em myFont") ]).then(()=>{ document.documentElement.className += " fl"; sessionStorage.fl = true }); }); } })();
+
+
+</script>
+
+<script type="rocketlazyloadscript"
+    data-rocket-src="https://www.fita.in/wp-content/themes/zeft/js/select2.min.js"></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    jQuery(document).ready(function($) {
+        setTimeout(() => {
+
+            $('#mx_Course_popup').select2({
+                selectOnClose: true
+            });
+            $('#mx_Branch_popup').select2({
+                selectOnClose: true
+            });
+            $('#contactphcode').select2();
+
+            var vlaue1 = jQuery("#contactphcode").val();
+            $('#select2-contactphcode-container').text(vlaue1);
+
+            $('#contactphcode').on('change', function(event) {
+                var vlaue = jQuery(this).val();
+                $('#MobileData').val(vlaue);
+                $('#select2-contactphcode-container').text(vlaue);
+            })
+
+
+            $('#mx_Course').select2({
+                selectOnClose: true
+            });
+            $('#mx_Branch').select2({
+                selectOnClose: true
+            });
+            $('#contactphcode2').select2();
+
+            var vlaue2 = jQuery("#contactphcode2").val();
+            $('#select2-contactphcode2-container').text(vlaue2);
+
+            $('#contactphcode2').on('change', function(event) {
+                var vlaue = jQuery(this).val();
+                $('#MobileData2').val(vlaue);
+                $('#select2-contactphcode2-container').text(vlaue);
+            })
+
+
+        }, "100");
+    });
+</script>
+
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1721891935 -->

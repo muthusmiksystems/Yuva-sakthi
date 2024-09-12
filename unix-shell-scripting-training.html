@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="p:domain_verify" content="ca280439ae739ce624450dca7a438025" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#2389f2" />
+
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <link rel="preconnect" href="https://www.google-analytics.com/" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+    <!-- <link rel="dns-prefetch" href="https://www.imagetechnologies.com"> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/imagepopup.css">
+    <meta name='robots' content='index, follow' />
+
+    <!-- This site is optimized with the Yoast SEO plugin v18.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Unix Shell Scripting Training | Master Shell Scripting</title>
+    <meta name="description"
+        content="Learn Unix shell scripting with our comprehensive training course. Get certified and boost your career in system administration.">
+    <meta name="title" content="Unix Shell Scripting Training | Master Shell Scripting">
+    <link rel="icon" type="image/x-icon" href="./image/letter-y.png">
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Unix Shell Scripting Training">
+    <meta property="og:description"
+        content="Learn Unix shell scripting for automating tasks and system administration on Unix/Linux systems.">
+
+    <meta property="article:modified_time" content="2023-09-08T13:26:22+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="1 minute" />
+
+
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <!-- //video straming -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel='stylesheet' id='chennai-css' href='./css/chennai.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='chennai-mobile-css' href='./css/chennai-mobile.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='tablepress-custom-css' href='./css/tablepress-custom.min.css' type='text/css'
+        media='all' />
+    <!-- <link rel="https://api.w.org/" href="https://www.imagetechnologies.com/wp-json/" /> -->
+    <!-- <link rel="alternate" type="application/json" href="https://www.imagetechnologies.com/wp-json/wp/v2/pages/71541" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.imagetechnologies.com/xmlrpc.php?rsd" /> -->
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+
+    <!-- <link rel='shortlink' href='https://www.imagetechnologies.com/?p=71541' /> -->
+    <!-- <link rel="alternate" type="application/json+oembed" href="https://www.imagetechnologies.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.imagetechnologies.com%2Fdata-analytics-course-in-chennai" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.imagetechnologies.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.imagetechnologies.com%2Fdata-analytics-course-in-chennai&#038;format=xml" /> -->
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <!-- script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-33683228-1', 'auto');s
+ga('send', 'pageview');
+</script -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33683228-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-33683228-1');
+    </script>
+
+    <link href="https://www.googletagmanager.com/gtag/js?id=AW-9597684055" rel="preload" as="script">
+    <script async="" defer="" src="https://www.googletagmanager.com/gtag/js?id=AW-9597684055"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-9597684055');
+    </script> -->
+
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ESWPF36X6"></script>
+
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'G-0ESWPF36X6');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ5GR7Z5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+    <!--
+        <div class="headClass"></div>
+    <script src="../js/topnav.js"></script> -->
+    <!-- <div class="nav1"></div>
+  <script src="./js/header.js"></script> -->
+    <script>
+        $(function () {
+            $("#includedContent").load("header.html");
+        });
+    </script>
+    <div id="includedContent" class="sticky-top"></div>
+    <!--Banner section starts-->
+    <div class="course_banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs">
+                    <div class="banner_title">
+                        <h1 class="coursepagesingle schedule" data-bemscourseid="423"
+                            data-bemscoursename="Data Analytics" data-bemscityid="1"> Unix Shell Scripting
+                        </h1>
+
+                        <span class="badge badge-warning">Best Seller</span>
+                        <span class="star-rating-ex1"><img src="./image/star-rating.webp" loading="lazy"
+                                alt="image Star Rating" class="img-fluid" width="85px" height="15px"></span>
+                        <span class="ratingtitle">1955 Ratings (5.0)</span>
+
+                    </div>
+                    <div class="bannershow">
+                        <p> Yuva Sakthi Academy provides the Best Unix Shell Scripting Training to
+                            the candidate trained by experienced professionals. The Unix training course helps the
+                            candidate to master different basic to advanced level concepts like Unix architecture,
+                            Service, Shell Scripting, Unix commands, server, and more through hands-on training,
+                            real-world industry examples, and case studies.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs">
+                    <div class="video_widget">
+                        <div class="video_popup">
+                            <a href="#" title="AWS Training in Chennai" data-toggle="" data-target=""
+                                data-modalnewtitle="Get Free Demo Class Video" data-gaeventcate="leadModalOpen"
+                                data-gaeventlabel="videoRequestSidebar">
+                                <img src="./image/aws-certification-course.avif" alt="AWS Training "
+                                    title="AWS Training " width="325px" height="205px" class="img-fluid" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="overallbtn">
+                            <div class="enroll_btn">
+                                <a href="#enrollclass" title="Enroll Now" data-toggle="" data-target=""
+                                    data-modalnewtitle="Get Course Fees &amp; Discounts"
+                                    data-gaeventcate="leadModalOpen" data-gaeventlabel="feesRequestMidBody">Enroll
+                                    Now</a>
+                            </div>
+                            <div class="download_btn">
+                                <a href="#" class="start" data-toggle="modal" data-target="#videoModal"
+                                    data-modalnewtitle="Get Free Live Videos" data-gaev entcate="leadModalOpen"
+                                    data-gaeventlabel="freeLiveVideosBanner" title="Free Video"> Get Video Class
+                                </a>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                <!-- Indicators -->
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                                </ol>
+
+                                                <!-- Wrapper for slides -->
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe id="videoFrame" class="embed-responsive-item"
+                                                                src="https://www.youtube.com/embed/k_064zngqJQ?si=bNXuzFjDlJPcY6oE"
+                                                                allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="item">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe id="videoFrame" class="embed-responsive-item"
+                                                                src="https://www.youtube.com/embed/zYgKrAw3LqE?si=akcqMbCzUVpGh-vs"
+                                                                allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="item">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe id="videoFrame" class="embed-responsive-item"
+                                                                src="https://www.youtube.com/embed/qq3EVXs-fiM?si=Wiwow1rB4VD__94a"
+                                                                allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                            <script
+                                src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                            <script
+                                src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                        </div>
+                        <div class="dividerline"></div>
+                        <div class="online_advicer">
+                            <p class="quotes">Have Queries? Ask our Experts</p>
+                            <div class="overallquotes">
+                                <div class="quote_left">
+                                    <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                </div>
+                                <div class="quote_right">
+                                    <p><a href="tel:+91-9597684055" title="+91-9597684055">+91-9597684055</a></p>
+                                    <span> Available 24x7 for your queries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SCroll menu section-->
+    <section class="staticscrollmenu_wraper d-none d-lg-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+                    <div class="static_secondmenu">
+                        <ul>
+                            <li class="active">
+                                <a href="#aboutcourses" title="About Courses">About Courses</a>
+                            </li>
+                            <li>
+                                <a href="#batch_schedule" title="Upcoming Batch">Upcoming Batch </a>
+                            </li>
+                            <li>
+                                <a href="#coursesyllabus" title="Course Syllabus">Course Syllabus </a>
+                            </li>
+
+                            <li>
+                                <a href="#Trainer" title="Trainer Profile">Trainer Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""></a>
+                            </li>
+                            <li>
+                                <a href="#features" title="Key Features">Key Features</a>
+                            </li>
+
+                            <li>
+                                <a href="#Projects" title="Projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#reviews" title="Reviews">Reviews</a>
+                            </li>
+                            <li>
+                                <a href="#faq" title="FAQ">FAQ</a>
+                            </li>
+                        </ul>
+                        <span class="static_scrollbtn">
+                            <p href="#" title="Request a Demo" id="requestDemoBtn" data-toggle="modal"
+                                data-target="#demoModal" data-modalnewtitle="Avail Free Demo Classes"
+                                data-gaeventcate="leadModalOpen" data-gaeventlabel="demoClassMidBody">Request a Demo</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="demoModalLabel">Avail Free Demo Classes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for requesting a demo -->
+                    <div class="bt_hirecontact-right">
+                        <form action="#" method="post" class="wpcf7-form">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform">
+                                        <div class="form-group">
+                                            <label>First Name*</label>
+                                            <input type="text" id="f_name" name="first-name" placeholder="First Name"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform">
+                                        <div class="form-group">
+                                            <label>Last Name*</label>
+                                            <input type="text" id="l_name" name="last-name" placeholder="Last Name"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform">
+                                        <div class="form-group">
+                                            <label>Email Id*</label>
+                                            <input type="email" id="e_mail" name="email" pattern=".{3,100}" size="40"
+                                                placeholder="Email Id" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform">
+                                        <div class="form-group">
+                                            <label>Mobile No*</label>
+                                            <input type="number" id="phone" name="ph_no" placeholder="Mobile No"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform">
+                                        <div class="form-group">
+                                            <label>Address*</label>
+                                            <input type="text" id="a_add" name="add" pattern=".{3,50}" size="40"
+                                                placeholder="Address" required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform">
+                                        <input type="submit" name="submit_button"
+                                            class="bt_hire_submit btn btn-primary btn-block" value="Drop the Query">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+                                    <div class="bt_hireform"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"> </script>
+
+    <!--Fixed layout Sections-->
+    <section class="fixed_menu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs">
+                    <!-- About COurse section -->
+
+                    <section id="aboutcourses" class="content_widgets">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+                                <div class="course_contents">
+                                    <h2 class="bt_coursetitle"> UNIX Shell Scripting Training Course </h2>
+                                    <p>The Unix Shell Scripting Training Course enables you to master the secure
+                                        and oldest operating system. The Unix Shell Scripting training classes
+                                        also cover system administration, programming, web design,
+                                        and development. The candidate will be able to identify and understand various
+                                        Unix OS, develop Unix architecture, obtain insights to troubleshoot and run Unix
+                                        shell scripts, will gain the ability to debug,
+                                        execute, and write Unix Shell Scripts.</p>
+                                    <p>The Unix Shell Scripting course enables you to work on
+                                        real-time industry-based projects based on the Unix Shell Scripting. The Yuva
+                                        Sakthi Academy Unix Shell Scripting training and
+                                        prepares the candidate for the Unix Shell Scripting exam. The
+                                        in-depth Unix Shell Scripting training delivers skills
+                                        required for working as a support, infra, developer, and
+                                        testing related shell script programming and Unix/Linux environment.</p>
+                                    <p>Once the candidate completes the Unix Shell Scripting course from
+                                        Yuva Sakthi Academy, they will be awarded an Unix Shell Scripting
+                                        training course completion certificate that is valid and accredited
+                                        in top IT and MNC companies across the globe. According to glassdoor.com, the
+                                        average salary of Linux System Administrator with Unix Shell Scripting skills is
+                                        about USD $70,783/yr.</p>
+                                    <h3>About Unix Shell Scripting Training<strong><br />
+                                        </strong></h3>
+                                    <p>The Unix Shell Scripting training course modules are curated by
+                                        Yuva Sakthi Academy professionals who stay updated about the latest trends and
+                                        technologies. Our instructors focus on both practical
+                                        and theoretical classes so that the candidate gets to know the concept clearly
+                                        without hassle. The real-time industry-based projects, scenarios, hands-on
+                                        training, and case studies make the training smarter,
+                                        and also it’s easy for the candidate to understand the concept in a more natural
+                                        way.</p>
+                                    <p>The Unix Shell Scripting helps to make the candidate clear
+                                        about the Command usage, directory structure, and architecture of Unix operating
+                                        system, learn how to make use of the Putty tool to
+                                        connect Unix server, know about various flavors of Unix, file system layout, how
+                                        to access Unix server and more.</p>
+                                    <p>The candidates will be provided with primary, intermediate, and advanced
+                                        real-time tasks and projects in Unix so that they can learn the Scripting
+                                        language quickly. The candidate will get to know about how to implement
+                                        automation with the help of Unix shell script, work with different logics,
+                                        overcome solutions by decreasing time when compared to windows, and more.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!--Batch Schedule-->
+                    <section class="content_widgets course_contents shadow border" id="batch_schedule">
+                        <h2 class="bt_coursetitle">Upcoming Training Batches </h2>
+                        <p>Yuva Sakthi Academy provides flexible timings to all our students. Here is the Unix Shell
+                            Scripting Training
+                            Course Schedule in our branches. If this schedule doesn’t match please let us know. We will
+                            try to arrange appropriate timings based on your flexible timings.</p>
+                        <div class="btchschedulenew">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr style="font-weight: bold;">
+                                        <th>Time</th>
+                                        <th>Days</th>
+                                        <th>Batch Type</th>
+                                        <th>Duration (Per Session)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>8:00AM - 12:00PM</td>
+                                        <td>Mon - Sat</td>
+                                        <td>Weekdays Batch</td>
+                                        <td>4Hr - 5:30Hrs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:00PM - 5:00PM</td>
+                                        <td>Mon - Sat</td>
+                                        <td>Weekdays Batch</td>
+                                        <td>4Hr - 5:30Hrs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5:00PM - 9:00PM</td>
+                                        <td>Mon - Sat</td>
+                                        <td>Weekdays Batch</td>
+                                        <td>4Hr - 5:30Hrs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </section>
+                    <!-- Offer section -->
+                    <!-- <div class="triplecoursewidget">
+                        <h3>Try it out, on us</h3>
+                        <p>Take the first step in your learning journey. Get hands-on experience and be a master.
+                            <span>Buy 3 course @24,999/-</span>
+                        </p>
+                        <a href="../special-offers.html" target="_blank" class="btn btn-primary"
+                            title="Learn more">Learn more</a>
+                    </div> -->
+
+                    <section id="coursesyllabus" class="content_widgets">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+                                <div class="course_contents">
+
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h2 class="bt_coursetitle">Syllabus of Unix Shell Scripting Training </h2>
+
+                                        <div
+                                            class="d-flex align-items-center justify-content-center download-button px-3">
+
+                                            <img alt="AdobeIcon" width="20" height="20"
+                                                src="data:image/webp;base64, UklGRgoBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSKUAAAABcFZba9h8Ej4JkRAHjYPVwSIhEuKgOFkctA46B8VB44B/G2wGImICuF3mfm0UCxWNueyXp4a8E0dEL6VElB5UEEO0CAFGxBEkQInIKePwU/QdabpVqFWsXpPV7M7Io/c+5lcNaqYCgMsCvr9Q1FEJIAGpSZLPZgH42Pbb7HwuRLk/EgLDvOeaG5q593yAt5tCyNPcT4AvC9y3y/5SY1RihKJ+KgQAVlA4ID4AAABQAwCdASoeAB4APikSiEKhoSEUBAAYAoSygDsAfgAARr/YAAD+4CV//+Uq8FjdHn//57R+e0fntH/nhAAAAA=="
+                                                loading="lazy" style="margin-right: 10px;">
+                                            <a href="./pdf/Unix-Shell-Scripting.pdf" class="" download> Download
+                                                Curriculum
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4>Introduction</h4>
+                                    <ul class="list-1">
+                                        <li>Basics of computer applications</li>
+                                        <li>Unix Course Introductions</li>
+                                        <li>Pre-requisites</li>
+                                        <li>Course Summary</li>
+                                    </ul>
+                                    <h4>Unix Commands :</h4>
+                                    <h4>Processing &amp; Listing</h4>
+                                    <ul class="list-1">
+                                        <li>Processes and Directories</li>
+                                        <li>Displaying Processes – ps</li>
+                                        <li>Displaying Directories – ls</li>
+                                        <li>Getting Help – man</li>
+                                        <li>Simple Commands used for processing</li>
+                                        <li>Using Wildcards</li>
+                                    </ul>
+                                    <h4>File Creation and Displaying</h4>
+                                    <ul class="list-1">
+                                        <li>Creating files – using &gt; symbol</li>
+                                        <li>Redirection – using &gt;&gt; symbol</li>
+                                        <li>Redirecting Input – using &lt; symbol</li>
+                                        <li>Displaying Files – cat, more</li>
+                                        <li>Piping – using | symbol</li>
+                                        <li>Word Count</li>
+                                        <li>Sorting a file</li>
+                                        <li>Removing duplicates</li>
+                                        <li>Transliteration</li>
+                                        <li>Using Head and Tail command in files</li>
+                                    </ul>
+                                    <h4>Files Handling</h4>
+                                    <ul class="list-1">
+                                        <li>Creating directory</li>
+                                        <li>Moving files to directories</li>
+                                        <li>Copying files to directories</li>
+                                        <li>Changing directory</li>
+                                        <li>Removing files and directories</li>
+                                        <li>Special Files–. and.</li>
+                                        <li>Creating Aliases</li>
+                                        <li>Using Aliases</li>
+                                    </ul>
+                                    <h4>Cut and Paste</h4>
+                                    <ul class="list-1">
+                                        <li>Displaying selected characters – using cut</li>
+                                        <li>Displaying selected fields – using delimiters</li>
+                                        <li>Displaying selected files – using paste</li>
+                                        <li>Using the paste with delimiters</li>
+                                    </ul>
+                                    <h4>GREP and EGREP</h4>
+                                    <ul class="list-1">
+                                        <li>Displaying content of the file using GREP</li>
+                                        <li>Displaying content of the file using EGREP</li>
+                                        <li>EGREP Meta-character</li>
+                                        <li>Back Referencing concepts</li>
+                                    </ul>
+                                    <h4>ZIP &amp; TAR</h4>
+                                    <ul class="list-1">
+                                        <li>Zipping a file</li>
+                                        <li>Unzipping a file</li>
+                                        <li>Combining a set of files using TAR</li>
+                                        <li>Extracting TAR file</li>
+                                        <li>Using TAR with ZIP</li>
+                                    </ul>
+                                    <h4>FIND command</h4>
+                                    <ul class="list-1">
+                                        <li>Searching for a file – using find</li>
+                                        <li>Finding List of files and directories</li>
+                                        <li>Finding Last modified files</li>
+                                        <li>Find with -exec</li>
+                                        <li>Find with -xargs</li>
+                                    </ul>
+                                    <h4>Handling Jobs</h4>
+                                    <ul class="list-1">
+                                        <li>Using /dev/null</li>
+                                        <li>Foreground Jobs</li>
+                                        <li>Background Jobs – &amp;</li>
+                                        <li>Stopping Jobs – kill</li>
+                                        <li>Changing Permissions – chmod</li>
+                                    </ul>
+                                    <h4>Shell Programming</h4>
+                                    <h4>Introduction to Shell</h4>
+                                    <ul class="list-1">
+                                        <li>Basics of Shell</li>
+                                        <li>Set and Unset a variable</li>
+                                        <li>Displaying – using echo</li>
+                                        <li>Using Expr</li>
+                                        <li>Using Test</li>
+                                        <li>Getting input – using read</li>
+                                        <li>Header file of shell script – using Shabang (#!)</li>
+                                        <li>Sample Shell script program</li>
+                                    </ul>
+                                    <h4>Command Substitution</h4>
+                                    <ul class="list-1">
+                                        <li>Assigning a command to a variable</li>
+                                        <li>Storing output to a variable</li>
+                                        <li>Assigning global value – using Export</li>
+                                    </ul>
+                                    <h4>Command Line Arguments</h4>
+                                    <ul class="list-1">
+                                        <li>Passing input in runtime.</li>
+                                        <li>Using input inside a program</li>
+                                    </ul>
+                                    <h4>Conditional &amp; Looping Statement</h4>
+                                    <ul class="list-1">
+                                        <li>Using if statement</li>
+                                        <li>Using the if-else statement</li>
+                                        <li>Using Nested if statement</li>
+                                        <li>Using ‘While’ Loop</li>
+                                        <li>Using ‘Until’ Loop</li>
+                                        <li>Using ‘For’ Loop</li>
+                                        <li>Using CASE</li>
+                                    </ul>
+                                    <h4>Functions</h4>
+                                    <ul class="list-1">
+                                        <li>Creating a function</li>
+                                        <li>Calling a function in file</li>
+                                        <li>Calling a function in another file</li>
+                                    </ul>
+                                    <h4>Advanced Commands</h4>
+                                    <ul class="list-1">
+                                        <li>SED</li>
+                                        <li>Replacing values in a file</li>
+                                        <li>STTY</li>
+                                        <li>TOP</li>
+                                        <li>Sending an email – using MAIL</li>
+                                        <li>HERE</li>
+                                    </ul>
+                                    <h4>Editors</h4>
+                                    <ul class="list-1">
+                                        <li>NANO</li>
+                                        <li>PICO</li>
+                                        <li>GEDIT</li>
+                                        <li>Vi Editor</li>
+                                    </ul>
+                                    <h4>AWK</h4>
+                                    <ul class="list-1">
+                                        <li>Basics of AWK</li>
+                                        <li>Displaying values – using awk</li>
+                                        <li>Using awk in Shell script</li>
+                                    </ul>
+                                    <h4>Scheduler</h4>
+                                    <ul class="list-1">
+                                        <li>Scheduling a job – using ‘Crontab’</li>
+                                        <li>Scheduling a job – using ‘at’</li>
+                                    </ul>
+                                    <h4>Advanced Shell Scripting</h4>
+                                    <ul class="list-1">
+                                        <li>Monitoring a file</li>
+                                        <li>Extracting data from HTML/XML file</li>
+                                    </ul>
+                                    <h4>Database Connectivity</h4>
+                                    <ul class="list-1">
+                                        <li>Connecting MYSQL to Shell</li>
+                                        <li>Running SQL queries from Shell Script</li>
+                                        <li>Generating a report and storing in a file Shopping cart</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- div class="common_sections text-center">
+		<h3 class="text-white">Corporate Training</h3>
+		<p class="text-white">If you want to give the Trending technology experience to your esteemed employees, we are here to help you! </p>
+		<a class="btn btn-warning btn-sm" href="#" role="button" data-toggle="modal" data-target="" data-modalnewtitle="Corporate Training" data-gaeventcate="leadModalOpen" data-gaeventlabel="corporateMidBody" title="Contact Corporate Co-Ordinator">Contact Corporate Co-Ordinator</a>
+	</div -->
+                    <!-- Trainer Profile section -->
+                    <section id="Trainer" class="content_widgets course_contents shadow border">
+                        <h2 class="bt_coursetitle"> Trainer Profile of Unix Shell Scripting Training Course </h2>
+                        <p>Our Trainers provide complete freedom to the students, to explore the subject and learn based
+                            on real-time examples. Our trainers help the candidates in completing their projects and
+                            even prepare them for interview questions and
+                            answers. Candidates are free to ask any questions at any time.</p>
+
+                        <ul>
+
+                            <li>Trained more than <strong>2000+</strong> students in a year.</li>
+                            <li>Strong Theoretical & Practical Knowledge.</li>
+                            <li>Certified Professionals with High Grade.</li>
+
+                            <li>Expert level Subject Knowledge and fully up-to-date on real-world industry applications.
+                            </li>
+                            <li>Trainers have Experienced on multiple real-time projects in their Industries.</li>
+
+                        </ul>
+                    </section>
+
+                    <!--  section -->
+                    <section id="" class="content_widgets course_contents shadow border">
+                        <h2 class="bt_coursetitle">Unix Shell Scripting Training Exams </h2>
+                        <div class="">
+                            <div class="">
+                                <p>Yuva Sakthi Academy is Accredited by all major Global Companies around
+                                    the world. We provide after completion of the theoretical and practical sessions to
+                                    fresher’s as well as corporate trainees.</p>
+                                <p>Our at Yuva Sakthi Academy is accredited worldwide. It increases the
+                                    value of your resume and you can attain leading job posts with the help of this
+                                    in leading MNC’s of the world. The
+                                    is only provided after successful completion of our training and practical based
+                                    projects.</p>
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- Features section -->
+                    <section id="features" class="content_widgets course_contents shadow border border-2">
+                        <h2 class="bt_coursetitle">Key Features of Our Training Institute
+                        </h2>
+
+                        <div class="row align-items-center mx-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p> One on One Teaching</p>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p> Flexible Timing</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center  mx-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p>Fully Practical Oriented Classes</p>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center ">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p>Class Room Training</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center  mx-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p>Online Training</p>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p>Corporate Training</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center  mx-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+                                <p> 100 % Placement</p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- Projects section -->
+
+                    <section id="Projects" class="content_widgets course_contents shadow border">
+                        <h2 class="bt_coursetitle">Projects in Unix Shell Scripting Training Course </h2>
+                        <h3>Sales Pipeline Dashboard</h3>
+                        <p>Build a dashboard to get a clearer view of your sales pipeline and know where your leads are
+                            coming from, so that you can double down on your efforts there to meet your targets.</p>
+                        <h3>Sales Growth Dashboard</h3>
+                        <p>Build a dashboard to measure your sales team’s performance and how much revenue can be raised
+                            within a specific time frame.</p>
+                        <h3>Healthcare Data Dashboard</h3>
+                        <p>The Unix Shell Scripting Training Healthcare Data dashboard for hospital managers to manage
+                            and
+                            identify
+                            patients’ risk from one screen.</p>
+
+                    </section>
+
+                    <!-- Review  section -->
+                    <section id="reviews" class="content_widgets course_contents shadow border">
+                        <h2 class="bt_coursetitle">Training Courses Reviews</h2>
+
+
+                        <div class="bt_reviewdetails">
+                            <div class="testimonial">
+                                <div class="description">
+                                    <p>
+                                    <p> I highly recommend the computer training institute for anyone who wants to
+                                        improve their computer skills. The instructors are knowledgeable and patient,
+                                        and they create a comfortable and supportive learning environment. The
+                                        curriculum is well-structured and covers a range of topics, from basic computer
+                                        operations to advanced programming languages. </p>
+                                    </p>
+                                </div>
+                                <div class="pic">
+                                    <p>
+                                        T </p>
+                                </div>
+                                <h3 class="testimonial-title">
+                                    TOM DINESH <span class="star-rating-ex"></span>
+                                </h3>
+
+                            </div>
+                        </div>
+
+
+                        <div class="bt_reviewdetails">
+                            <div class="testimonial">
+                                <div class="description">
+                                    <p>
+                                    <p> *Right place to learn new technologies
+
+                                        *Self motivated staffs ...
+
+                                        *This institution is a good start for emerging youngster who has a passion in
+                                        their life I have trained for core Java. It was very useful to learn java from
+                                        basic level.
+
+                                        *The trainers are knowledgeable and real time worked employees. I like this
+                                        institutions be hope with us. You are really reached your goals.... </p>
+                                    </p>
+                                </div>
+                                <div class="pic">
+                                    <p>
+                                        H </p>
+                                </div>
+                                <h3 class="testimonial-title">
+                                    Harish Arjunan <span class="star-rating-ex"></span>
+                                </h3>
+
+                            </div>
+                        </div>
+
+
+                        <div class="bt_reviewdetails">
+                            <div class="testimonial">
+                                <div class="description">
+                                    <p>
+                                    <p> One of the best academy to easy learn tally prime from kalpana mam one to one
+                                        teaching is very excellent ..,coaching is very good and motivational person are
+                                        here ...great service and excellent teach and friendly staff, good environment
+                                        and comfortable to learn easily
+                                        Thank you for wonderfull guide mam. ....</p>
+                                    </p>
+                                </div>
+                                <div class="pic">
+                                    <p>
+                                        P </p>
+                                </div>
+                                <h3 class="testimonial-title">
+                                    Priya Mohan <span class="star-rating-ex"></span>
+                                </h3>
+
+                            </div>
+                        </div>
+
+
+                        <div class="text-center">
+                            <a href="https://www.google.com/search?q=yuva+sakthi+academy&rlz=1C1UEAD_enIN1014IN1014&oq=yu&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxjjAhiKBTIMCAAQIxgnGOMCGIoFMg8IARAuGCcYrwEYxwEYigUyEwgCEC4YgwEYxwEYsQMY0QMYgAQyCQgDEAAYQxiKBTIPCAQQABhDGIMBGLEDGIoFMgcIBRAAGIAEMgYIBhBFGD0yBggHEEUYPdIBCDExNTNqMWo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                                target="_blank" class="btn btn-primary" title="Explore All Reviews">Explore All Reviews
+                                <i class="fa fa-angle-right"></i></a>
+                        </div>
+
+
+
+                    </section>
+                    <!-- Review  Widgets section -->
+
+                    <!-- Faq section -->
+                    <section id="faq" class="content_widgets course_contents shadow border">
+                        <h2 class="bt_coursetitle">Frequently Asked Questions</h2>
+                        <div class="su-accordion su-u-trim">
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>What is Unix shell scripting?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Unix shell scripting involves writing a series of commands for the Unix shell
+                                        (command-line interpreter) to automate repetitive tasks, perform system
+                                        administration tasks, and execute complex operations.</p>
+                                    <p>Shell scripts are text files containing commands and constructs that the shell
+                                        executes as a single unit. They can combine Unix commands, control structures,
+                                        variables, and functions to create powerful automation scripts.</p>
+                                    <p>Shell scripting is essential for Unix-based systems' administration, automation
+                                        of tasks, and batch processing of commands.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>Which Unix shells are commonly used for
+                                    scripting?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>The most commonly used Unix shells for scripting include:</p>
+                                    <ul>
+                                        <li><strong>Bash (Bourne Again Shell):</strong> Default shell for most Linux
+                                            distributions, offering powerful scripting capabilities, compatibility with
+                                            POSIX standards, and extensive features like arrays, functions, and control
+                                            structures.</li>
+                                        <li><strong>Sh (Bourne Shell):</strong> Original Unix shell, providing basic
+                                            scripting features and compatibility with older Unix systems.</li>
+                                        <li><strong>Ksh (Korn Shell):</strong> Enhances Bourne shell with additional
+                                            features for scripting, including associative arrays, floating-point
+                                            arithmetic, and job control.</li>
+                                        <li><strong>Zsh (Z Shell):</strong> Highly customizable shell with advanced
+                                            scripting features, improved interactive use, and extensive plugin support.
+                                        </li>
+                                        <li><strong>Csh (C Shell):</strong> Designed for interactive use with C-like
+                                            syntax, offering scripting capabilities but less popular for extensive
+                                            scripting due to syntax quirks.</li>
+                                    </ul>
+                                    <p>Developers and system administrators choose a shell based on compatibility,
+                                        features, and specific scripting requirements.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>What are the advantages of using shell scripting
+                                    in Unix?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Shell scripting offers several advantages for Unix system administration and
+                                        automation:</p>
+                                    <ul>
+                                        <li><strong>Automation:</strong> Automate repetitive tasks, such as backups, log
+                                            parsing, and file management, reducing manual effort and minimizing human
+                                            errors.</li>
+                                        <li><strong>Batch processing:</strong> Execute sequences of commands or scripts
+                                            in batch mode, improving efficiency and resource management.</li>
+                                        <li><strong>System administration:</strong> Manage system configurations, user
+                                            accounts, software installations, and network settings through scripted
+                                            procedures.</li>
+                                        <li><strong>Integration:</strong> Integrate diverse Unix utilities, tools, and
+                                            applications into cohesive workflows using scripting constructs.</li>
+                                        <li><strong>Customization:</strong> Customize scripts with variables,
+                                            conditionals, loops, functions, and error handling to meet specific
+                                            operational requirements.</li>
+                                        <li><strong>Rapid prototyping:</strong> Quickly develop and test new procedures,
+                                            configurations, and solutions using shell scripts.</li>
+                                    </ul>
+                                    <p>Effective shell scripting enhances productivity, scalability, and reliability in
+                                        Unix environments, supporting both routine operations and complex system
+                                        management tasks.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>How do you create and execute a shell script in
+                                    Unix?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>To create and execute a shell script in Unix:</p>
+                                    <ol>
+                                        <li>Create a new text file with a .sh extension (e.g., script.sh) using a text
+                                            editor like vi or nano.</li>
+                                        <li>Add shell commands and scripting constructs (e.g., variables, loops,
+                                            conditionals) to the script file.</li>
+                                        <li>Save the script file and make it executable using the chmod command (e.g.,
+                                            chmod +x script.sh).</li>
+                                        <li>Execute the shell script by specifying its path (e.g., ./script.sh) in the
+                                            terminal or shell prompt.</li>
+                                    </ol>
+                                    <p>Ensure the script file begins with a shebang line (e.g., #!/bin/bash) to specify
+                                        the shell interpreter.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>How can you pass arguments to a shell script?
+                                </div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Shell scripts can accept command-line arguments to customize their behavior:</p>
+                                    <ol>
+                                        <li>Define variables or use special variables like $1, $2,...$n to capture
+                                            positional arguments passed to the script.</li>
+                                        <li>Access all arguments passed to the script using $@ or $*.</li>
+                                        <li>Use the shift command to shift positional parameters, enabling iterative
+                                            processing of arguments.</li>
+                                        <li>Validate and sanitize input arguments using conditional statements and
+                                            parameter expansion techniques.</li>
+                                    </ol>
+                                    <p>Passing arguments to shell scripts enables parameterization and flexibility,
+                                        allowing scripts to perform different actions based on user-provided inputs.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>What are conditional statements in Unix shell
+                                    scripting?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Conditional statements in shell scripting allow scripts to make decisions based
+                                        on conditions:</p>
+                                    <ul>
+                                        <li><strong>If statement:</strong> Executes commands based on the evaluation of
+                                            a condition using if, elif (else if), and optionally else branches.</li>
+                                        <li><strong>Case statement:</strong> Performs pattern matching against a value
+                                            and executes corresponding commands based on matching cases.</li>
+                                        <li><strong>Logical operators:</strong> Use logical operators (e.g., &&, ||) to
+                                            combine conditions and create complex conditional expressions.</li>
+                                        <li><strong>Comparison operators:</strong> Compare values using operators like
+                                            == (equal), != (not equal), < (less than),> (greater than), etc.</li>
+                                    </ul>
+                                    <p>Conditional statements enable shell scripts to implement branching logic, handle
+                                        different scenarios, and control program flow based on runtime conditions.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>How does Unix shell scripting handle loops?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Unix shell scripting supports various types of loops for iterative processing:
+                                    </p>
+                                    <ul>
+                                        <li><strong>For loop:</strong> Executes a sequence of commands for a fixed
+                                            number of iterations or over elements in a list/array.</li>
+                                        <li><strong>While loop:</strong> Executes commands repeatedly as long as a
+                                            specified condition remains true.</li>
+                                        <li><strong>Until loop:</strong> Executes commands repeatedly until a specified
+                                            condition becomes true.</li>
+                                        <li><strong>Loop control:</strong> Use control statements like break to exit a
+                                            loop prematurely or continue to skip current iteration and proceed to the
+                                            next.</li>
+                                    </ul>
+                                    <p>Loops in shell scripting facilitate iterative tasks, batch processing, and
+                                        automation by enabling repetitive execution based on specified conditions or
+                                        data sets.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>How can you handle errors and exceptions in Unix
+                                    shell scripts?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Shell scripts can handle errors and exceptions using error handling techniques:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Error checking:</strong> Verify command outputs, file existence, and
+                                            input validations using conditional statements (e.g., if-else).</li>
+                                        <li><strong>Error codes:</strong> Capture and interpret exit statuses (error
+                                            codes) returned by commands using $? and exit commands to set custom error
+                                            codes.</li>
+                                        <li><strong>Error handling:</strong> Implement error handling routines to log
+                                            errors, display error messages, retry failed operations, or gracefully
+                                            terminate the script.</li>
+                                        <li><strong>Trap command:</strong> Use trap to catch signals (e.g., SIGINT,
+                                            SIGTERM) and execute cleanup actions or error recovery procedures.</li>
+                                    </ul>
+                                    <p>Effective error handling ensures robustness, reliability, and graceful failure
+                                        recovery in Unix shell scripts, enhancing script resilience and operational
+                                        stability.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>What are functions in Unix shell scripting? How
+                                    do you define and use them?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Functions in Unix shell scripting encapsulate a set of commands for reuse and
+                                        modularity:</p>
+                                    <ul>
+                                        <li><strong>Function definition:</strong> Define functions using the function
+                                            name followed by parentheses and curly braces containing commands.</li>
+                                        <li><strong>Function parameters:</strong> Pass arguments to functions as
+                                            positional parameters ($1, $2,...$n) within parentheses.</li>
+                                        <li><strong>Local variables:</strong> Declare local variables inside functions
+                                            using the local keyword to restrict variable scope to the function.</li>
+                                        <li><strong>Function invocation:</strong> Call functions by their name followed
+                                            by arguments (if any) to execute encapsulated commands and return values.
+                                        </li>
+                                        <li><strong>Return values:</strong> Use the return statement to return an exit
+                                            status (0 for success, non-zero for failure) from a function.</li>
+                                    </ul>
+                                    <p>Functions promote code reuse, maintainability, and abstraction in shell scripts
+                                        by encapsulating logic into modular units that can be called multiple times with
+                                        different inputs.</p>
+                                </div>
+                            </div>
+                            <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+                                data-anchor-in-url="no">
+                                <div class="su-spoiler-title" tabindex="0" role="button"><span
+                                        class="su-spoiler-icon"></span>How does Unix shell scripting handle input and
+                                    output redirection?</div>
+                                <div class="su-spoiler-content su-u-clearfix su-u-trim">
+                                    <p>Unix shell scripting uses input and output redirection to manage command input
+                                        sources and output destinations:</p>
+                                    <ul>
+                                        <li><strong>Standard input (stdin):</strong> Redirect input from a file, device,
+                                            or command output using the <, <<, and | operators.</li>
+                                        <li><strong>Standard output (stdout):</strong> Redirect command output to a file
+                                            or device using the > and >> operators.</li>
+                                        <li><strong>Standard error (stderr):</strong> Redirect error messages and
+                                            diagnostic output using 2> and 2>> operators.</li>
+                                        <li><strong>Pipes:</strong> Chain commands together using | to redirect stdout
+                                            of one command as stdin to another command, facilitating data processing
+                                            pipelines.</li>
+                                        <li><strong>Here documents:</strong> Use << to create inline input streams
+                                                within scripts for multi-line input or script templating.</li>
+                                    </ul>
+                                    <p>Input and output redirection mechanisms in Unix shell scripting enable efficient
+                                        data handling, command chaining, and file manipulation to achieve desired script
+                                        behavior and automation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs d-none d-lg-block" id="enrollclass">
+                    <div class=" right_form0">
+                        <div class="qckform clearfix" id="stickyqckformdiv">
+                            <div class="help-div">
+                                <h5 class="font-weight-bold">Stay in the loop</h5>
+                                <p class="rightformhelpdivcaption">Enroll for Classroom, Online, Corporate training.</p>
+                                <form name="" id="" method="post" accept-charset="UTF-8" data-url=""
+                                    action="./enroll.php" novalidate>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <span class="input input--nao">
+                                                <input class="input__field input__field--nao" type="text"
+                                                    id="stxtenqname" name="stxtenqname" required="" pattern=".{3,30}"
+                                                    maxlength="30" autocomplete="name">
+                                                <label class="input__label input__label--nao" for="stxtenqname">
+                                                    <span class="input__label-content input__label-content--nao">Name
+                                                        *</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input input--nao">
+                                                <input name="stxtenqmobile" class="input__field input__field--nao d4"
+                                                    id="stxtenqmobile" type="tel" pattern="[6-9]{1}[0-9]{9}"
+                                                    maxlength="10" required="" onkeypress="return isNumberKey(this)"
+                                                    autocomplete="tel-national">
+                                                <label class="input__label input__label--nao mob " for="stxtenqmobile">
+                                                    <span class="input__label-content input__label-content--nao">10
+                                                        Digit Mobile No *</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input input--nao">
+                                                <input class="input__field input__field--nao" type="email"
+                                                    name="stxtenqemail" required="" id="stxtenqemail"
+                                                    autocomplete="email">
+                                                <label class="input__label input__label--nao" for="stxtenqemail">
+                                                    <span class="input__label-content input__label-content--nao">Email
+                                                        *</span>
+                                                </label>
+                                            </span>
+                                        </div>
+
+
+                                        <!-- <div class="form-group">
+                                            <span class="input input--nao">
+                                                <textarea class="input__field input__field--nao" name="content" id="stxtenqdesc"
+                                                    required="required"></textarea>
+                                                <label class="input__label input__label--nao" for="stxtenqdesc">
+                                                    <span class="input__label-content input__label-content--nao">Message
+                                                        *</span>
+                                                </label>
+                                            </span>
+                                        </div> -->
+                                        <input type="text" class="d-none" name="catch1" readonly="">
+                                        <input type="text" class="d-none" name="catch2" value="s" readonly="">
+                                        <input type="submit" class="btn btn-primary btn-block submit-btn text-center"
+                                            name="" value="I'm Interested, Tell me more." id="">
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Location Maps-->
+    <section class="bt_train_locmap">
+        <div class="container-fluid ">
+            <div class="row mb-4">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+                    <div class="bt_neartitle d-flex justify-content-center">
+                        <h2 class="bt_coursetitle"> Yuva Sakthi Academy Training Location</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4 d-flex justify-content-center">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs text-lg">
+                    <div class="bt_addressbox">
+                        <div class="bt_addressbox-details">
+                            <h3 class="fw-bold">Saravanampatti</h3>
+                            <div class="adresseditor-content">
+                                <p style="">95/1<sup>th</sup>Sathy main road,SN complex, <br /> Saravanampatti,
+                                    Coimbatore – 641
+                                    035<br /> Tamil Nadu, India.</p>
+                                <span class="addland"><strong>Landmark:</strong> Hotel Guruamuthas</span>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/place/yuva+sakthi+academy/@11.0742555,76.9992303,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8f7f10a2f9091:0x98cbdcebe6ccb54b!8m2!3d11.0742555!4d77.0018052!16s%2Fg%2F11g9qwc8l3?entry=ttu"
+                            target="_blank" rel="noopener" class=""><button class="btn btn-primary">View
+                                Location</button> </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="bt_support row text-white">
+        <div class="col-md-3">
+            <img src="./image/support.svg" class="img-fluid" alt="image Support">
+        </div>
+        <div class="col-md-3">
+            <h3 style="font-size: 2.5rem;font-weight: 700;">We're here to help</h3>
+        </div>
+        <div class="col-md-6">
+            <p style="font-size: 1rem;font-weight: 700;">Know more about our products, find a sales partner and get
+                specific answers from our expert team any time.</p>
+            <a href="./contact-us.html" data-toggle="" data-target="" data-modalnewtitle="Get Expert Guidance"
+                data-gaeventcate="leadModalOpen" data-gaeventlabel="feesRequestMidBody" class="btn btn-light my-3">Get
+                Support</a>
+        </div>
+    </section>
+    <!--Related Course Sections-->
+
+    <!--Related Interview section starts here-->
+
+    <!--Related Blogs Sections starts here -->
+
+    <!-- Training Location section -->
+    <!-- Fixed Request section -->
+
+
+
+    <script>
+        $(function () {
+            $("#includedFooter").load("footer.html");
+        });
+    </script>
+    <div id="includedFooter" class=""></div>
+    <div id='toTop'>
+        <i class="fa fa-caret-up" aria-hidden="true"></i>
+    </div>
+    <div class="bt_whatsapp">
+        <div class="bt_whatsappdiv">
+            <a href="https://api.whatsapp.com/send?phone=+91-9597684055&text=Looking%20for%20Training" target="_blank"
+                rel="noopener">
+                <img src="../image/whatsapp.svg" class="img-fluid" alt="Yuva Sakthi Academy WhatsApp" width="50px"
+                    height="50px" />
+            </a>
+        </div>
+    </div>
+    <section class="mb_footerscroll d-lg-none">
+        <div class="mb_mask">
+            <div class="mb_box mbbg2">
+                <a href="#" title="Get Training Quote for Free" data-toggle="modal" data-target=""
+                    data-modalnewtitle="Get Training Quote for Free" data-gaeventcate="leadModalOpen"
+                    data-gaeventlabel="demoClassMidBody">Drop a Query</a>
+            </div>
+            <div class="mb_box mbbg1">
+                <a href="tel:+91-9597684055"><i class="fa fa-phone"></i>Call Us</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <link rel='stylesheet' id='su-shortcodes-css' href='./css/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='su-icons-css' href='./css/icons.css' type='text/css' media='all' />
+    <script src="./jquery/jquery.min.js" id="jquery-core-js"></script>
+    <script src="./jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script type='text/javascript' id='su-shortcodes-js-extra'>
+        /* <![CDATA[ */
+        var SUShortcodesL10n = {
+            "noPreview": "This shortcode doesn't work in live preview. Please insert it into editor and preview on the site.",
+            "magnificPopup": {
+                "close": "Close (Esc)",
+                "loading": "Loading...",
+                "prev": "Previous (Left arrow key)",
+                "next": "Next (Right arrow key)",
+                "counter": "%curr% of %total%",
+                "error": "Failed to load content. <a href=\"%url%\" target=\"_blank\"><u>Open link<\/u><\/a>"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script async src="../js/index.js" id="su-shortcodes-js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        id="bootstrap-js"></script>
+    <script async src="../js/chennai.js" id="chennai-js-js"></script>
+
+
+    <script src="../js/imagepopup.js"></script>
+    <script>
+        x = 0;
+        var timer = setInterval(function () {
+            if (jQuery('#statusmsg').is(":visible")) {
+                if (x == 0) {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-9597684055/eJ7zCP-cmpEBENbkq_EC'
+                    });
+                    x = 1;
+                }
+                clearInterval(timer);
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        function fetches() {
+            jQuery.ajax({
+                url: '',
+                type: 'post',
+                data: {
+                    action: 'data_fetch',
+                    keyword: jQuery('#s').val()
+                },
+                success: function (data) {
+                    if ('#s' == "") {
+                        jQuery('#datafetch').html("");
+                        return;
+                    } else {
+                        jQuery('#datafetch').html(data);
+                    }
+                }
+            });
+        }
+    </script>
+    <script>
+        if ($('section').attr('id') == 'placed_section') {
+
+            const filterRole = document.getElementById('filterRole');
+            const filterYear = document.getElementById('filterYear');
+            const filterQualification = document.getElementById('filterQualification');
+
+            const tableBody = document.querySelector('.employee-table tbody');
+            const rows = tableBody.querySelectorAll('tr');
+
+            filterRole.addEventListener('input', updatePlacedTable);
+            filterYear.addEventListener('input', updatePlacedTable);
+            filterQualification.addEventListener('input', updatePlacedTable);
+
+            function updatePlacedTable() {
+                const selectedRole = filterRole.value.toLowerCase();
+                const selectedYear = filterYear.value;
+                const selectedQualification = filterQualification.value.toLowerCase();
+
+                rows.forEach(row => {
+                    const role = row.children[2].textContent.toLowerCase();
+                    const year = row.children[3].textContent;
+                    const qualification = row.children[4].textContent.toLowerCase();
+
+                    if (
+                        (selectedRole === '' || role.includes(selectedRole)) &&
+                        (selectedYear === '' || year.includes(selectedYear)) &&
+                        (selectedQualification === '' || qualification.includes(selectedQualification))
+                    ) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+            const images = document.querySelectorAll('.story-image');
+            let currentIndex = 0;
+
+            function nextImage() {
+                images[currentIndex].classList.remove('visible');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('visible');
+            }
+
+            setInterval(nextImage, 3000);
+        }
+    </script>
+</body>
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Page Caching using disk: enhanced
+
+Served from: www.imagetechnologies.com @ 2023-10-19 20:11:48 by W3 Total Cache
+-->

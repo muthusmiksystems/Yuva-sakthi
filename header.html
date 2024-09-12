@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style id="global-styles-inline-css" type="text/css">
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,
+                    rgb(255, 127, 6) 0%,
+                    rgba(255, 126, 6, 0.63) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,
+                    rgb(122, 220, 180) 0%,
+                    rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,
+                    rgba(252, 185, 0, 1) 0%,
+                    rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,
+                    rgba(255, 105, 0, 1) 0%,
+                    rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,
+                    rgb(238, 238, 238) 0%,
+                    rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,
+                    rgb(74, 234, 220) 0%,
+                    rgb(151, 120, 209) 20%,
+                    rgb(207, 42, 186) 40%,
+                    rgb(238, 44, 130) 60%,
+                    rgb(251, 105, 98) 80%,
+                    rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,
+                    rgb(255, 206, 236) 0%,
+                    rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,
+                    rgb(254, 205, 165) 0%,
+                    rgb(254, 45, 45) 50%,
+                    rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,
+                    rgb(255, 203, 112) 0%,
+                    rgb(199, 81, 192) 50%,
+                    rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg,
+                    rgb(255, 245, 203) 0%,
+                    rgb(182, 227, 212) 50%,
+                    rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg,
+                    rgb(202, 248, 128) 0%,
+                    rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg,
+                    rgb(2, 3, 129) 0%,
+                    rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url("#wp-duotone-dark-grayscale");
+            --wp--preset--duotone--grayscale: url("#wp-duotone-grayscale");
+            --wp--preset--duotone--purple-yellow: url("#wp-duotone-purple-yellow");
+            --wp--preset--duotone--blue-red: url("#wp-duotone-blue-red");
+            --wp--preset--duotone--midnight: url("#wp-duotone-midnight");
+            --wp--preset--duotone--magenta-yellow: url("#wp-duotone-magenta-yellow");
+            --wp--preset--duotone--purple-green: url("#wp-duotone-purple-green");
+            --wp--preset--duotone--blue-orange: url("#wp-duotone-blue-orange");
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+
+
+
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ESWPF36X6"></script>
+
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'G-0ESWPF36X6');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ5GR7Z5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="" style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;" id="">
+        <div class="" id="">
+            <div class=" t_head">
+                <!-- <div class="p-2">
+                    <button style="color: #8004a9;" class="btn hidden  d-lg-none  shadow fw-bold border bg-white"
+                        type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true"
+                        aria-controls="collapseExample">
+                        <span style="font-weight: bold;" ;>Contact Us</span>
+                    </button>
+                </div> -->
+
+                <div class="p-4 row" id="">
+
+                    <!-- <div class=" lh_head_left w-100 col-6 d-flex justify-content-end"> -->
+                    <!-- <div class="col-12 col-md-5 col-lg-6 d-flex align-items-center mb-2 mb-md-0">
+                   <marquee width="100%" direction="left" behavior="scroll" scrollamount="7" class="">
+                                            <span class="text-light h5">Welcome to Our Website! 🌟 Stay Updated with the Latest News and
+                                                Offers. 📢 Check Back Often for More Updates!</span>
+                                        </marquee>
+                </div> -->
+                    <!-- <div class="search_header">
+                        <input aria-label="Enter Course, Category or keyword" class="search_input" type="text"
+                            placeholder="Enter Course, Category or keyword" id="input">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+
+                        <div id="suggestion-box" class="suggestion-box"></div>
+                    </div> -->
+                    <!-- <div class="search_header">
+                        <input aria-label="Enter Course, Category or keyword" class="search_input" type="text"
+                            placeholder="Enter Course, Category or keyword" id="input">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(52, 51, 51, 0.8)"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                        <div id="suggestion-box" class="suggestion-box"></div>
+                    </div> -->
+                    <div
+                        class="col-12 col-lg-6  lh_head_left d-flex align-items-center justify-content-lg-end justify-content-center mb-2 mb-md-0">
+                        <!--   <div class="search_header d-flex align-items-center ">
+                        <div class=" search_box"> <input aria-label="Search Course, Category or keyword"
+                                class="search_input" type="text" placeholder="Search Course, Category or keyword"
+                                id="input"></div>
+                        <div class="">
+                            <button class="search_button" aria-label="Search" id="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="rgba(52, 51, 51, 0.8)" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+
+                            </button>
+                        </div>
+
+                        <div id="suggestion-box" class="suggestion-box"></div>
+                    </div>-->
+                        <div class="search_header d-flex align-items-center ">
+                            <div class="search_box">
+                                <input aria-label="Search Course, Category or keyword" class="search_input" type="text"
+                                    placeholder="Search Course, Category or keyword" id="input">
+                            </div>
+                            <div class="search_but">
+                                <div><button class="search_button p-0 d-flex justify-content-center" aria-label="Search"
+                                        id="search-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff"
+                                            class="bi bi-search" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                        </svg>
+                                    </button></div>
+
+                            </div>
+                            <div id="suggestion-box" class="suggestion-box"></div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- </div> -->
+                    <!-- <div class="col-6 border border-warning">
+                    <div
+                        class="col-6 col-md-4 col-lg-12 border border-info d-flex justify-content-center justify-content-md-end mb-2 mb-md-0 ">
+                        <a href="tel:+91-9597684055"
+                            class="h4 bg-white px-2 py-1 shadow rounded d-flex align-items-center">
+                            <img src="./image/phone-call.png" alt="animated_call" style="height: 18px; width: 18px;">
+                            <span style="color: #8604b1; font-size: 20px;" class="p ml-2">+91 95976 84055</span>
+                        </a>
+                    </div>
+                    <div
+                        class="footer_socialnav col-6 col-md-3 col-lg-6 border border-danger d-flex justify-content-center justify-content-md-end align-items-center">
+                        <ul
+                            class="header_social_list d-flex justify-content-center justify-content-md-end align-items-center">
+                            <li class="mr-2">
+                                <a href="https://www.facebook.com/kalpana.muthukumar.14/" title="Facebook"
+                                    rel="noreferrer" target="_blank">
+                                    <i class="fa fa-facebook cus_fb" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://www.youtube.com/@smiklearn" title="Youtube" rel="noreferrer"
+                                    target="_blank">
+                                    <i class="fa fa-youtube-play cus_play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://www.linkedin.com/in/yuva-sakthi-academy-software-training-institute-16a713303/"
+                                    title="Linkedin" rel="noreferrer" target="_blank">
+                                    <i class="fa fa-linkedin cus_linkd" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/yuva_sakthiacademy?igsh=Zm42amMwejQ0bmk3"
+                                    title="Instagram" rel="noreferrer" target="_blank">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                    <!-- <div class="col-12 col-lg-6  d-flex align-items-center justify-content-lg-end justify-content-center"> -->
+
+                    <!-- <div class="d-flex align-items-center mb-2 mb-md-0   justify-content-end">
+                        <a href="tel:+91-9597684055"
+                            class="h4 bg-white px-2 py-1 shadow rounded d-flex align-items-center">
+                            <img src="./image/phone-call.png" alt="animated_call" style="height: 18px; width: 18px;">
+                            <span style="color: #8604b1; font-size: 20px;" class="p ml-2">+91 95976 84055</span>
+                        </a>
+                    </div>
+
+
+                    <div class="footer_socialnav d-flex align-items-center    ms-5">
+                        <ul class="header_social_list d-flex list-unstyled mb-0 ml-5">
+                            <li class="mr-2">
+                                <a href="https://www.facebook.com/kalpana.muthukumar.14/" title="Facebook"
+                                    rel="noreferrer" target="_blank">
+                                    <i class="fa fa-facebook cus_fb" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://www.youtube.com/@smiklearn" title="Youtube" rel="noreferrer"
+                                    target="_blank">
+                                    <i class="fa fa-youtube-play cus_play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://www.linkedin.com/in/yuva-sakthi-academy-software-training-institute-16a713303/"
+                                    title="Linkedin" rel="noreferrer" target="_blank">
+                                    <i class="fa fa-linkedin cus_linkd" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/yuva_sakthiacademy?igsh=Zm42amMwejQ0bmk3"
+                                    title="Instagram" rel="noreferrer" target="_blank">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                    <div
+                        class="col d-flex flex-column flex-sm-row align-items-center justify-content-lg-end justify-content-center mt-sm-3  mt-lg-0">
+                        <!-- Phone Contact -->
+                        <div
+                            class="col-sm-6 d-flex align-items-center  mb-md-0 justify-content-center justify-content-lg-end w-100 w-lg-auto">
+                            <a href="tel:+91-9597684055"
+                                class="h4 bg-white px-2 py-1 shadow rounded d-flex align-items-center">
+                                <img src="./image/phone-call.png" alt="animated_call"
+                                    style="height: 18px; width: 18px;">
+                                <span style="color: #8604b1; font-size: 20px;" class="p ml-2">+91 95976 84055</span>
+                            </a>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="col footer_socialnav d-flex align-items-center mt-lg-0 w-100 w-lg-auto ml-5">
+
+                            <ul
+                                class="header_social_list d-flex justify-content-center list-unstyled mb-0 ms-0 ms-lg-5">
+                                <li class="mr-2">
+                                    <a href="https://www.facebook.com/smiklearn" title="Facebook" rel="noreferrer"
+                                        target="_blank">
+                                        <i class="fa fa-facebook cus_fb" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="mr-2">
+                                    <a href="https://www.youtube.com/@smiklearn" title="Youtube" rel="noreferrer"
+                                        target="_blank">
+                                        <i class="fa fa-youtube-play cus_play" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="mr-2">
+                                    <a href="https://www.linkedin.com/smiklearn?_l=en_US" title="Linkedin"
+                                        rel="noreferrer" target="_blank">
+                                        <i class="fa fa-linkedin cus_linkd" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/smik_learn2024?igsh=eTl0YXBqNG1yaWpr"
+                                        title="Instagram" rel="noreferrer" target="_blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:smiksystems@gmail.com" title="gmail" rel="noreferrer"
+                                        target="_blank">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/YuvaSakthi123" title="Twitter" rel="noreferrer"
+                                        target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                            <path
+                                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                                                fill="#8604b1" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- </div> -->
+                </div>
+
+
+            </div>
+        </div>
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12 col-xs">
+                        <div class="lh_bannerhead_logo  ">
+                            <a style="text-decoration: none;" href="./index.html"
+                                class="d-flex align-items-center w-auto"
+                                title="Yuva Sakthi Academy | No.1 Training Institute ">
+                                <img src="./image/logosmik.jpg" alt="404" style="height: 40px;">
+                                <p class="head_title text-start">YUVA SAKTHI ACADEMY</p>
+
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class=" col-xl-8 col-lg-9 col-md-12 col-sm-12 col-xs">
+                        <nav class="navbar navbar-expand-lg custom_menus">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul id="menu-primary" class="navbar-nav">
+
+                                    <li class="dropdown nav-item">
+
+                                        <a title="Recommended Courses" href="#" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false"
+                                            class="dropdown-toggle nav-link thirumenu_bg">Recommended
+                                            Courses</a>
+                                        <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-50188"
+                                            role="menu">
+                                            <li class="dropdown">
+                                                <a title="Master Program" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link"
+                                                    id="menu-item-dropdown-61">Saravanampatti</a>
+                                                <ul class="dropdown-menu" role="menu" style="height: auto">
+                                                    <a title="AWS Training" href="./aws.html"
+                                                        class="nav-link dropdown-item">AWS Training</a>
+
+                                                    <a title="Data Science Training" href="./datascience.html"
+                                                        class="nav-link dropdown-item">Data
+                                                        Science
+                                                        Training</a>
+
+                                                    <a title="Data Analytics Courses" href="./data-analytics.html"
+                                                        class="nav-link dropdown-item">Data Analytics
+                                                        Courses</a>
+
+                                                    <a title="Full Stack Developer Training"
+                                                        href="./full-stack-developer-training.html"
+                                                        class="nav-link dropdown-item">Full Stack
+                                                        Developer Training</a>
+
+                                                    <a title="Software Testing Training"
+                                                        href="./software-testing-training.html"
+                                                        class="nav-link dropdown-item">Software Testing
+                                                        Training
+                                                    </a>
+
+                                                    <a title="Python Training" href="./python-training.html"
+                                                        class="nav-link dropdown-item">Python
+                                                        Training</a>
+
+                                                    <a title="Java Training" href="./java-training.html"
+                                                        class="nav-link dropdown-item">Java
+                                                        Training</a>
+
+                                                    <!-- a title="Selenium Training" href="/training-courses/software-testing-training/selenium-training-institute-in-chennai" class="nav-link dropdown-item">Selenium Training</a -->
+
+                                                    <a title="DevOps Training" href="./devops.html"
+                                                        class="nav-link dropdown-item">DevOps
+                                                        Training</a>
+
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Cloud Computing" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link"></a>
+                                                <ul class="dropdown-menu" role="menu" style="height: auto">
+                                                    <a title="AWS Training" href="./aws.html"
+                                                        class="nav-link dropdown-item">AWS Training</a>
+
+                                                    <a title="Full Stack Developer Training"
+                                                        href="./full-stack-developer-training.html"
+                                                        class="nav-link dropdown-item">Full Stack
+                                                        Developer Training</a>
+
+                                                    <a title="Data Science Course" href="./datascience.html"
+                                                        class="nav-link dropdown-item">Data
+                                                        Science Course</a>
+
+                                                    <a title="Data Science Course" href="./data-analytics.html"
+                                                        class="nav-link dropdown-item">Data
+                                                        Analytics Course</a>
+
+                                                    <a title="Software Testing Training"
+                                                        href="./software-testing-training.html"
+                                                        class="nav-link dropdown-item">Software Testing
+                                                        Training</a>
+
+                                                    <a title="Python Training" href="./python-training.html"
+                                                        class="nav-link dropdown-item">Python
+                                                        Training</a>
+
+                                                    <a title="Java Training" href="./java-training.html"
+                                                        class="nav-link dropdown-item">Java
+                                                        Training</a>
+
+                                                    <!-- a title="Selenium Training" href="/training-courses/software-testing-training/selenium-training-institute-in-bangalore" class="nav-link dropdown-item">Selenium Training</a -->
+
+                                                    <a title="DevOps Training" href="./devops.html"
+                                                        class="nav-link dropdown-item">DevOps
+                                                        Training</a>
+
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Combo Courses" href="../special-offers.html"
+                                                    class="nav-link dropdown-item">Combo
+                                                    Courses</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a title="Home Page" href="./index.html" class="nav-link">Home</a>
+                                    </li>
+                                    <li class="dropdown nav-item">
+                                        <a title="Training Courses" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" class="dropdown-toggle nav-link">All Courses</a>
+                                        <ul class="dropdown-menu fw-bold" aria-labelledby="menu-item-dropdown-50188"
+                                            role="menu">
+                                            <li class="dropdown">
+                                                <a title="Master Program" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link" id="menu-item-dropdown-61">Master
+                                                    Program</a>
+                                                <ul class="dropdown-menu" role="menu"
+                                                    style="height: auto;font-weight: 600;">
+                                                    <a title="Cloud Masters Program" href="./cloud-master.html"
+                                                        class="nav-link dropdown-item">Cloud
+                                                        Masters
+                                                        Program</a>
+                                                    <a title="Data Science Masters Program"
+                                                        href="./data-science-master-program.html"
+                                                        class="nav-link dropdown-item">Data Science
+                                                        Masters Program</a>
+                                                    <a title="Full Stack Master Program"
+                                                        href="./java-full-stack-master-program.html"
+                                                        class="nav-link dropdown-item">Java Full Stack Master
+                                                        Program</a>
+
+                                                    <a title="Full Stack Master Program" href="./mern-master.html"
+                                                        class="nav-link dropdown-item">MERN Master
+                                                        Program</a>
+
+                                                    <a title="Full Stack Master Program"
+                                                        href="./mean-stack-training.html"
+                                                        class="nav-link dropdown-item">MEAN Master
+                                                        Program</a>
+
+                                                    <a title="Full Stack Master Program" href="./react-js.html"
+                                                        class="nav-link dropdown-item">React JS Master
+                                                        Program</a>
+
+
+                                                    <a title="dotnet Masters Program"
+                                                        href="./dotnet-masters-program.html"
+                                                        class="nav-link dropdown-item">.NET Masters
+                                                        Program</a>
+
+                                                    <a title="php Masters Program"
+                                                        href="./php-laravel-masters-program.html"
+                                                        class="nav-link dropdown-item">PHP Laravel Masters
+                                                        Program</a>
+
+
+                                                    <a title="Big Data Masters Program"
+                                                        href="./bigdata-master-program.html"
+                                                        class="nav-link dropdown-item">Big Data Masters
+                                                        Program</a>
+                                                    <a title="DevOps Masters Program"
+                                                        href="./devops-master-program.html"
+                                                        class="nav-link dropdown-item">DevOps Masters
+                                                        Program</a>
+                                                    <a title="Software Testing Masters Program"
+                                                        href="./software-testing-master-program.html"
+                                                        class="nav-link dropdown-item">Software
+                                                        Testing Masters Program</a>
+                                                    <a title="Business Intelligence Masters Program"
+                                                        href="./business-intelligence-master-program.html"
+                                                        class="nav-link dropdown-item">Business
+                                                        Intelligence Masters Program</a>
+                                                    <!-- <a title="Freshers Masters Program"
+                                                    href="./freshers-master-program.html"
+                                                    class="nav-link dropdown-item">Freshers Masters
+                                                    Program</a> -->
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Cloud Computing" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Cloud Computing</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="AWS Training" href="./aws.html"
+                                                        class="nav-link dropdown-item">AWS
+                                                        Training</a>
+                                                    <a title="AWS Certified DevOps Training" href="./aws-devops.html"
+                                                        class="nav-link dropdown-item">AWS
+
+                                                        DevOps Training</a>
+                                                    <a title="Azure DevOps Training" href="./azure-devops.html"
+                                                        class="nav-link dropdown-item">Azure DevOps
+                                                        Training</a>
+                                                    <!-- <a title="Salesforce Training" href="./salesforce-training.html"
+                                                        class="nav-link dropdown-item">Salesforce Training</a> -->
+                                                    <a title="Salesforce Developer Training"
+                                                        href="./salesforce-developer.html"
+                                                        class="nav-link dropdown-item">Salesforce
+                                                        Developer Training</a>
+                                                    <a title="Salesforce Administrator Training"
+                                                        href="./salesforce-adminstrator.html"
+                                                        class="nav-link dropdown-item">Salesforce
+                                                        Administrator Training
+                                                    </a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="DBA Training" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Data science
+                                                    &amp; AI</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="Machine Learning Training" href="./machine-learning.html"
+                                                        class="nav-link dropdown-item">Machine Learning
+                                                        Training</a>
+                                                    <a title="Data Science Training" href="./datascience.html"
+                                                        class="nav-link dropdown-item">Data
+                                                        Science
+                                                        Training</a>
+                                                    <a title="Data Science with Python Training"
+                                                        href="./python-with-datascience.html"
+                                                        class="nav-link dropdown-item">Data Science
+                                                        with Python Training</a>
+                                                    <a title="Artificial Intelligence"
+                                                        href="./artificial-intelligence.html"
+                                                        class="nav-link dropdown-item">Artificial Intelligence
+                                                        Training</a>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="DevOps" href="#" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" class="dropdown-toggle nav-link">DevOps</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="Kubernetes Training" href="./kubernetes-training.html"
+                                                        class="nav-link dropdown-item">Kubernetes Training</a>
+                                                    <a title="Docker  Training Course" href="./docker-training.html"
+                                                        class="nav-link dropdown-item">Docker
+                                                        Training
+                                                    </a>
+                                                    <a title="DevOps Training" href="./devops.html"
+                                                        class="nav-link dropdown-item">DevOps
+                                                        Training</a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Programming" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Programming</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="Python Training Course" href="./python-training.html"
+                                                        class="nav-link dropdown-item">Python Training
+                                                        Course</a>
+                                                    <a title="JavaScript Training" href="./javascript-training.html"
+                                                        class="nav-link dropdown-item">JavaScript Training</a>
+                                                    <a title="Unix Shell Scripting Training"
+                                                        href="./unix-shell-scripting-training.html"
+                                                        class="nav-link dropdown-item">Unix Shell Scripting
+                                                        Training</a>
+                                                    <a title="PHP Training" href="./php-training.html"
+                                                        class="nav-link dropdown-item">PHP
+                                                        Training</a>
+                                                    <a title="Java  Training" href="./java-training.html"
+                                                        class="nav-link dropdown-item">Java
+                                                        Training
+                                                    </a>
+                                                    <a title="Dot Net Training" href="./dotnet-training.html"
+                                                        class="nav-link dropdown-item">Dot
+                                                        Net
+                                                        Training</a>
+                                                    <a title="C and C++ Training" href="./c-c++-training.html"
+                                                        class="nav-link dropdown-item">C
+                                                        and C++ Training</a>
+                                                    <a title="R Programming Training"
+                                                        href="./r-programming-training.html"
+                                                        class="nav-link dropdown-item">R Programming
+                                                        Training</a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Software Testing" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Software Testing</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="Selenium Training" href="./selenium-training.html"
+                                                        class="nav-link dropdown-item">Selenium Training
+                                                    </a>
+                                                    <a title="LoadRunner Training" href="./loadrunner-training.html"
+                                                        class="nav-link dropdown-item">LoadRunner Training</a>
+                                                    <a title="Manual Testing Training" href="./jmeter-training.html"
+                                                        class="nav-link dropdown-item">JMeter Training</a>
+                                                    <a title="Manual Testing Training"
+                                                        href="./manual-testing-training.html"
+                                                        class="nav-link dropdown-item">Manual Testing
+                                                        Training</a>
+                                                    <a title="Coded UI Training" href="./coded-ui-training.html"
+                                                        class="nav-link dropdown-item">Coded UI Training</a>
+                                                    <a title="ETL Testing Training" href="./etl-testing-training.html"
+                                                        class="nav-link dropdown-item">ETL Testing Training</a>
+                                                    <a title="Big Data Testing Training"
+                                                        href="./big-data-testing-training.html"
+                                                        class="nav-link dropdown-item">Big Data Testing
+                                                        Training</a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Web Designing" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Web Designing</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="Angular Online Training" href="./angular-training.html"
+                                                        class="nav-link dropdown-item">Angular Training</a>
+                                                    <a title="React Online Training" href="./react-training.html"
+                                                        class="nav-link dropdown-item">React Training</a>
+                                                    <a title="Node.js Online Training" href="./node.js-training.html"
+                                                        class="nav-link dropdown-item">Node.js Training</a>
+                                                    <a title="MEAN Stack Training" href="./mean-stack-training.html"
+                                                        class="nav-link dropdown-item">MEAN Stack Training</a>
+                                                    <a title="HTML Online Training" href="./html-training.html"
+                                                        class="nav-link dropdown-item">HTML
+                                                        Training</a>
+                                                    <a title="CSS Online Training" href="./css-training.html"
+                                                        class="nav-link dropdown-item">CSS
+                                                        Training</a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Database Developer" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Database Developer</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="MySQL Training" href="./mysql-training.html"
+                                                        class="nav-link dropdown-item">MySQL
+                                                        Training</a>
+                                                    <a title="MongoDB Training" href="./mongodb-training.html"
+                                                        class="nav-link dropdown-item">MongoDB Training</a>
+                                                    <a title="SQL Server DBA Training"
+                                                        href="./sql-server-dba-training.html"
+                                                        class="nav-link dropdown-item">SQL Server DBA Training
+                                                    </a>
+                                                    <a title="Apache Cassandra  Training"
+                                                        href="./apache-cassandra-training.html"
+                                                        class="nav-link dropdown-item">Apache Cassandra
+                                                        Training</a>
+                                                    <a title="Teradata  Training" href="./teradata-training.html"
+                                                        class="nav-link dropdown-item">Teradata Training</a>
+                                                    <a title="SQL Server Developer Training"
+                                                        href="./sql-server-developer-training.html"
+                                                        class="nav-link dropdown-item">SQL Server Developer
+                                                        Training</a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Microsoft Training" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Microsoft Training</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <a title="Microsoft Azure Training"
+                                                        href="./microsoft-azure-training.html"
+                                                        class="nav-link dropdown-item">Microsoft Azure
+                                                        Training</a>
+                                                    <a title="Power BI Online Training" href="./power-bi-training.html"
+                                                        class="nav-link dropdown-item">Power BI Training
+                                                    </a>
+                                                    <a title="Microsoft Dynamics CRM Training"
+                                                        href="./microsoft-dynamics-crm-training.html"
+                                                        class="nav-link dropdown-item">Microsoft Dynamics CRM
+                                                        Training
+                                                    </a>
+                                                    <a title="PowerShell Training" href="./powershell-training.html"
+                                                        class="nav-link dropdown-item">PowerShell Training</a>
+
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a title="Project Management" href="#" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="dropdown-toggle nav-link">Project Management</a>
+                                                <ul class="dropdown-menu" role="menu">
+
+                                                    <a title="Agile Training" href="./agile-training.html"
+                                                        class="nav-link dropdown-item">Agile
+                                                        Training</a>
+                                                    <a title="Microsoft Excel Training"
+                                                        href="./microsoft-excel-training.html"
+                                                        class="nav-link dropdown-item">Microsoft Excel
+                                                        Training</a>
+                                                    <a title="Advanced Excel Training"
+                                                        href="./advanced-excel-training.html"
+                                                        class="nav-link dropdown-item">Advanced Excel
+                                                        Training</a>
+                                                    <a title="Scrum Master Training" href="./scrum-master-training.html"
+                                                        class="nav-link dropdown-item">Scrum Master
+                                                        Training</a>
+
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+
+
+
+
+                                    <li>
+                                        <a title="Online Training" href="./online-training.html" class="nav-link">Online
+                                            Training</a>
+                                    </li>
+                                    <li>
+                                        <a title="Corporate Training" href="./corporate-training.html"
+                                            class="nav-link">Corporate Training</a>
+                                    </li>
+                                    <li>
+                                        <a title="Hire Talent" href="./hire-talent.html" class="nav-link">Hire
+                                            Talent</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            var err = 0;
+            var fnam = /^[A-Za-z. ]{3,30}/;
+            var letters = /^[A-Za-z., ]{3,50}/;
+            var numbers = /^\d{10}$/;
+            var msg = /^[0-9a-zA-Z,\_:. ]+$/;
+            var j_title = document.getElementById("j_title").value;
+            var c_name = document.getElementById("c_name").value;
+            var f_name = document.getElementById("f_name").value;
+            var y_phone = document.getElementById("y_phone").value;
+            var y_email = document.getElementById("y_email").value;
+            if (
+                j_title == "" ||
+                c_name == "" ||
+                f_name == "" ||
+                y_phone == "" ||
+                y_email == ""
+            ) {
+                err = 1;
+            }
+            var umsg = "Title: " + j_title;
+            if (j_title.match(letters)) {
+                err = 0;
+                if (j_title.length > 50) err = 1;
+            } else {
+                document.getElementById("j_title").style.borderColor = "red";
+                err = 1;
+            }
+            if (f_name.match(fnam)) {
+                err = 0;
+                if (f_name.length > 30) err = 1;
+            } else {
+                document.getElementById("f_name").style.borderColor = "red";
+                err = 1;
+            }
+            if (c_name.match(letters)) {
+                if (c_name.length > 50) err = 1;
+            } else {
+                document.getElementById("c_name").style.borderColor = "red";
+                err = 1;
+            }
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (y_email.match(mailformat)) {
+                err = 0;
+            } else {
+                document.getElementById("y_email").style.borderColor = "red";
+                err = 1;
+            }
+            if (y_phone.match(numbers)) {
+                err = 0;
+                if (y_phone.length > 10) err = 1;
+            } else {
+                document.getElementById("y_phone").style.borderColor = "red";
+                err = 1;
+            }
+            if (umsg.match(msg)) {
+                err = 0;
+            } else {
+                err = 1;
+            }
+            if (err == 1) return false;
+            else return true;
+        }
+    </script>
+
+    <style>
+        section.bt_commonfooter,
+        .inner_cat {
+            display: none !important;
+        }
+
+        body {
+            background: #ffffff;
+        }
+    </style>
+
+
+    <div id="toTop">
+        <i class="fa fa-caret-up" aria-hidden="true"></i>
+    </div>
+    <div class="bt_whatsapp">
+        <div class="bt_whatsappdiv">
+            <a href="https://api.whatsapp.com/send?phone=+91-9597684055&text=Looking%20for%20Training" target="_blank"
+                rel="noopener">
+                <img src="./image/whatsapp.svg" class="img-fluid" alt="Yuva Sakthi Academy WhatsApp" width="50px"
+                    height="50px" />
+            </a>
+        </div>
+    </div>
+    <div class="bt_whatsapp">
+        <div class="bt_whatsappdiv">
+            <li class="mr-2">
+                <a href="https://www.facebook.com/smiklearn" title="Facebook" rel="noreferrer" target="_blank">
+                    <i class="fa fa-facebook cus_fb" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="mr-2">
+                <a href="https://www.youtube.com/@smiklearn" title="Youtube" rel="noreferrer" target="_blank">
+                    <i class="fa fa-youtube-play cus_play" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="mr-2">
+                <a href="https://www.linkedin.com/smiklearn?_l=en_US" title="Linkedin" rel="noreferrer" target="_blank">
+                    <i class="fa fa-linkedin cus_linkd" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/smik_learn2024?igsh=eTl0YXBqNG1yaWpr" title="Instagram"
+                    rel="noreferrer" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:smiksystems@gmail.com" title="gmail" rel="noreferrer" target="_blank">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/YuvaSakthi123" title="Twitter" rel="noreferrer" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                        <path
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                            fill="#8604b1" />
+                    </svg>
+                </a>
+            </li>
+        </div>
+    </div>
+    <section class="mb_footerscroll d-lg-none">
+        <div class="mb_mask">
+            <div class="mb_box mbbg2">
+                <a href="#" title="Get Training Quote for Free" data-toggle="modal" data-target="#enqModal"
+                    data-modalnewtitle="Get Training Quote for Free" data-gaeventcate="leadModalOpen"
+                    data-gaeventlabel="demoClassMidBody">Drop a Query</a>
+            </div>
+            <div class="mb_box mbbg1">
+                <a href="tel:+91-9597684055"><i class="fa fa-phone"></i>Call Us</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="./jquery/jquery.min.js" id="jquery-core-js"></script>
+    <script src="./jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script async src="./js/wp-customer-reviews.js" id="wp-customer-reviews-3-frontend-js"></script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        overflow: hidden;
+      ">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+    <!-- <script src="js/common.js"> </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        id="bootstrap-js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        id="owl.carousel-js"></script>
+    <!-- <script async src="./js/showmore.min.js" id="showmore-js"></script> -->
+    <script async src="./js/app.js" id="app-js"></script>
+
+
+    <script src="./popup/yuvapopup.js"></script>
+    <script>
+        x = 0;
+        var timer = setInterval(function () {
+            if (jQuery("#statusmsg").is(":visible")) {
+                if (x == 0) {
+                    gtag("event", "conversion", {
+                        send_to: "AW-9597684055/eJ7zCP-cmpEBENbkq_EC",
+                    });
+                    x = 1;
+                }
+                clearInterval(timer);
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        function fetches() {
+            jQuery.ajax({
+                url: "",
+                type: "post",
+                data: { action: "data_fetch", keyword: jQuery("#s").val() },
+                success: function (data) {
+                    if ("#s" == "") {
+                        jQuery("#datafetch").html("");
+                        return;
+                    } else {
+                        jQuery("#datafetch").html(data);
+                    }
+                },
+            });
+        }
+    </script>
+    <script>
+        if ($("section").attr("id") == "placed_section") {
+            const filterRole = document.getElementById("filterRole");
+            const filterYear = document.getElementById("filterYear");
+            const filterQualification = document.getElementById(
+                "filterQualification"
+            );
+
+            const tableBody = document.querySelector(".employee-table tbody");
+            const rows = tableBody.querySelectorAll("tr");
+
+            filterRole.addEventListener("input", updatePlacedTable);
+            filterYear.addEventListener("input", updatePlacedTable);
+            filterQualification.addEventListener("input", updatePlacedTable);
+
+            function updatePlacedTable() {
+                const selectedRole = filterRole.value.toLowerCase();
+                const selectedYear = filterYear.value;
+                const selectedQualification = filterQualification.value.toLowerCase();
+
+                rows.forEach((row) => {
+                    const role = row.children[2].textContent.toLowerCase();
+                    const year = row.children[3].textContent;
+                    const qualification = row.children[4].textContent.toLowerCase();
+
+                    if (
+                        (selectedRole === "" || role.includes(selectedRole)) &&
+                        (selectedYear === "" || year.includes(selectedYear)) &&
+                        (selectedQualification === "" ||
+                            qualification.includes(selectedQualification))
+                    ) {
+                        row.style.display = "";
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+            }
+            const images = document.querySelectorAll(".story-image");
+            let currentIndex = 0;
+
+            function nextImage() {
+                images[currentIndex].classList.remove("visible");
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add("visible");
+            }
+
+            setInterval(nextImage, 3000);
+        }
+
+    </script>
+    <script>
+
+
+        var header = document.getElementById("sticky-header");
+        var sticky = header.offsetTop;
+
+        header_height = $('#sticky-header').innerHeight();
+
+        const page = window.pageYOffset
+
+        window.onload = function () {
+            header.classList.remove("sticky-header");
+        }
+
+        window.onscroll = function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky-header");
+
+
+            } else {
+                header.classList.remove("sticky-header");
+
+            }
+
+        }
+
+
+    </script>
+
+    <script>
+
+        const data = [
+            { id: 1, name: "CLOUD MASTERS PROGRAM", description: "Cloud Masters Program Training Course", rating: 4, category: "Masters Program", keywords: "cloud, masters, program, training", url: "cloud-master.html" },
+            { id: 2, name: "DATA SCIENCE MASTERS PROGRAM", description: "Data Science Masters Program. Become a Data Scientist", rating: 4, category: "Masters Program", keywords: "data science, masters, program, data scientist", url: "data-science-master-program.html" },
+            { id: 3, name: "JAVA FULL STACK MASTERS TRAINING", description: "Java Full Stack Development Training. Become a Java Full Stack Developer", rating: 4, category: "Masters Program", keywords: "java, full stack, development, training, java developer", url: "java-full-stack-master-program.html" },
+            { id: 4, name: "MERN STACK MASTERS PROGRAM", description: "MERN Stack Masters Program. Become a MERN Stack Developer", rating: 4, category: "Masters Program", keywords: "mern stack, masters, program, developer", url: "mern-master.html" },
+            { id: 5, name: "MEAN STACK MASTERS PROGRAM", description: "MEAN Stack Training. Become a MEAN Stack Developer", rating: 4, category: "Masters Program", keywords: "mean stack, training, developer", url: "mean-stack-training.html" },
+            { id: 6, name: "REACT JS MASTERS PROGRAM", description: "React JS Training. Master React JS Development.", rating: 4, category: "Masters Program", keywords: "react js, training, development", url: "react-js.html" },
+            { id: 7, name: "DOTNET MASTERS PROGRAM", description: "DotNet Masters Program Master. DotNet Development.", rating: 4, category: "Masters Program", keywords: ".NET, development, masters program", url: "dotnet-masters-program.html" },
+            { id: 8, name: "PHP MASTERS PROGRAM", description: "PHP Masters Program. Master PHP Web Development", rating: 4, category: "Masters Program", keywords: "php, web development, masters program", url: "php-laravel-masters-program.html" },
+            { id: 9, name: "BIG DATA MASTERS PROGRAM", description: "Big Data Masters Program. Become a Big Data Expert.", rating: 4, category: "Masters Program", keywords: "big data, masters program, expert", url: "bigdata-master-program.html" },
+            { id: 10, name: "DEVOPS MASTER PROGRAMS", description: "DevOps Master Program. Master DevOps Practices.", rating: 4, category: "Masters Program", keywords: "devops, master program, practices", url: "devops-master-program.html" },
+            { id: 11, name: "SOFTWARE TESTING MASTERS PROGRAM", description: "Software Testing Masters Program. Master Software Testing Techniques.", rating: 4, category: "Masters Program", keywords: "software testing, masters program, techniques", url: "software-testing-master-program.html" },
+            { id: 12, name: "BUSINESS INTELLIGENCE MASTERS PROGRAM", description: "Business Intelligence Masters Program. Master BI Tools.", rating: 4, category: "Masters Program", keywords: "business intelligence, masters program, BI tools", url: "business-intelligence-master-program.html" },
+            { id: 13, name: "AWS TRAINING COURSE", description: "AWS Training Course. Become an Expert in AWS.", rating: 5, category: "Cloud Computing", keywords: "AWS, cloud computing, training", url: "aws.html" },
+            { id: 14, name: "AWS DEVOPS TRAINING COURSE", description: "AWS DevOps Training Course. Master AWS DevOps Practices.", rating: 5, category: "Cloud Computing", keywords: "AWS, DevOps, training", url: "aws-devops.html" },
+            { id: 15, name: "AZURE DEVOPS TRAINING COURSE", description: "Azure DevOps Training Course. Master Azure DevOps Practices.", rating: 5, category: "Cloud Computing", keywords: "Azure, DevOps, training", url: "azure-devops.html" },
+            { id: 16, name: "SALESFORCE DEVELOPER TRAINING COURSE", description: "Salesforce Developer Training Course. Master Salesforce Developer Platform.", rating: 5, category: "Cloud Computing", keywords: "Salesforce, developer, training", url: "salesforce-developer.html" },
+            { id: 17, name: "SALESFORCE ADMINISTRATOR TRAINING COURSE", description: "Salesforce Administrator Training Course. Master Salesforce Administrator Platform.", rating: 5, category: "AI & Data Science", keywords: "Salesforce, administrator, training", url: "salesforce-administrator.html" },
+            { id: 18, name: "SELENIUM TRAINING COURSE", description: "Selenium Training Course. Master Automation Testing with Selenium", rating: 5, category: "Software Testing", keywords: "selenium, automation testing, course", url: "selenium-training.html" },
+            { id: 19, name: "LOADRUNNER TRAINING COURSE", description: "LoadRunner Training Course. Master Performance Testing with LoadRunner", rating: 5, category: "Software Testing", keywords: "loadrunner, performance testing, course", url: "loadrunner-training.html" },
+            { id: 20, name: "JMETER TRAINING COURSE", description: "JMeter Training Course. Master Performance Testing with JMeter", rating: 5, category: "Software Testing", keywords: "jmeter, performance testing, course", url: "jmeter-training.html" },
+            { id: 21, name: "MANUAL TESTING TRAINING COURSE", description: "Manual Testing Training Course. Master Manual Testing Skills", rating: 5, category: "Software Testing", keywords: "manual testing, skills, course", url: "manual-testing-training.html" },
+            { id: 22, name: "CODED UI TRAINING COURSE", description: "Coded UI Training Course.", rating: 5, category: "Software Testing", keywords: "coded ui, test automation, course", url: "coded-ui-training.html" },
+            { id: 23, name: "ETL TRAINING COURSE", description: "ETL Training Course. Master ETL Processes and Tools", rating: 5, category: "Software Testing", keywords: "etl, data warehousing, course", url: "etl-testing-training.html" },
+            { id: 24, name: "BIG DATA TESTING TRAINING COURSE", description: "Big Data Testing Training Course. Master Big Data Testing", rating: 5, category: "Software Testing", keywords: "big data testing, course", url: "big-data-testing-training.html" },
+            { id: 25, name: "MACHINE LEARNING TRAINING COURSE", description: "Machine Learning Training Course. Master Machine Learning Techniques.", rating: 5, category: "AI & Data Science", keywords: "machine learning, techniques, course", url: "machine-learning.html" },
+            { id: 26, name: "DATA SCIENCE TRAINING COURSE", description: "Data Science Training Course. Master Data Science Techniques.", rating: 5, category: "AI & Data Science", keywords: "data science, techniques, course", url: "datascience.html" },
+            { id: 27, name: "PYTHON WITH DATA SCIENCE TRAINING COURSE", description: "Python with Data Science Training. Master Python for Data Science.", rating: 5, category: "AI & Data Science", keywords: "python, data science, course", url: "python-with-datascience.html" },
+            { id: 28, name: "ARTIFICIAL INTELLIGENCE TRAINING COURSE", description: "Artificial Intelligence Training Course. Master AI Concepts.", rating: 5, category: "AI & Data Science", keywords: "artificial intelligence, ai, course", url: "artificial-intelligence.html" },
+            { id: 29, name: "PYTHON TRAINING COURSE", description: "Python Training Course. Master Python Programming.", rating: 5, category: "Programming", keywords: "python, programming, course", url: "python-training.html" },
+            { id: 30, name: "JAVASCRIPT TRAINING COURSE", description: "JavaScript Training Course. Master JavaScript Development", rating: 5, category: "Programming", keywords: "javascript, development, course", url: "javascript-training.html" },
+            { id: 31, name: "UNIX SHELL SCRIPTING TRAINING COURSE", description: "Unix Shell Scripting Training Course. Master Shell Scripting", rating: 5, category: "Programming", keywords: "unix, shell scripting, course", url: "unix-shell-scripting-training.html" },
+            { id: 32, name: "PHP TRAINING COURSE", description: "PHP Training Course. Master PHP Web Development", rating: 5, category: "Programming", keywords: "php, web development, course", url: "php-training.html" },
+            { id: 33, name: "JAVA TRAINING COURSE", description: "Java Training Course. Master Java Programming", rating: 5, category: "Programming", keywords: "java, programming, course", url: "java-training.html" },
+            { id: 34, name: "DOTNET TRAINING COURSE", description: "DotNet Training Course. Master DotNet Development", rating: 5, category: "Programming", keywords: ".NET, development, course", url: "dotnet-training.html" },
+            { id: 35, name: "C & C++ TRAINING COURSE", description: "C & C++ Training Course. Master C & C++ Programming", rating: 5, category: "Programming", keywords: "c, c++, programming, course", url: "c-c++-training.html" },
+            { id: 36, name: "R PROGRAMMING TRAINING COURSE", description: "R Programming Training Course. Master Data Analysis with R", rating: 5, category: "Programming", keywords: "r, programming, data analysis, course", url: "r-programming-training.html" },
+            { id: 37, name: "ANGULAR TRAINING COURSE", description: "Angular Training Course. Master Angular Framework.", rating: 5, category: "Web Designing", keywords: "angular, framework, course", url: "angular-training.html" },
+            { id: 38, name: "REACT JS TRAINING COURSE", description: "React JS Training Course. Master React JS Development", rating: 5, category: "Web Designing", keywords: "react js, development, course", url: "react-training.html" },
+            { id: 39, name: "NODEJS TRAINING COURSE", description: "NodeJS Training Course. Master NodeJS Development.", rating: 5, category: "Web Designing", keywords: "nodejs, development, course", url: "node.js-training.html" },
+            { id: 40, name: "MEAN STACK TRAINING COURSE", description: "MEAN Stack Training Course. Become a MEAN Stack Developer", rating: 5, category: "Web Designing", keywords: "mean stack, developer, course", url: "mean-stack-training.html" },
+            { id: 41, name: "HTML TRAINING COURSE", description: "HTML Training Course. Master HTML for Web Development", rating: 5, category: "Web Designing", keywords: "html, web development, course", url: "html-training.html" },
+
+            { id: 42, name: "CSS TRAINING COURSE", description: "CSS Training Course. Master CSS for Web Development.", rating: 5, category: "Web Designing", keywords: "css, web development, course", url: "css-training.html" },
+            { id: 43, name: "MySQL Training Course", description: "MySQL Training Course. Master MySQL Database Management.", rating: 5, category: "Databases", keywords: "mysql, database, sql", url: "mysql-training.html" },
+            { id: 44, name: "MongoDB Training Course", description: "MongoDB Training Course. Master MongoDB Database.", rating: 5, category: "Databases", keywords: "mongodb, nosql, database", url: "mongodb-training.html" },
+            { id: 45, name: "SQL Server DBA Training Course", description: "SQL Server DBA Training Course. Master SQL Server Database Administration", rating: 5, category: "Databases", keywords: "sql server, dba, database administration", url: "sql-server-dba-training.html" },
+            { id: 46, name: "Apache Cassandra Training Course", description: "Apache Cassandra Training Course. Master NoSQL Databases.", rating: 5, category: "Databases", keywords: "apache cassandra, nosql, database", url: "apache-cassandra-training.html" },
+            { id: 47, name: "Teradata Training Course", description: "Teradata Training. Master Teradata Database.", rating: 5, category: "Databases", keywords: "teradata, database, data warehousing", url: "teradata-training.html" },
+            { id: 48, name: "SQL Server Developer Training Course", description: "SQL Server Developer Training Course. Master SQL Server Development", rating: 5, category: "Databases", keywords: "sql server, development, database", url: "sql-server-developer-training.html" },
+            { id: 49, name: "Microsoft Azure Training", description: "Microsoft Azure Training. Master Azure Cloud Platform.", rating: 5, category: "Microsoft Training", keywords: "azure, cloud, microsoft", url: "microsoft-azure-training.html" },
+            { id: 50, name: "Power BI Training Course", description: "Power BI Training. Master Data Visualization with Power BI.", rating: 5, category: "Microsoft Training", keywords: "power bi, data visualization, microsoft", url: "power-bi-training.html" },
+            { id: 51, name: "Microsoft Dynamics Training Course", description: "Microsoft Dynamics Training Course. Master Microsoft Dynamics", rating: 5, category: "Microsoft Training", keywords: "microsoft dynamics, crm, erp", url: "microsoft-dynamics-crm-training.html" },
+            { id: 52, name: "PowerShell Training Course", description: "PowerShell Training Course. Master Scripting with PowerShell.", rating: 5, category: "Microsoft Training", keywords: "powershell, scripting, microsoft", url: "powershell-training.html" },
+            { id: 53, name: "Agile Training Course", description: "Agile Training Course. Master Agile Methodologies", rating: 5, category: "Project Management", keywords: "agile, methodologies, project management", url: "agile-training.html" },
+            { id: 54, name: "Microsoft Excel Training Course", description: "Microsoft Excel Training Course. Master Excel Functions", rating: 5, category: "Project Management", keywords: "excel, microsoft, spreadsheet", url: "microsoft-excel-training.html" },
+            { id: 55, name: "Advanced Excel Training Course", description: "Advanced Excel Training Course. Master Functions & Data Analysis", rating: 5, category: "Project Management", keywords: "advanced excel, data analysis, microsoft", url: "advanced-excel-training.html" },
+            { id: 56, name: "Scrum Training Course", description: "Scrum Training. Master Scrum Framework.", rating: 5, category: "Project Management", keywords: "scrum, framework, agile", url: "scrum-master-training.html" }
+
+        ]
+
+
+
+
+        const input = document.getElementById("input");
+
+        const suggestionBox = document.getElementById("suggestion-box");
+        const searchButton = document.getElementById("search-button");
+
+        input.addEventListener("input", () => {
+            const query = input.value.toLowerCase();
+
+            const suggestions = data.filter(item => {
+                const nameMatch = item.name.toLowerCase().includes(query);
+                const keywordsMatch = item.keywords.toLowerCase().includes(query);
+                const categoryMatch = item.category.toLowerCase().includes(query);
+
+                console.log(`Item: ${item.name}`);
+                console.log(`Name Match: ${nameMatch}`);
+                console.log(`Keywords Match: ${keywordsMatch}`);
+                console.log(`Category Match: ${categoryMatch}`);
+
+                return nameMatch || keywordsMatch || categoryMatch;
+            });
+
+
+            suggestionBox.innerHTML = "";
+            if (suggestions.length > 0 && query) {
+                suggestionBox.style.display = "block";
+                suggestions.forEach(suggestion => {
+                    const div = document.createElement("div");
+                    div.classList.add("suggestion-item");
+                    div.textContent = suggestion.name;
+                    div.addEventListener("click", () => {
+                        input.value = suggestion.name;
+                        suggestionBox.style.display = "none";
+                        window.location.href = suggestion.url;
+                    });
+                    suggestionBox.appendChild(div);
+                });
+            } else {
+                suggestionBox.style.display = "none";
+            }
+        });
+
+        searchButton.addEventListener("click", () => {
+            const query = input.value.toLowerCase();
+            const matchedItem = data.find(item => {
+                return item.name.toLowerCase().includes(query) ||
+                    item.keywords.toLowerCase().includes(query) ||
+                    item.category.toLowerCase().includes(query);
+            });
+
+            if (matchedItem) {
+                window.location.href = matchedItem.url;
+            } else {
+                alert("No matching course found.");
+            }
+        });
+
+        document.addEventListener("click", (event) => {
+            if (event.target !== input && !suggestionBox.contains(event.target)) {
+                suggestionBox.style.display = "none";
+            }
+        });
+
+
+    </script>
+
+    <!-- <script>
+        const data = [
+            { id: 1, name: "CLOUD MASTERS PROGRAM", description: "Cloud Masters Program Training Course", rating: 4, category: "Masters Program", keywords: "cloud, masters, program, training", url: "cloud-master.html" },
+            { id: 2, name: "DATA SCIENCE MASTERS PROGRAM", description: "Data Science Masters Program. Become a Data Scientist", rating: 4, category: "Masters Program", keywords: "data science, masters, program, data scientist", url: "data-science-master-program.html" },
+            { id: 3, name: "JAVA FULL STACK MASTERS TRAINING", description: "Java Full Stack Development Training. Become a Java Full Stack Developer", rating: 4, category: "Masters Program", keywords: "java, full stack, development, training, java developer", url: "java-full-stack-master-program.html" },
+            { id: 4, name: "MERN STACK MASTERS PROGRAM", description: "MERN Stack Masters Program. Become a MERN Stack Developer", rating: 4, category: "Masters Program", keywords: "mern stack, masters, program, developer", url: "mern-master.html" },
+            { id: 5, name: "MEAN STACK MASTERS PROGRAM", description: "MEAN Stack Training. Become a MEAN Stack Developer", rating: 4, category: "Masters Program", keywords: "mean stack, training, developer", url: "mean-stack-training.html" },
+            { id: 6, name: "REACT JS MASTERS PROGRAM", description: "React JS Training. Master React JS Development.", rating: 4, category: "Masters Program", keywords: "react js, training, development", url: "react-js.html" },
+            { id: 7, name: "DOTNET MASTERS PROGRAM", description: "DotNet Masters Program Master. DotNet Development.", rating: 4, category: "Masters Program", keywords: ".NET, development, masters program", url: "dotnet-masters-program.html" },
+            { id: 8, name: "PHP MASTERS PROGRAM", description: "PHP Masters Program. Master PHP Web Development", rating: 4, category: "Masters Program", keywords: "php, web development, masters program", url: "php-laravel-masters-program.html" },
+            { id: 9, name: "BIG DATA MASTERS PROGRAM", description: "Big Data Masters Program. Become a Big Data Expert.", rating: 4, category: "Masters Program", keywords: "big data, masters program, expert", url: "bigdata-master-program.html" },
+            { id: 10, name: "DEVOPS MASTER PROGRAMS", description: "DevOps Master Program. Master DevOps Practices.", rating: 4, category: "Masters Program", keywords: "devops, master program, practices", url: "devops-master-program.html" },
+            { id: 11, name: "SOFTWARE TESTING MASTERS PROGRAM", description: "Software Testing Masters Program. Master Software Testing Techniques.", rating: 4, category: "Masters Program", keywords: "software testing, masters program, techniques", url: "software-testing-master-program.html" },
+            { id: 12, name: "BUSINESS INTELLIGENCE MASTERS PROGRAM", description: "Business Intelligence Masters Program. Master BI Tools.", rating: 4, category: "Masters Program", keywords: "business intelligence, masters program, BI tools", url: "business-intelligence-master-program.html" }
+        ];
+
+        const input = document.getElementById("input");
+        const suggestionBox = document.getElementById("suggestion-box");
+        const searchButton = document.getElementById("search-button");
+
+        input.addEventListener("input", () => {
+            const query = input.value.toLowerCase();
+            const suggestions = data.filter(item => {
+                const nameMatch = item.name.toLowerCase().includes(query);
+                const keywordsMatch = item.keywords.toLowerCase().includes(query);
+                const categoryMatch = item.category.toLowerCase().includes(query);
+
+                return nameMatch || keywordsMatch || categoryMatch;
+            });
+
+            suggestionBox.innerHTML = "";
+            if (suggestions.length > 0 && query) {
+                suggestionBox.style.display = "block";
+                suggestions.forEach(suggestion => {
+                    const div = document.createElement("div");
+                    div.classList.add("suggestion-item");
+                    div.textContent = suggestion.name;
+
+                    // Set input value when suggestion is clicked
+                    div.addEventListener("click", () => {
+                        input.value = suggestion.name; // Place suggestion in the input box
+                        suggestionBox.style.display = "none"; // Hide the suggestion box
+                    });
+
+                    suggestionBox.appendChild(div);
+                });
+            } else {
+                suggestionBox.style.display = "none";
+            }
+        });
+
+        searchButton.addEventListener("click", () => {
+
+            const query = input.value.toLowerCase();
+            if (!query) {
+                alert("Oops! Please enter a course name, keyword, or category.");
+                return;
+            }
+            const matchedItem = data.find(item => {
+                return item.name.toLowerCase().includes(query) ||
+                    item.keywords.toLowerCase().includes(query) ||
+                    item.category.toLowerCase().includes(query);
+            });
+
+            if (matchedItem) {
+                window.location.href = matchedItem.url; // Redirect to the matched URL
+            } else {
+                alert("No matching course found.");
+            }
+        });
+
+        document.addEventListener("click", (event) => {
+            if (event.target !== input && !suggestionBox.contains(event.target)) {
+                suggestionBox.style.display = "none"; // Hide suggestion box if clicked outside
+            }
+        });
+    </script> -->
+</body>
