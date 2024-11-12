@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        id="bootstrap-js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/common.js"></script>
+
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .form-group input {
+            outline: none;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            margin: 30px auto;
+            border-radius: 10px;
+            width: 50%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            /* color: #1a73e8; */
+            /* margin-bottom: 20px; */
+            text-align: center;
+        }
+
+        h5,
+        h6 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        /* Dotted bottom border for input fields */
+        .form-control {
+            border: none;
+            /* Remove all borders */
+            border-bottom: 2px dotted #ccc;
+            /* Only bottom border */
+            border-radius: 0;
+            /* Remove rounded corners */
+            height: 30px;
+            /* Adjust height */
+            width: 80%;
+            /* Adjust width */
+            padding: 5px 0;
+            /* Padding for better spacing */
+        }
+
+        /* Dotted bottom border for address with three lines */
+        .address-input {
+            border: none;
+            /* Remove all borders */
+            border-bottom: 2px dotted #ccc;
+            /* Only bottom border */
+            border-radius: 0;
+            /* Remove rounded corners */
+            height: 60px;
+            /* Height adjustment for textarea */
+            width: 80%;
+            /* Adjust width */
+            padding: 5px 0;
+            /* Padding for better spacing */
+        }
+
+        /* Styling for file input labels */
+        /* .custom-file-label::after {
+            content: "Browse";
+        } */
+
+        .btn-primary {
+            background-color: #1a73e8;
+            border-color: #1a73e8;
+            width: 30%;
+        }
+
+        .btn-primary:hover {
+            background-color: #1558c8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+            }
+
+            .form-control,
+            .address-input {
+                width: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>YUVA SAKTHI ACADEMY</h2>
+            <h5>COMPUTER SOFTWARE TRAINING</h5>
+            <h5>Application Form</h5>
+            <form method="post" action="#" enctype="multipart/form-data" class="apcf7-form">
+
+                <!-- Student Name -->
+                <div class="form-group row">
+                    <label for="studentName" class="col-sm-4 col-form-label">STUDENT NAME</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="studentName" id="studentName"
+                            placeholder="Enter student name" required>
+                    </div>
+                </div>
+
+                <!-- Father's Name -->
+                <div class="form-group row">
+                    <label for="fatherName" class="col-sm-4 col-form-label">FATHER NAME</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="fatherName" name="fatherName"
+                            placeholder="Enter father's name" required>
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group row">
+                    <label for="dob" class="col-sm-4 col-form-label">DATE OF BIRTH</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <!-- Qualification -->
+                <div class="form-group row">
+                    <label for="qualification" class="col-sm-4 col-form-label">QUALIFICATION</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="qualification" name="qualification"
+                            placeholder="Enter qualification" required>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group row">
+                    <label for="address" class="col-sm-4 col-form-label">ADDRESS</label>
+                    <div class="col-sm-8">
+                        <textarea class="address-input" id="address" name="address" rows="3" placeholder="Enter address"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group row">
+                    <label for="email" class="col-sm-4 col-form-label">EMAIL</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+                            required>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="form-group row">
+                    <label for="contactInfo" class="col-sm-4 col-form-label">CONTACT INFO</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="contactInfo" name="contactInfo"
+                            placeholder="Enter contact number" required>
+                    </div>
+                </div>
+
+                <!-- Course Info -->
+                <div class="form-group row">
+                    <label for="courseInfo" class="col-sm-4 col-form-label">COURSE NAME</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="courseInfo" name="courseInfo"
+                            placeholder="Enter course details" required>
+                    </div>
+                </div>
+
+                <!-- Reference -->
+                <div class="form-group row">
+                    <label for="reference" class="col-sm-4 col-form-label">REFERENCE</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="reference" name="reference"
+                            placeholder="Enter reference">
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="form-group row">
+                    <label for="status" class="col-sm-4 col-form-label">STATUS</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="status" name="status">
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Application Date -->
+                <div class="form-group row">
+                    <label for="applicationDate" class="col-sm-4 col-form-label">DATE: </label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="applicationDate" name="applicationDate" required>
+                    </div>
+                </div>
+
+                <!-- Photo Upload -->
+                <div class="form-group row">
+                    <label for="photo" class="col-sm-4 col-form-label">Photo</label>
+                    <div class="col-sm-8">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="photo" name="photo" required>
+                            <label class="custom-file-label" for="photo">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signature Upload -->
+                <!-- <div class="form-group row">
+                    <label for="signature" class="col-sm-4 col-form-label">SIGNATURE</label>
+                    <div class="col-sm-8">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="signature" required>
+                            <label class="custom-file-label" for="signature">Choose file</label>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+
+
+    <!-- Script for file input labels -->
+    <script>
+        // Update file input label when a file is selected
+        $('.custom-file-input').on('change', function () {
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+    </script>
+</body>
+
+</html>

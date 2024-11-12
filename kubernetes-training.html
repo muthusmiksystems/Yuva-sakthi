@@ -1,1607 +1,3068 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
+
+
 
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="p:domain_verify" content="ca280439ae739ce624450dca7a438025" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#2389f2" />
 
-    <link rel="profile" href="https://gmpg.org/xfn/11" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="p:domain_verify" content="ca280439ae739ce624450dca7a438025">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script src="./js/fetch-review.js"></script>
+    <meta name="theme-color" content="#2389f2">
+
+    <link rel="canonical" href="https://smiklearn.com/kubernetes-training.html" />
+
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
     <link rel="preconnect" href="https://www.google-analytics.com/" crossorigin>
+
     <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+
     <!-- <link rel="dns-prefetch" href="https://www.imagetechnologies.com"> -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
+
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
+
     <link rel="stylesheet" href="./css/imagepopup.css">
+
     <meta name='robots' content='index, follow' />
+
+
 
     <!-- This site is optimized with the Yoast SEO plugin v18.1 - https://yoast.com/wordpress/plugins/seo/ -->
 
+
+
     <link rel="icon" type="image/x-icon" href="./image/letter-y.png">
+
     <title>Kubernetes Training | Master Container Orchestration</title>
+
     <meta name="description"
+
         content="Learn container orchestration with Kubernetes in our comprehensive training course. Get certified and enhance your career in DevOps.">
+
     <meta name="title" content="Kubernetes Training | Master Container Orchestration">
+
     <meta property="og:locale" content="en_US" />
+
     <meta property="og:type" content="article" />
+
     <meta property="og:title" content="Kubernetes Training">
+
     <meta property="og:description"
+
         content="Learn container orchestration with Kubernetes for managing microservices-based applications.">
 
+
+
     <meta property="article:modified_time" content="2023-09-08T13:26:22+00:00" />
+
     <meta name="twitter:card" content="summary_large_image" />
+
     <meta name="twitter:label1" content="Est. reading time" />
+
     <meta name="twitter:data1" content="1 minute" />
 
 
 
+
+
+
+
     <link rel='dns-prefetch' href='//s.w.org' />
+
     <!-- //video straming -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <!-- <link rel="alternate" type="application/rss+xml" title="Yuva Sakthi Academy &raquo; Feed" href="https://www.imagetechnologies.com/feed" />
+
     <link rel="alternate" type="application/rss+xml" title="Yuva Sakthi Academy &raquo; Comments Feed" href="https://www.imagetechnologies.com/comments/feed" /> -->
 
+
+
     <link rel='stylesheet' id='chennai-css' href='./css/chennai.css' type='text/css' media='all' />
+
     <link rel='stylesheet' id='chennai-mobile-css' href='./css/chennai-mobile.css' type='text/css' media='all' />
+
     <link rel='stylesheet' id='tablepress-custom-css' href='./css/tablepress-custom.min.css' type='text/css'
+
         media='all' />
+
     <!-- <link rel="https://api.w.org/" href="https://www.imagetechnologies.com/wp-json/" /> -->
+
     <!-- <link rel="alternate" type="application/json" href="https://www.imagetechnologies.com/wp-json/wp/v2/pages/71541" />
+
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.imagetechnologies.com/xmlrpc.php?rsd" /> -->
+
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
 
+
+
     <!-- <link rel='shortlink' href='https://www.imagetechnologies.com/?p=71541' /> -->
+
     <!-- <link rel="alternate" type="application/json+oembed" href="https://www.imagetechnologies.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.imagetechnologies.com%2Fdata-analytics-course-in-chennai" />
+
     <link rel="alternate" type="text/xml+oembed" href="https://www.imagetechnologies.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.imagetechnologies.com%2Fdata-analytics-course-in-chennai&#038;format=xml" /> -->
+
     <style type="text/css">
+
         .recentcomments a {
+
             display: inline !important;
+
             padding: 0 !important;
+
             margin: 0 !important;
+
         }
+
     </style>
+
     <!-- script type="text/javascript">
+
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
 ga('create', 'UA-33683228-1', 'auto');
+
 ga('send', 'pageview');
+
 </script -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33683228-1"></script>
+
     <!-- <script>
+
         window.dataLayer = window.dataLayer || [];
 
+
+
         function gtag() {
+
             dataLayer.push(arguments);
+
         }
+
         gtag('js', new Date());
+
+
 
         gtag('config', 'UA-33683228-1');
+
     </script>
 
+
+
     <link href="https://www.googletagmanager.com/gtag/js?id=AW-9597684055" rel="preload" as="script">
+
     <script async="" defer="" src="https://www.googletagmanager.com/gtag/js?id=AW-9597684055"></script>
+
     <script>
+
         window.dataLayer = window.dataLayer || [];
 
+
+
         function gtag() {
+
             dataLayer.push(arguments);
+
         }
+
         gtag('js', new Date());
+
         gtag('config', 'AW-9597684055');
+
     </script> -->
 
 
+
+
+
     <!-- Google Tag Manager -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ESWPF36X6"></script>
+
+
 
     <script>
 
+
+
         window.dataLayer = window.dataLayer || [];
+
+
 
         function gtag() { dataLayer.push(arguments); }
 
+
+
         gtag('js', new Date());
+
+
+
+
 
 
 
         gtag('config', 'G-0ESWPF36X6');
 
+
+
     </script>
+
     <!-- End Google Tag Manager -->
+
 </head>
 
+
+
 <body>
+
     <!-- Google Tag Manager (noscript) -->
+
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ5GR7Z5" height="0" width="0"
+
             style="display:none;visibility:hidden"></iframe></noscript>
+
     <!-- End Google Tag Manager (noscript) -->
 
 
 
+
+
+
+
     <!--
+
         <div class="headClass"></div>
+
     <script src="../js/topnav.js"></script> -->
+
     <!-- <div class="nav1"></div>
+
   <script src="./js/header.js"></script> -->
+
     <script>
+
         $(function () {
+
             $("#includedContent").load("header.html");
+
         });
+
     </script>
+
     <div id="includedContent" class="sticky-top"></div>
+
     <!--Banner section starts-->
+
     <div class="course_banner">
+
         <div class="container-fluid">
+
             <div class="row">
+
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs">
+
                     <div class="banner_title">
+
                         <h1 class="coursepagesingle schedule" data-bemscourseid="423"
+
                             data-bemscoursename="Data Analytics" data-bemscityid="1"> Kubernetes
+
                         </h1>
 
+
+
                         <span class="badge badge-warning">Best Seller</span>
+
                         <span class="star-rating-ex1"><img src="./image/star-rating.webp" loading="lazy"
+
                                 alt="image Star Rating" class="img-fluid" width="85px" height="15px"></span>
+
                         <span class="ratingtitle">1955 Ratings (5.0)</span>
 
+
+
                     </div>
+
                     <div class="bannershow">
+
                         <p>
+
                             Kubernetes is an open-source platform that automates the deployment, scaling, and management
+
                             of containerized applications. Developed by Google and now maintained by the Cloud Native
+
                             Computing Foundation (CNCF), Kubernetes allows you to efficiently manage clusters of
+
                             containers, ensuring seamless load balancing, scaling, and automation. It is widely used to
+
                             build and manage modern, cloud-native applications across diverse environments, making it an
+
                             essential tool for organizations of all sizes.
+
                         </p>
+
                         <p>
+
                             Kubernetes simplifies the orchestration of containers, enabling developers to deploy and
+
                             manage applications with ease. It offers features like automated rollouts, self-healing, and
+
                             service discovery, ensuring that applications remain resilient and scalable. With
+
                             Kubernetes, you can optimize resource utilization and maintain consistent performance,
+
                             whether you're running workloads on-premises, in the cloud, or in hybrid environments.
+
                         </p>
+
+
+
 
 
                     </div>
+
                 </div>
+
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs">
+
                     <div class="video_widget">
+
                         <div class="video_popup">
+
                             <a href="#" title="AWS Training in Chennai" data-toggle="" data-target=""
+
                                 data-modalnewtitle="Get Free Demo Class Video" data-gaeventcate="leadModalOpen"
+
                                 data-gaeventlabel="videoRequestSidebar">
+
                                 <img src="./image/aws-certification-course.avif" alt="AWS Training "
+
                                     title="AWS Training " width="325px" height="205px" class="img-fluid" loading="lazy">
+
                             </a>
+
                         </div>
+
                         <div class="overallbtn">
+
                             <div class="enroll_btn">
+
                                 <a href="#enrollclass" title="Enroll Now" data-toggle="" data-target=""
+
                                     data-modalnewtitle="Get Course Fees &amp; Discounts"
+
                                     data-gaeventcate="leadModalOpen" data-gaeventlabel="feesRequestMidBody">Enroll
+
                                     Now</a>
+
                             </div>
+
                             <div class="download_btn">
+
                                 <a href="#" class="start" data-toggle="modal" data-target="#videoModal"
+
                                     data-modalnewtitle="Get Free Live Videos" data-gaev entcate="leadModalOpen"
+
                                     data-gaeventlabel="freeLiveVideosBanner" title="Free Video"> Get Video Class
+
                                 </a>
+
                             </div>
+
                             <!-- Modal -->
+
                             <div class="modal fade" id="videoModal" tabindex="-1" role="dialog"
+
                                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
                                 <div class="modal-dialog modal-dialog-centered" role="document">
+
                                     <div class="modal-content">
+
                                         <div class="modal-header">
 
+
+
                                             </h5>
+
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
                                                 <span aria-hidden="true">&times;</span>
+
                                             </button>
+
                                         </div>
+
                                         <div class="modal-body">
 
+
+
                                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
                                                 <!-- Indicators -->
+
                                                 <ol class="carousel-indicators">
+
                                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
                                                     <li data-target="#myCarousel" data-slide-to="1"></li>
+
                                                     <li data-target="#myCarousel" data-slide-to="2"></li>
+
                                                 </ol>
 
+
+
                                                 <!-- Wrapper for slides -->
+
                                                 <div class="carousel-inner">
+
                                                     <div class="item active">
+
                                                         <div class="embed-responsive embed-responsive-16by9">
+
                                                             <iframe id="videoFrame" class="embed-responsive-item"
+
                                                                 src="https://www.youtube.com/embed/k_064zngqJQ?si=bNXuzFjDlJPcY6oE"
+
                                                                 allowfullscreen></iframe>
+
                                                         </div>
+
                                                     </div>
 
+
+
                                                     <div class="item">
+
                                                         <div class="embed-responsive embed-responsive-16by9">
+
                                                             <iframe id="videoFrame" class="embed-responsive-item"
+
                                                                 src="https://www.youtube.com/embed/zYgKrAw3LqE?si=akcqMbCzUVpGh-vs"
+
                                                                 allowfullscreen></iframe>
+
                                                         </div>
+
                                                     </div>
 
+
+
                                                     <div class="item">
+
                                                         <div class="embed-responsive embed-responsive-16by9">
+
                                                             <iframe id="videoFrame" class="embed-responsive-item"
+
                                                                 src="https://www.youtube.com/embed/qq3EVXs-fiM?si=Wiwow1rB4VD__94a"
+
                                                                 allowfullscreen></iframe>
+
                                                         </div>
+
                                                     </div>
+
                                                 </div>
 
+
+
                                                 <!-- Left and right controls -->
+
                                                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
                                                     <span class="glyphicon glyphicon-chevron-left"></span>
+
                                                     <span class="sr-only">Previous</span>
+
                                                 </a>
+
                                                 <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
                                                     <span class="glyphicon glyphicon-chevron-right"></span>
+
                                                     <span class="sr-only">Next</span>
+
                                                 </a>
+
                                             </div>
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                             </div>
+
+
 
                             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
                             <script
+
                                 src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
                             <script
+
                                 src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
                         </div>
+
                         <div class="dividerline"></div>
+
                         <div class="online_advicer">
+
                             <p class="quotes">Have Queries? Ask our Experts</p>
+
                             <div class="overallquotes">
+
                                 <div class="quote_left">
+
                                     <i class="fa fa-phone-square" aria-hidden="true"></i>
+
                                 </div>
+
                                 <div class="quote_right">
+
                                     <p><a href="tel:+91-9597684055" title="+91-9597684055">+91-9597684055</a></p>
+
                                     <span> Available 24x7 for your queries</span>
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
     <!--SCroll menu section-->
+
     <section class="staticscrollmenu_wraper d-none d-lg-block">
+
         <div class="container-fluid">
+
             <div class="row">
+
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+
                     <div class="static_secondmenu">
+
                         <ul>
+
                             <li class="active">
+
                                 <a href="#aboutcourses" title="About Courses">About Courses</a>
+
                             </li>
+
                             <li>
+
                                 <a href="#batch_schedule" title="Upcoming Batch">Upcoming Batch </a>
+
                             </li>
+
                             <li>
+
                                 <a href="#coursesyllabus" title="Course Syllabus">Course Syllabus </a>
+
                             </li>
 
+
+
                             <li>
+
                                 <a href="#Trainer" title="Trainer Profile">Trainer Profile</a>
-                            </li>
-                            <li>
-                                <a href="#" title=""></a>
-                            </li>
-                            <li>
-                                <a href="#features" title="Key Features">Key Features</a>
+
                             </li>
 
                             <li>
+
+                                <a href="#" title=""></a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#features" title="Key Features">Key Features</a>
+
+                            </li>
+
+
+
+                            <li>
+
                                 <a href="#Projects" title="Projects">Projects</a>
+
                             </li>
+
                             <li>
+
                                 <a href="#reviews" title="Reviews">Reviews</a>
+
                             </li>
+
                             <li>
+
                                 <a href="#faq" title="FAQ">FAQ</a>
+
                             </li>
+
                         </ul>
+
                         <span class="static_scrollbtn">
+
                             <p href="#" title="Request a Demo" id="requestDemoBtn" data-toggle="modal"
+
                                 data-target="#demoModal" data-modalnewtitle="Avail Free Demo Classes"
+
                                 data-gaeventcate="leadModalOpen" data-gaeventlabel="demoClassMidBody">Request a Demo</p>
+
                         </span>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
     <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel"
+
         aria-hidden="true">
+
         <div class="modal-dialog" role="document">
+
             <div class="modal-content">
+
                 <div class="modal-header">
+
                     <h5 class="modal-title" id="demoModalLabel">Avail Free Demo Classes</h5>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
                         <span aria-hidden="true">&times;</span>
+
                     </button>
+
                 </div>
+
                 <div class="modal-body">
+
                     <!-- Form for requesting a demo -->
+
                     <div class="bt_hirecontact-right">
+
                         <form action="#" method="post" class="wpcf7-form">
+
                             <div class="row">
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform">
+
                                         <div class="form-group">
+
                                             <label>First Name*</label>
+
                                             <input type="text" id="f_name" name="first-name" placeholder="First Name"
+
                                                 required />
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform">
+
                                         <div class="form-group">
+
                                             <label>Last Name*</label>
+
                                             <input type="text" id="l_name" name="last-name" placeholder="Last Name"
+
                                                 required />
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                             </div>
+
                             <div class="row">
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform">
+
                                         <div class="form-group">
+
                                             <label>Email Id*</label>
+
                                             <input type="email" id="e_mail" name="email" pattern=".{3,100}" size="40"
+
                                                 placeholder="Email Id" required />
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform">
+
                                         <div class="form-group">
+
                                             <label>Mobile No*</label>
+
                                             <input type="number" id="phone" name="ph_no" placeholder="Mobile No"
+
                                                 required />
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                             </div>
+
                             <div class="row">
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform">
+
                                         <div class="form-group">
+
                                             <label>Address*</label>
+
                                             <input type="text" id="a_add" name="add" pattern=".{3,50}" size="40"
+
                                                 placeholder="Address" required />
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                             </div>
+
                             <div class="row">
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform">
+
                                         <input type="submit" name="submit_button"
+
                                             class="bt_hire_submit btn btn-primary btn-block" value="Drop the Query">
+
                                     </div>
+
                                 </div>
+
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs">
+
                                     <div class="bt_hireform"></div>
+
                                 </div>
+
                             </div>
+
                         </form>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
     <script src="js/common.js"> </script>
+
     <!--Fixed layout Sections-->
+
     <section class="fixed_menu">
+
         <div class="container-fluid">
+
             <div class="row">
+
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs">
+
                     <!-- About COurse section -->
 
+
+
                     <section id="aboutcourses" class="content_widgets">
+
                         <div class="row">
+
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+
                                 <div class="course_contents">
+
                                     <h2 class="bt_coursetitle"> About Kubernetes Course </h2>
+
                                     <p style="font-weight: 400;">
+
                                         This Kubernetes Course Syllabus is designed to make you proficient in Kubernetes
+
                                         architecture, components, and cluster management, including hands-on experience
+
                                         with GitHub, YAML, Master Nodes, and Pods. Through this in-depth training,
+
                                         you'll learn how to deploy Kubernetes clusters across major cloud platforms such
+
                                         as AWS, Azure, GCP, and Salesforce, alongside Docker containerization.
+
                                         Additionally, the course includes foundational knowledge of Linux, Docker, and
+
                                         DevOps practices, empowering you to become a skilled Kubernetes Administrator.
+
                                         Enroll now to master Kubernetes and enhance your DevOps expertise, all at no
+
                                         extra cost.
+
                                     </p>
 
 
+
+
+
                                     <p><b>Kubernetes Training</b></p>
+
                                     <p>End of this Kubernetes Course you will earn a Valid Google
+
                                         Kubernetes in both Admin and Developer tracks Such as CKA and CKAD
+
                                         and also we offer Yuva Sakthi Academy Course Completion Certificates.
+
                                         By enrolling on Yuva Sakthi Academy Kubernetes Course you will become a
+
                                         certified admin and developer.</p>
+
                                     <p>Docker Kubernetes courses are specially designed to learn about the docker
+
                                         Kubernetes tools in a vast manner. You can gain in-depth knowledge of the
+
                                         deployment, usage and maintaining the applications in Docker
+
                                         Kubernetes.</p>
+
                                     <p>In our Yuva Sakthi Academy institute, you can take the Docker Kubernetes
+
                                         training in flexible timings. We have sufficient facilities
+
                                         to deliver the docker Kubernetes online course for the candidates.
+
                                         At the end of the course, you can avail of the course completion certificate
+
                                         from our institute for later use.</p>
+
                                     <div class="su-accordion su-u-trim">
+
                                         <div class="su-spoiler su-spoiler-style-default " data-scroll-offset="0"
+
                                             data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>What are the Objectives of our Docker
+
                                                 Kubernetes Training?</div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <p>The main objectives of the Docker Kubernetes online course are to</p>
+
                                                 <ul>
+
                                                     <li>Learn the basics of Docker and Kubernetes</li>
+
                                                     <li>Install and run the docker and Kubernetes cluster</li>
+
                                                     <li>Know the containerization and different operations performed in
+
                                                         it</li>
+
                                                     <li>Learn the process of building applications using Docker and
+
                                                         deploying the Kubernetes cluster with the help of tools like
+
                                                         ubuntu.</li>
+
                                                     <li>Know about the architecture and necessary commands of Kubernetes
+
                                                     </li>
+
                                                     <li>Understand the network mechanisms that are available in docker
+
                                                     </li>
+
                                                     <li>Become expertise in creating container-based applications on the
+
                                                         cloud.</li>
+
                                                 </ul>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
+
                                         <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
                                             data-scroll-offset="0" data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>Why should you go for Docker
+
                                                 Kubernetes Training? </div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <ul>
+
                                                     <li>Docker Kubernetes is a blooming technology in this cloud era.
+
                                                     </li>
+
                                                     <li>Has greater scope and job opportunity across the world</li>
+
                                                     <li>Organizations are expanding the chances in docker Kubernetes
+
                                                         technology</li>
+
                                                     <li> is more helpful to get placed in a company</li>
+
                                                     <li>It makes you be well-versed in the docker Kubernetes and its
+
                                                         applications.</li>
+
                                                 </ul>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
+
                                         <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
                                             data-scroll-offset="0" data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>Who should you go for Docker
+
                                                 Kubernetes Training?</div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <p>The candidates who can take the docker Kubernetes online training are
+
                                                 </p>
+
                                                 <ul>
+
                                                     <li>Beginners or newbie who are interested in learning Docker
+
                                                         Kubernetes</li>
+
                                                     <li>Software and testing professionals</li>
+
                                                     <li>Open source enthusiasts</li>
+
                                                     <li>Web developers</li>
+
                                                     <li>Cloud professionals</li>
+
                                                     <li>Software developers and designers</li>
+
                                                     <li>Software development project managers</li>
+
                                                     <li>Professionals who want to enhance their career using docker and
+
                                                         Kubernetes.</li>
+
                                                 </ul>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
+
                                         <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
                                             data-scroll-offset="0" data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>How will Docker Kubernetes
+
                                                 Training help your career?</div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <ul>
+
                                                     <li>The docker Kubernetes online course will be
+
                                                         provided with real-time training</li>
+
                                                     <li>Candidates can able to work with their own project and get ready
+
                                                         for the job</li>
+
                                                     <li>The exams and practical attended during the training will give
+
                                                         you hand for your career</li>
+
                                                     <li>You can get more job opportunities from various part of the
+
                                                         world</li>
+
                                                     <li>The obtained from the institute exposes your
+
                                                         knowledge in Docker Kubernetes</li>
+
                                                     <li>Act as an added advantage for your technological career.</li>
+
                                                 </ul>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
+
                                         <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
                                             data-scroll-offset="0" data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>What are the prerequisites of Docker
+
                                                 Kubernetes ?</div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <ul>
+
                                                     <li>Candidates should understand the basics of Unix/Linux os.</li>
+
                                                     <li>Basic knowledge of windows command line</li>
+
                                                     <li>You should capable of opening the shell or terminal and run the
+
                                                         basic commands</li>
+
                                                     <li>It is better when you know the general concepts of Docker and
+
                                                         Kubernetes.</li>
+
                                                 </ul>
+
                                                 <p>However, the Docker Kubernetes online course doesn’t
+
                                                     require much prior knowledge of the docker.</p>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
+
                                         <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
                                             data-scroll-offset="0" data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>What skills will you learn in Docker
+
                                                 Kubernetes ?</div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <ul>
+
                                                     <li>Application scaling and management</li>
+
                                                     <li>Core concepts of the application containers</li>
+
                                                     <li>Challenges and the best solutions to tackle them</li>
+
                                                     <li>Responsibilities of the docker Kubernetes professional in a
+
                                                         company.</li>
+
                                                 </ul>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
+
                                         <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
                                             data-scroll-offset="0" data-anchor-in-url="no">
+
                                             <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                                     class="su-spoiler-icon"></span>Do you need Programming for Docker
+
                                                 Kubernetes career?</div>
+
                                             <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                                 </p>
+
                                                 <p>While taking the docker Kubernetes online course, it
+
                                                     will become easier to create applications if you know some
+
                                                     programming languages such as java, python, etc. Apart from the
+
                                                     programming
+
                                                     language, you should have an idea about the orchestration tools like
+
                                                     amazon ECS, Mesos and Google container engine.</p>
+
                                                 <p>
+
                                             </div>
+
                                         </div>
-                                    </div>
-                                    <h3>Introduction to Docker and Kubernetes</h3>
-                                    <p>In these days, the docker and Kubernetes are becoming more popular among the
-                                        people for their better benefits. The usage of large-scale distributed systems
-                                        that run on clusters of hundreds, thousands and more servers
-                                        are increased.</p>
-                                    <p>The development, deployment, and management of these systems are economical. This
-                                        led to the creation of Docker and Kubernetes as they may provide efficient
-                                        results.</p>
-                                    <div class="su-accordion su-u-trim">
-                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
-                                            data-scroll-offset="0" data-anchor-in-url="no">
-                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
-                                                    class="su-spoiler-icon"></span>What are Docker and Kubernetes?</div>
-                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
-                                                </p>
-                                                <p>Docker is one of the leading software containerization platforms that
-                                                    are promoted by the company named docker. It provides
-                                                    operating-system-level virtualization which is also referred to as
-                                                    the containers.
-                                                    This docker makes your application into one standardized unit and
-                                                    wraps it into a single file to run on a server.</p>
-                                                <p>Kubernetes is an open-source system established by google to automate
-                                                    the deployment, scaling and managing the containerized applications.
-                                                    The docker and Kubernetes are more beneficial for the users
-                                                    to install and maintain the complex application on any platform.</p>
-                                                <p>
-                                            </div>
-                                        </div>
-                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
-                                            data-scroll-offset="0" data-anchor-in-url="no">
-                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
-                                                    class="su-spoiler-icon"></span>What is Docker Kubernetes used for?
-                                            </div>
-                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
-                                                </p>
-                                                <ul>
-                                                    <li>Docker and Kubernetes are the commonly used tools to deploy
-                                                        containers that are available inside a cluster.</li>
-                                                    <li>They are most useful for managing the cluster of containers and
-                                                        combine all servers into a single unit.</li>
-                                                    <li>The open-source tools are especially used to design, deploy and
-                                                        run the application anywhere.</li>
-                                                </ul>
-                                                <p>These are the major reasons that led to the arrival of docker
-                                                    Kubernetes online courses.</p>
-                                                <p>
-                                            </div>
-                                        </div>
-                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
-                                            data-scroll-offset="0" data-anchor-in-url="no">
-                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
-                                                    class="su-spoiler-icon"></span>What is the difference between Docker
-                                                and Kubernetes?</div>
-                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
-                                                </p>
-                                                <p>The difference between docker and Kubernetes are</p>
-                                                <ul>
-                                                    <li>Installation is simpler in docker than Kubernetes</li>
-                                                    <li>Docker is highly scalable and faster than Kubernetes</li>
-                                                    <li>Kubernetes can deploy the rolling updates and automate the
-                                                        rollbacks which are not possible in the docker</li>
-                                                    <li>The docker can share the storage with any container whereas the
-                                                        Kubernetes can do it with the same pod.</li>
-                                                    <li>Kubernetes make use of the in-built tools and docker utilizes
-                                                        the 3rd party tools for logging and monitoring processes.</li>
-                                                </ul>
-                                                <p>
-                                            </div>
-                                        </div>
-                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
-                                            data-scroll-offset="0" data-anchor-in-url="no">
-                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
-                                                    class="su-spoiler-icon"></span>What is the difference between
-                                                Docker, Kubernetes and VM?</div>
-                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
-                                                </p>
-                                                <p>Docker Kubernetes is a container-based technology that is specially
-                                                    built for running applications. Here, the containers tend to share
-                                                    the host os kernel and provide files to support the process in it.
-                                                </p>
-                                                <p>While coming to the virtual machine (VM), it is not based on the
-                                                    container technology. VM is designed with the userspace kernel of an
-                                                    operating system. The server hardware is virtualized and so it
-                                                    shares
-                                                    hardware resources from the host.</p>
-                                                <p>
-                                            </div>
-                                        </div>
-                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
-                                            data-scroll-offset="0" data-anchor-in-url="no">
-                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
-                                                    class="su-spoiler-icon"></span>Is Docker, Kubernetes an open-source?
-                                            </div>
-                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
-                                                </p>
-                                                <p>Yes, docker Kubernetes is an open-source tool that plays a vital role
-                                                    in creating applications as small containers. The docker platform is
-                                                    used to build a ship and run distributed services anywhere.
-                                                    Kubernetes automates the deployment, scaling, and management of
-                                                    application containers over the cluster of hosts.</p>
-                                                <p>
-                                            </div>
-                                        </div>
+
                                     </div>
 
+                                    <h3>Introduction to Docker and Kubernetes</h3>
+
+                                    <p>In these days, the docker and Kubernetes are becoming more popular among the
+
+                                        people for their better benefits. The usage of large-scale distributed systems
+
+                                        that run on clusters of hundreds, thousands and more servers
+
+                                        are increased.</p>
+
+                                    <p>The development, deployment, and management of these systems are economical. This
+
+                                        led to the creation of Docker and Kubernetes as they may provide efficient
+
+                                        results.</p>
+
+                                    <div class="su-accordion su-u-trim">
+
+                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
+                                            data-scroll-offset="0" data-anchor-in-url="no">
+
+                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
+
+                                                    class="su-spoiler-icon"></span>What are Docker and Kubernetes?</div>
+
+                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
+                                                </p>
+
+                                                <p>Docker is one of the leading software containerization platforms that
+
+                                                    are promoted by the company named docker. It provides
+
+                                                    operating-system-level virtualization which is also referred to as
+
+                                                    the containers.
+
+                                                    This docker makes your application into one standardized unit and
+
+                                                    wraps it into a single file to run on a server.</p>
+
+                                                <p>Kubernetes is an open-source system established by google to automate
+
+                                                    the deployment, scaling and managing the containerized applications.
+
+                                                    The docker and Kubernetes are more beneficial for the users
+
+                                                    to install and maintain the complex application on any platform.</p>
+
+                                                <p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
+                                            data-scroll-offset="0" data-anchor-in-url="no">
+
+                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
+
+                                                    class="su-spoiler-icon"></span>What is Docker Kubernetes used for?
+
+                                            </div>
+
+                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
+                                                </p>
+
+                                                <ul>
+
+                                                    <li>Docker and Kubernetes are the commonly used tools to deploy
+
+                                                        containers that are available inside a cluster.</li>
+
+                                                    <li>They are most useful for managing the cluster of containers and
+
+                                                        combine all servers into a single unit.</li>
+
+                                                    <li>The open-source tools are especially used to design, deploy and
+
+                                                        run the application anywhere.</li>
+
+                                                </ul>
+
+                                                <p>These are the major reasons that led to the arrival of docker
+
+                                                    Kubernetes online courses.</p>
+
+                                                <p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
+                                            data-scroll-offset="0" data-anchor-in-url="no">
+
+                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
+
+                                                    class="su-spoiler-icon"></span>What is the difference between Docker
+
+                                                and Kubernetes?</div>
+
+                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
+                                                </p>
+
+                                                <p>The difference between docker and Kubernetes are</p>
+
+                                                <ul>
+
+                                                    <li>Installation is simpler in docker than Kubernetes</li>
+
+                                                    <li>Docker is highly scalable and faster than Kubernetes</li>
+
+                                                    <li>Kubernetes can deploy the rolling updates and automate the
+
+                                                        rollbacks which are not possible in the docker</li>
+
+                                                    <li>The docker can share the storage with any container whereas the
+
+                                                        Kubernetes can do it with the same pod.</li>
+
+                                                    <li>Kubernetes make use of the in-built tools and docker utilizes
+
+                                                        the 3rd party tools for logging and monitoring processes.</li>
+
+                                                </ul>
+
+                                                <p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
+                                            data-scroll-offset="0" data-anchor-in-url="no">
+
+                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
+
+                                                    class="su-spoiler-icon"></span>What is the difference between
+
+                                                Docker, Kubernetes and VM?</div>
+
+                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
+                                                </p>
+
+                                                <p>Docker Kubernetes is a container-based technology that is specially
+
+                                                    built for running applications. Here, the containers tend to share
+
+                                                    the host os kernel and provide files to support the process in it.
+
+                                                </p>
+
+                                                <p>While coming to the virtual machine (VM), it is not based on the
+
+                                                    container technology. VM is designed with the userspace kernel of an
+
+                                                    operating system. The server hardware is virtualized and so it
+
+                                                    shares
+
+                                                    hardware resources from the host.</p>
+
+                                                <p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="su-spoiler su-spoiler-style-default  su-spoiler-closed"
+
+                                            data-scroll-offset="0" data-anchor-in-url="no">
+
+                                            <div class="su-spoiler-title" tabindex="0" role="button"><span
+
+                                                    class="su-spoiler-icon"></span>Is Docker, Kubernetes an open-source?
+
+                                            </div>
+
+                                            <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
+                                                </p>
+
+                                                <p>Yes, docker Kubernetes is an open-source tool that plays a vital role
+
+                                                    in creating applications as small containers. The docker platform is
+
+                                                    used to build a ship and run distributed services anywhere.
+
+                                                    Kubernetes automates the deployment, scaling, and management of
+
+                                                    application containers over the cluster of hosts.</p>
+
+                                                <p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </section>
+
+
+
 
 
                     <!--Batch Schedule-->
+
                     <section class="content_widgets course_contents shadow border" id="batch_schedule">
+
                         <h2 class="bt_coursetitle">Upcoming Training Batches </h2>
+
                         <p>Yuva Sakthi Academy provides flexible timings to all our students. Here is the Kubernetes
+
                             Training
+
                             Course Schedule in our branches. If this schedule doesn’t match please let us know. We will
+
                             try to arrange appropriate timings based on your flexible timings.</p>
+
                         <div class="btchschedulenew">
+
                             <table class="table table-bordered table-hover">
+
                                 <thead>
+
                                     <tr style="font-weight: bold;">
+
                                         <th>Time</th>
+
                                         <th>Days</th>
+
                                         <th>Batch Type</th>
+
                                         <th>Duration (Per Session)</th>
+
                                     </tr>
+
                                 </thead>
+
                                 <tbody>
+
                                     <tr>
+
                                         <td>8:00AM - 12:00PM</td>
+
                                         <td>Mon - Sat</td>
+
                                         <td>Weekdays Batch</td>
+
                                         <td>4Hr - 5:30Hrs</td>
+
                                     </tr>
+
                                     <tr>
+
                                         <td>12:00PM - 5:00PM</td>
+
                                         <td>Mon - Sat</td>
+
                                         <td>Weekdays Batch</td>
+
                                         <td>4Hr - 5:30Hrs</td>
+
                                     </tr>
+
                                     <tr>
+
                                         <td>5:00PM - 9:00PM</td>
+
                                         <td>Mon - Sat</td>
+
                                         <td>Weekdays Batch</td>
+
                                         <td>4Hr - 5:30Hrs</td>
+
                                     </tr>
+
                                 </tbody>
+
                             </table>
 
+
+
                         </div>
+
                     </section>
+
                     <!-- Offer section -->
+
                     <!-- <div class="triplecoursewidget">
+
                         <h3>Try it out, on us</h3>
+
                         <p>Take the first step in your learning journey. Get hands-on experience and be a master.
+
                             <span>Buy 3 course @24,999/-</span>
+
                         </p>
+
                         <a href="../special-offers.html" target="_blank" class="btn btn-primary"
+
                             title="Learn more">Learn more</a>
+
                     </div> -->
 
+
+
                     <section id="coursesyllabus" class="content_widgets">
+
                         <div class="row">
+
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+
                                 <div class="course_contents">
 
+
+
                                     <div class="d-flex align-items-center justify-content-between">
+
                                         <h2 class="bt_coursetitle">Syllabus of Kubernetes Training</h2>
 
+
+
                                         <div
+
                                             class="d-flex align-items-center justify-content-center download-button px-3">
+
                                             <img alt="AdobeIcon" width="20" height="20"
+
                                                 src="data:image/webp;base64, UklGRgoBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSKUAAAABcFZba9h8Ej4JkRAHjYPVwSIhEuKgOFkctA46B8VB44B/G2wGImICuF3mfm0UCxWNueyXp4a8E0dEL6VElB5UEEO0CAFGxBEkQInIKePwU/QdabpVqFWsXpPV7M7Io/c+5lcNaqYCgMsCvr9Q1FEJIAGpSZLPZgH42Pbb7HwuRLk/EgLDvOeaG5q593yAt5tCyNPcT4AvC9y3y/5SY1RihKJ+KgQAVlA4ID4AAABQAwCdASoeAB4APikSiEKhoSEUBAAYAoSygDsAfgAARr/YAAD+4CV//+Uq8FjdHn//57R+e0fntH/nhAAAAA=="
+
                                                 loading="lazy" style="margin-right: 10px;">
+
                                             <a href="./pdf/Kubernetes.pdf" class="" download> Download Curriculum</a>
+
                                         </div>
+
                                     </div>
 
+
+
                                     <p><strong>Kubernetes Introduction:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Introduction to Kubernetes, setup and
+
                                         running Docker containers. Running your first app in Kubernetes and load
+
                                         balancing using load balancer.</p>
+
                                     <ul>
+
                                         <li>Containers introduction</li>
+
                                         <li>Kubernetes setup</li>
+
                                         <li>Local setup with Minikube</li>
+
                                         <li>Installing Kubernetes using the Docker client</li>
+
                                         <li>Minikube vs Docker client vs kops vs kubeadm</li>
+
                                         <li>Introduction to kops</li>
+
                                         <li>Building Docker images</li>
+
                                         <li>Docker image registry</li>
+
                                         <li>Running 1st app on Kubernetes</li>
+
                                         <li>Service with load balancer</li>
+
                                         <li>Service with AWS ELB load balancer</li>
+
                                         <li>Practice test</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Kubernetes setup using Minikube</li>
+
                                         <li>Building Docker images</li>
+
                                         <li>Running an app in Kubernetes</li>
+
                                         <li>Load balancing the app</li>
+
                                         <li>Load balancing the app using AWS load balancer</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Kubernetes Basics:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding the architecture and pod
+
                                         lifecycle, creating different services, replicas and setting the health checks
+
                                         for your pods.</p>
+
                                     <ul>
+
                                         <li>Node architecture</li>
+
                                         <li>Replication controller</li>
+
                                         <li>Deployments</li>
+
                                         <li>Services</li>
+
                                         <li>Labels</li>
+
                                         <li>Health checks</li>
+
                                         <li>Readiness probe</li>
+
                                         <li>Pod state</li>
+
                                         <li>Pod lifecycle</li>
+
                                         <li>Secrets</li>
+
                                         <li>Web UI</li>
+
                                         <li>Practice test</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Deploying different kinds of services</li>
+
                                         <li>Replica set and replication controller</li>
+
                                         <li>Deployments and health checks</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Advanced Topics:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Creating persistent volumes, setting up auto
+
                                         scaling and tolerations, monitoring resource usage.</p>
+
                                     <ul>
+
                                         <li>Service directory</li>
+
                                         <li>ConfigMap</li>
+
                                         <li>Ingress controller</li>
+
                                         <li>External DNS</li>
+
                                         <li>Volumes</li>
+
                                         <li>Volumes auto-provisioning</li>
+
                                         <li>Pod presets</li>
+
                                         <li>StatefulSets</li>
+
                                         <li>DaemonSets</li>
+
                                         <li>Resource usage monitoring</li>
+
                                         <li>Auto scaling</li>
+
                                         <li>Affinity / anti-affinity</li>
+
                                         <li>Inter-pod affinity and anti-affinity</li>
+
                                         <li>Taints and tolerations</li>
+
                                         <li>Custom Resource Definitions (CRDs)</li>
+
                                         <li>Operators</li>
+
                                         <li>Practice test</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Using volumes</li>
+
                                         <li>Using DaemonSets</li>
+
                                         <li>Auto scaling</li>
+
                                         <li>Working with StatefulSets</li>
+
                                         <li>Monitoring the resources</li>
+
                                         <li>Using tolerations</li>
+
                                         <li>Creating affinity and inter-pod affinity</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Kubernetes Administrator:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Managing users, maintaining nodes, making
+
                                         nodes highly available, and using TLS.</p>
+
                                     <ul>
+
                                         <li>Kubernetes master services</li>
+
                                         <li>Resource quotas</li>
+
                                         <li>Namespaces</li>
+
                                         <li>User management</li>
+
                                         <li>RBAC</li>
+
                                         <li>Networking</li>
+
                                         <li>Node maintenance</li>
+
                                         <li>High availability</li>
+
                                         <li>TLS on ELB using annotations</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Managing users</li>
+
                                         <li>Working with networking</li>
+
                                         <li>Viewing the resource quotas</li>
+
                                         <li>Maintaining the nodes</li>
+
                                         <li>Making the nodes highly available</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Packaging and Deploying on Kubernetes:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding and creating Helm charts.</p>
+
                                     <ul>
+
                                         <li>Introduction to Helm</li>
+
                                         <li>Creating your own Helm charts</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Working with Helm</li>
+
                                         <li>Creating your own Helm charts</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Continuous Development with Kubernetes:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding Skaffold on a high level.</p>
+
                                     <ul>
+
                                         <li>Introduction to Skaffold</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Getting to know Skaffold</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Serverless on Kubernetes:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding serverless and Kuberless and
+
                                         what you can do with them.</p>
+
                                     <ul>
+
                                         <li>Introduction to serverless</li>
+
                                         <li>Introduction to Kuberless</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Serverless and Kuberless</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Microservices:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding Istio and authenticating users
+
                                         using Istio.</p>
+
                                     <ul>
+
                                         <li>Introduction to Istio</li>
+
                                         <li>Mutual TLS</li>
+
                                         <li>RBAC with Istio</li>
+
                                         <li>End-user authentication with Istio (JWT)</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Working with Istio</li>
+
                                         <li>Authenticating using Istio</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Installing Kubernetes Using kubeadm:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Installing Kubernetes using kubeadm.</p>
+
                                     <ul>
+
                                         <li>Introduction to kubeadm</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Running basic commands using kubeadm</li>
+
                                     </ul>
+
+
 
                                     <p><strong>On-Prem or Cloud-Agnostic Kubernetes:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Using TLS certificates, understanding
+
                                         Kubernetes dashboard, and working with Prometheus.</p>
+
                                     <ul>
+
                                         <li>Managing TLS certificates with cert-manager</li>
+
                                         <li>Kubernetes dashboard</li>
+
                                         <li>Kubernetes with Prometheus</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Managing TLS certificates</li>
+
                                         <li>Setting up and using Kubernetes dashboard</li>
+
                                         <li>Working with Prometheus</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Kubernetes Security:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding and implementing Kubernetes
+
                                         security best practices.</p>
+
                                     <ul>
+
                                         <li>Introduction to Kubernetes Security</li>
+
                                         <li>Pod Security Policies</li>
+
                                         <li>Network Policies</li>
+
                                         <li>Security Contexts</li>
+
                                         <li>RBAC and Network Policies</li>
+
                                     </ul>
+
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
+
                                         <li>Implementing security best practices</li>
+
                                         <li>Configuring Pod Security Policies</li>
+
                                         <li>Applying Network Policies</li>
+
                                     </ul>
+
+
 
                                     <p><strong>Kubernetes Troubleshooting:</strong></p>
+
                                     <p><strong>Learning Objective: </strong>Understanding common issues and how to
+
                                         troubleshoot Kubernetes deployments.</p>
+
                                     <ul>
+
                                         <li>Common Kubernetes issues</li>
+
                                         <li>Troubleshooting Pods</li>
+
                                         <li>Troubleshooting Nodes</li>
+
                                         <li>Using kubectl for debugging</li>
-                                    </ul>
-                                    <p><strong>Hands-On:</strong></p>
-                                    <ul>
-                                        <li>Debugging Pods and Nodes</li>
-                                        <li>Using kubectl commands for troubleshooting</li>
+
                                     </ul>
 
-                                    <p><strong>Exam Preparation:</strong></p>
-                                    <p><strong>Learning Objective: </strong>Preparing for Kubernetes certification
-                                        exams.</p>
-                                    <ul>
-                                        <li>Reviewing exam objectives</li>
-                                        <li>Practice exams</li>
-                                        <li>Study tips</li>
-                                    </ul>
                                     <p><strong>Hands-On:</strong></p>
+
                                     <ul>
-                                        <li>Taking practice exams</li>
-                                        <li>Reviewing sample questions</li>
+
+                                        <li>Debugging Pods and Nodes</li>
+
+                                        <li>Using kubectl commands for troubleshooting</li>
+
                                     </ul>
+
+
+
+                                    <p><strong>Exam Preparation:</strong></p>
+
+                                    <p><strong>Learning Objective: </strong>Preparing for Kubernetes certification
+
+                                        exams.</p>
+
+                                    <ul>
+
+                                        <li>Reviewing exam objectives</li>
+
+                                        <li>Practice exams</li>
+
+                                        <li>Study tips</li>
+
+                                    </ul>
+
+                                    <p><strong>Hands-On:</strong></p>
+
+                                    <ul>
+
+                                        <li>Taking practice exams</li>
+
+                                        <li>Reviewing sample questions</li>
+
+                                    </ul>
+
+
 
                                 </div>
 
+
+
                             </div>
+
                         </div>
+
                     </section>
+
+
+
 
 
                     <!-- div class="common_sections text-center">
+
 		<h3 class="text-white">Corporate Training</h3>
+
 		<p class="text-white">If you want to give the Trending technology experience to your esteemed employees, we are here to help you! </p>
+
 		<a class="btn btn-warning btn-sm" href="#" role="button" data-toggle="modal" data-target="" data-modalnewtitle="Corporate Training" data-gaeventcate="leadModalOpen" data-gaeventlabel="corporateMidBody" title="Contact Corporate Co-Ordinator">Contact Corporate Co-Ordinator</a>
+
 	</div -->
+
                     <!-- Trainer Profile section -->
+
                     <section id="Trainer" class="content_widgets course_contents shadow border">
+
                         <h2 class="bt_coursetitle"> Trainer Profile of Kubernetes Training Course </h2>
+
                         <p>Our Trainers provide complete freedom to the students, to explore the subject and learn based
+
                             on real-time examples. Our trainers help the candidates in completing their projects and
+
                             even prepare them for interview questions and
+
                             answers. Candidates are free to ask any questions at any time.</p>
+
+
 
                         <ul>
 
+
+
                             <li>Trained more than <strong>2000+</strong> students in a year.</li>
+
                             <li>Strong Theoretical & Practical Knowledge.</li>
+
                             <li>Certified Professionals with High Grade.</li>
 
+
+
                             <li>Expert level Subject Knowledge and fully up-to-date on real-world industry applications.
+
                             </li>
+
                             <li>Trainers have Experienced on multiple real-time projects in their Industries.</li>
 
+
+
                         </ul>
+
                     </section>
+
+
+
+
 
 
 
                     <!-- Features section -->
+
                     <section id="features" class="content_widgets course_contents shadow border border-2">
+
                         <h2 class="bt_coursetitle">Key Features of Our Training Institute
+
                         </h2>
 
+
+
                         <div class="row align-items-center mx-3">
+
                             <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+
                                 <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
                                 <p> One on One Teaching</p>
+
                             </div>
+
                             <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+
                                 <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
                                 <p> Flexible Timing</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center  mx-3">
-                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
-                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
-                                <p>Fully Practical Oriented Classes</p>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center ">
-                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
-                                <p>Class Room Training</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center  mx-3">
-                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
-                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
-                                <p>Online Training</p>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
-                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
-                                <p>Corporate Training</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center  mx-3">
-                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
-                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
-                                <p> 100 % Placement</p>
+
                             </div>
 
                         </div>
+
+                        <div class="row align-items-center  mx-3">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
+                                <p>Fully Practical Oriented Classes</p>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center ">
+
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
+                                <p>Class Room Training</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row align-items-center  mx-3">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
+                                <p>Online Training</p>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
+                                <p>Corporate Training</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row align-items-center  mx-3">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12  keythings d-flex align-items-center">
+
+                                <img src="./image/tick.png" alt="ticket" style="height: 40px;float: left;  ">
+
+                                <p> 100 % Placement</p>
+
+                            </div>
+
+
+
+                        </div>
+
+
 
                     </section>
 
+
+
                     <!-- div class="right_div text-center common_sections">
+
 		<h3>Get Sample Resume &amp; Tie-up Companies Details</h3>
+
 		<a class="btn btn-warning btn-sm" href="#" role="button" data-toggle="modal" data-target="" data-modalnewtitle="Get tie-up companies Details" data-gaeventcate="leadModalOpen" data-gaeventlabel="tieupDetailsMidBody" title="Sample Resumes & Tie-up companies">One Step ahead!</a>
+
 	</div -->
 
 
+
+
+
                     <!-- Review  section -->
+
                     <section id="reviews" class="content_widgets course_contents shadow border">
+
                         <h2 class="bt_coursetitle">Training Courses Reviews</h2>
 
 
-                        <div class="bt_reviewdetails">
-                            <div class="testimonial">
-                                <div class="description">
-                                    <p>
-                                    <p> I highly recommend the computer training institute for anyone who wants to
-                                        improve their computer skills. The instructors are knowledgeable and patient,
-                                        and they create a comfortable and supportive learning environment. The
-                                        curriculum is well-structured and covers a range of topics, from basic computer
-                                        operations to advanced programming languages. </p>
-                                    </p>
-                                </div>
-                                <div class="pic">
-                                    <p>
-                                        T </p>
-                                </div>
-                                <h3 class="testimonial-title">
-                                    TOM DINESH <span class="star-rating-ex"></span>
-                                </h3>
-
-                            </div>
+                        <div id="reviewsContainer">
+                            <!-- JavaScript will populate initial reviews here -->
                         </div>
 
-
-                        <div class="bt_reviewdetails">
-                            <div class="testimonial">
-                                <div class="description">
-                                    <p>
-                                    <p> *Right place to learn new technologies
-
-                                        *Self motivated staffs ...
-
-                                        *This institution is a good start for emerging youngster who has a passion in
-                                        their life I have trained for core Java. It was very useful to learn java from
-                                        basic level.
-
-                                        *The trainers are knowledgeable and real time worked employees. I like this
-                                        institutions be hope with us. You are really reached your goals.... </p>
-                                    </p>
-                                </div>
-                                <div class="pic">
-                                    <p>
-                                        H </p>
-                                </div>
-                                <h3 class="testimonial-title">
-                                    Harish Arjunan <span class="star-rating-ex"></span>
-                                </h3>
-
-                            </div>
+                        <!-- Hidden container for additional reviews -->
+                        <div id="moreReviewsContainer" style="display: none;">
+                            <!-- Additional reviews will be displayed here -->
                         </div>
 
-
-                        <div class="bt_reviewdetails">
-                            <div class="testimonial">
-                                <div class="description">
-                                    <p>
-                                    <p> One of the best academy to easy learn tally prime from kalpana mam one to one
-                                        teaching is very excellent ..,coaching is very good and motivational person are
-                                        here ...great service and excellent teach and friendly staff, good environment
-                                        and comfortable to learn easily
-                                        Thank you for wonderfull guide mam. ....</p>
-                                    </p>
-                                </div>
-                                <div class="pic">
-                                    <p>
-                                        P </p>
-                                </div>
-                                <h3 class="testimonial-title">
-                                    Priya Mohan <span class="star-rating-ex"></span>
-                                </h3>
-
-                            </div>
-                        </div>
-
-
+                        <!-- Button to show more reviews -->
                         <div class="text-center">
-                            <a href="https://www.google.com/search?q=yuva+sakthi+academy&rlz=1C1UEAD_enIN1014IN1014&oq=yu&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxjjAhiKBTIMCAAQIxgnGOMCGIoFMg8IARAuGCcYrwEYxwEYigUyEwgCEC4YgwEYxwEYsQMY0QMYgAQyCQgDEAAYQxiKBTIPCAQQABhDGIMBGLEDGIoFMgcIBRAAGIAEMgYIBhBFGD0yBggHEEUYPdIBCDExNTNqMWo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
-                                target="_blank" class="btn btn-primary" title="Explore All Reviews">Explore All Reviews
-                                <i class="fa fa-angle-right"></i></a>
+                            <button type="button" class="btn btn-primary" onclick="toggleReviews()">
+                                Explore All Reviews
+                                <i class="fa fa-angle-right"></i>
+                            </button>
                         </div>
+
+
+
+
 
 
 
                     </section>
+
                     <!-- Review  Widgets section -->
 
+
+
                     <!-- Faq section -->
+
                     <section id="faq" class="content_widgets course_contents shadow border">
+
                         <h2 class="bt_coursetitle">Frequently Asked Questions</h2>
+
                         <div class="su-accordion su-u-trim">
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>What is Kubernetes?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes is an open-source container orchestration platform designed to
+
                                         automate the deployment, scaling, and management of containerized applications.
+
                                         It provides container-centric infrastructure management, enabling efficient
+
                                         application deployment across diverse environments.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>What are the key features of Kubernetes?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes offers features such as automated container deployment and scaling,
+
                                         declarative configuration, service discovery and load balancing, storage
+
                                         orchestration, automated rollouts and rollbacks, self-healing capabilities,
+
                                         secret and configuration management, and horizontal scaling.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>How does Kubernetes help in container management?
+
                                 </div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes simplifies container management by automating the deployment, scaling,
+
                                         and operation of application containers. It provides a platform-agnostic
+
                                         framework that enables seamless orchestration of containers across multiple
+
                                         nodes, ensuring efficient resource utilization and application resilience.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>What are Kubernetes Pods?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes Pods are the smallest deployable units in Kubernetes, consisting of
+
                                         one or more containers that share network and storage resources. Pods
+
                                         encapsulate an application's containers, storage resources, and configuration
+
                                         settings, allowing them to be managed collectively.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>How is Kubernetes different from Docker?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes and Docker serve different purposes in container management. Docker is
+
                                         a platform for building, shipping, and running containers, while Kubernetes is
+
                                         an orchestration tool that automates the deployment and management of containers
+
                                         at scale. Kubernetes can manage Docker containers along with other container
+
                                         runtimes.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>What is Kubernetes Deployment?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes Deployment is a resource object used to declare and manage the
+
                                         lifecycle of a set of replica Pods. It provides declarative updates to
+
                                         applications, ensuring their availability and scalability by handling rolling
+
                                         updates and rollbacks based on defined configurations.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>How can Kubernetes enhance application
+
                                     scalability?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes enables application scalability by automatically scaling the number of
+
                                         application instances (replicas) based on resource usage metrics or
+
                                         custom-defined policies. It supports horizontal scaling of Pods across multiple
+
                                         nodes, ensuring optimal performance and responsiveness under varying workloads.
+
                                     </p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>What role does Kubernetes play in microservices
+
                                     architecture?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes facilitates the deployment and management of microservices within a
+
                                         distributed application architecture. It supports container-based isolation,
+
                                         service discovery, load balancing, and automated scaling of microservices,
+
                                         ensuring high availability, fault tolerance, and efficient resource utilization.
+
                                     </p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>How does Kubernetes handle service discovery and
+
                                     load balancing?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Kubernetes uses Services to abstract access to a set of Pods and provides
+
                                         mechanisms for service discovery and load balancing. It automatically assigns
+
                                         stable IP addresses to Services, routes traffic to available Pods based on
+
                                         defined policies (such as round-robin), and ensures continuous availability of
+
                                         services across the cluster.</p>
+
                                 </div>
+
                             </div>
+
                             <div class="su-spoiler su-spoiler-style-default su-spoiler-closed" data-scroll-offset="0"
+
                                 data-anchor-in-url="no">
+
                                 <div class="su-spoiler-title" tabindex="0" role="button"><span
+
                                         class="su-spoiler-icon"></span>Is Kubernetes suitable for hybrid and multi-cloud
+
                                     environments?</div>
+
                                 <div class="su-spoiler-content su-u-clearfix su-u-trim">
+
                                     <p>Yes, Kubernetes is designed to operate seamlessly across hybrid and multi-cloud
+
                                         environments. It supports deployment across on-premises data centers, public
+
                                         cloud providers (like AWS, Google Cloud, and Azure), and edge computing
+
                                         platforms. Kubernetes' portability and flexibility make it ideal for
+
                                         organizations seeking a unified orchestration solution across diverse
+
                                         infrastructure setups.</p>
+
                                 </div>
+
                             </div>
+
+
 
                         </div>
 
+
+
                     </section>
+
                 </div>
+
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs d-none d-lg-block" id="enrollclass">
+
                     <div class=" right_form0">
+
                         <div class="qckform clearfix" id="stickyqckformdiv">
+
                             <div class="help-div">
+
                                 <h5 class="font-weight-bold">Stay in the loop</h5>
+
                                 <p class="rightformhelpdivcaption">Enroll for Classroom, Online, Corporate training.</p>
+
                                 <form name="" id="" method="post" accept-charset="UTF-8" data-url=""
+
                                     action="./enroll.php" novalidate>
+
                                     <fieldset>
+
                                         <div class="form-group">
+
                                             <span class="input input--nao">
+
                                                 <input class="input__field input__field--nao" type="text"
+
                                                     id="stxtenqname" name="stxtenqname" required="" pattern=".{3,30}"
+
                                                     maxlength="30" autocomplete="name">
+
                                                 <label class="input__label input__label--nao" for="stxtenqname">
+
                                                     <span class="input__label-content input__label-content--nao">Name
+
                                                         *</span>
+
                                                 </label>
+
                                             </span>
+
                                         </div>
+
                                         <div class="form-group">
+
                                             <span class="input input--nao">
+
                                                 <input name="stxtenqmobile" class="input__field input__field--nao d4"
+
                                                     id="stxtenqmobile" type="tel" pattern="[6-9]{1}[0-9]{9}"
+
                                                     maxlength="10" required="" onkeypress="return isNumberKey(this)"
+
                                                     autocomplete="tel-national">
+
                                                 <label class="input__label input__label--nao mob " for="stxtenqmobile">
+
                                                     <span class="input__label-content input__label-content--nao">10
+
                                                         Digit Mobile No *</span>
+
                                                 </label>
+
                                             </span>
+
                                         </div>
+
                                         <div class="form-group">
+
                                             <span class="input input--nao">
+
                                                 <input class="input__field input__field--nao" type="email"
+
                                                     name="stxtenqemail" required="" id="stxtenqemail"
+
                                                     autocomplete="email">
+
                                                 <label class="input__label input__label--nao" for="stxtenqemail">
+
                                                     <span class="input__label-content input__label-content--nao">Email
+
                                                         *</span>
+
                                                 </label>
+
                                             </span>
+
                                         </div>
+
+
+
 
 
                                         <!-- <div class="form-group">
+
                                             <span class="input input--nao">
+
                                                 <textarea class="input__field input__field--nao" name="content" id="stxtenqdesc"
+
                                                     required="required"></textarea>
+
                                                 <label class="input__label input__label--nao" for="stxtenqdesc">
+
                                                     <span class="input__label-content input__label-content--nao">Message
+
                                                         *</span>
+
                                                 </label>
+
                                             </span>
+
                                         </div> -->
+
                                         <input type="text" class="d-none" name="catch1" readonly="">
+
                                         <input type="text" class="d-none" name="catch2" value="s" readonly="">
+
                                         <input type="submit" class="btn btn-primary btn-block submit-btn text-center"
+
                                             name="" value="I'm Interested, Tell me more." id="">
+
                                     </fieldset>
+
                                 </form>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
 
+
+
         </div>
+
     </section>
+
     <!--Location Maps-->
+
     <section class="bt_train_locmap">
+
         <div class="container-fluid ">
+
             <div class="row mb-4">
+
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+
                     <div class="bt_neartitle d-flex justify-content-center">
+
                         <h2 class="bt_coursetitle"> Yuva Sakthi Academy Training Location</h2>
+
                     </div>
+
                 </div>
+
             </div>
+
             <div class="row mb-4 d-flex justify-content-center">
+
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs text-lg">
+
                     <div class="bt_addressbox">
+
                         <div class="bt_addressbox-details">
+
                             <h3 class="fw-bold">Saravanampatti</h3>
+
                             <div class="adresseditor-content">
+
                                 <p style="">95/1<sup>th</sup>Sathy main road,SN complex, <br /> Saravanampatti,
+
                                     Coimbatore – 641
+
                                     035<br /> Tamil Nadu, India.</p>
+
                                 <span class="addland"><strong>Landmark:</strong> Hotel Guruamuthas</span>
+
                             </div>
+
                         </div>
+
                         <a href="https://www.google.com/maps/place/yuva+sakthi+academy/@11.0742555,76.9992303,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8f7f10a2f9091:0x98cbdcebe6ccb54b!8m2!3d11.0742555!4d77.0018052!16s%2Fg%2F11g9qwc8l3?entry=ttu"
+
                             target="_blank" rel="noopener" class=""><button class="btn btn-primary">View
+
                                 Location</button> </a>
+
                     </div>
+
                 </div>
 
 
+
+
+
             </div>
+
         </div>
+
     </section>
+
     <section class="bt_support row text-white">
+
         <div class="col-md-3">
+
             <img src="./image/support.svg" class="img-fluid" alt="image Support">
+
         </div>
+
         <div class="col-md-3">
+
             <h3 style="font-size: 2.5rem;font-weight: 700;">We're here to help</h3>
+
         </div>
+
         <div class="col-md-6">
+
             <p style="font-size: 1rem;font-weight: 700;">Know more about our products, find a sales partner and get
+
                 specific answers from our expert team any time.</p>
+
             <a href="./contact-us.html" data-toggle="" data-target="" data-modalnewtitle="Get Expert Guidance"
+
                 data-gaeventcate="leadModalOpen" data-gaeventlabel="feesRequestMidBody" class="btn btn-light my-3">Get
+
                 Support</a>
+
         </div>
+
     </section>
+
     <!--Related Course Sections-->
+
+
 
     <!--Related Interview section starts here-->
 
+
+
     <!--Related Blogs Sections starts here -->
 
+
+
     <!-- Training Location section -->
+
     <!-- Fixed Request section -->
 
 
 
+
+
+
+
     <script>
+
         $(function () {
+
             $("#includedFooter").load("footer.html");
+
         });
+
     </script>
+
     <div id="includedFooter" class=""></div>
+
     <div id='toTop'>
+
         <i class="fa fa-caret-up" aria-hidden="true"></i>
+
     </div>
+
     <div class="bt_whatsapp">
+
         <div class="bt_whatsappdiv">
+
             <a href="https://api.whatsapp.com/send?phone=+91-9597684055&text=Looking%20for%20Training" target="_blank"
+
                 rel="noopener">
+
                 <img src="../image/whatsapp.svg" class="img-fluid" alt="Yuva Sakthi Academy WhatsApp" width="50px"
+
                     height="50px" />
+
             </a>
+
         </div>
+
     </div>
+
     <section class="mb_footerscroll d-lg-none">
+
         <div class="mb_mask">
+
             <div class="mb_box mbbg2">
+
                 <a href="#" title="Get Training Quote for Free" data-toggle="modal" data-target=""
+
                     data-modalnewtitle="Get Training Quote for Free" data-gaeventcate="leadModalOpen"
+
                     data-gaeventlabel="demoClassMidBody">Drop a Query</a>
+
             </div>
+
             <div class="mb_box mbbg1">
+
                 <a href="tel:+91-9597684055"><i class="fa fa-phone"></i>Call Us</a>
+
             </div>
+
         </div>
+
     </section>
 
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
 
 
     <link rel='stylesheet' id='su-shortcodes-css' href='./css/shortcodes.css' type='text/css' media='all' />
+
     <link rel='stylesheet' id='su-icons-css' href='./css/icons.css' type='text/css' media='all' />
+
     <script src="./jquery/jquery.min.js" id="jquery-core-js"></script>
+
     <script src="./jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+
     <script type='text/javascript' id='su-shortcodes-js-extra'>
+
         /* <![CDATA[ */
+
         var SUShortcodesL10n = {
+
             "noPreview": "This shortcode doesn't work in live preview. Please insert it into editor and preview on the site.",
+
             "magnificPopup": {
+
                 "close": "Close (Esc)",
+
                 "loading": "Loading...",
+
                 "prev": "Previous (Left arrow key)",
+
                 "next": "Next (Right arrow key)",
+
                 "counter": "%curr% of %total%",
+
                 "error": "Failed to load content. <a href=\"%url%\" target=\"_blank\"><u>Open link<\/u><\/a>"
+
             }
+
         };
+
         /* ]]> */
+
     </script>
+
     <script async src="../js/index.js" id="su-shortcodes-js"></script>
+
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+
         id="bootstrap-js"></script>
+
     <script async src="../js/chennai.js" id="chennai-js-js"></script>
 
 
 
+
+
+
+
     <script src="../js/imagepopup.js"></script>
+
     <script>
+
         x = 0;
+
         var timer = setInterval(function () {
+
             if (jQuery('#statusmsg').is(":visible")) {
+
                 if (x == 0) {
+
                     gtag('event', 'conversion', {
+
                         'send_to': 'AW-9597684055/eJ7zCP-cmpEBENbkq_EC'
+
                     });
+
                     x = 1;
+
                 }
+
                 clearInterval(timer);
+
             }
+
         })
+
     </script>
+
     <script type="text/javascript">
+
         function fetches() {
+
             jQuery.ajax({
+
                 url: '',
+
                 type: 'post',
+
                 data: {
+
                     action: 'data_fetch',
+
                     keyword: jQuery('#s').val()
+
                 },
+
                 success: function (data) {
+
                     if ('#s' == "") {
+
                         jQuery('#datafetch').html("");
+
                         return;
+
                     } else {
+
                         jQuery('#datafetch').html(data);
+
                     }
+
                 }
+
             });
+
         }
+
     </script>
+
     <script>
+
         if ($('section').attr('id') == 'placed_section') {
 
+
+
             const filterRole = document.getElementById('filterRole');
+
             const filterYear = document.getElementById('filterYear');
+
             const filterQualification = document.getElementById('filterQualification');
 
+
+
             const tableBody = document.querySelector('.employee-table tbody');
+
             const rows = tableBody.querySelectorAll('tr');
 
+
+
             filterRole.addEventListener('input', updatePlacedTable);
+
             filterYear.addEventListener('input', updatePlacedTable);
+
             filterQualification.addEventListener('input', updatePlacedTable);
 
+
+
             function updatePlacedTable() {
+
                 const selectedRole = filterRole.value.toLowerCase();
+
                 const selectedYear = filterYear.value;
+
                 const selectedQualification = filterQualification.value.toLowerCase();
 
+
+
                 rows.forEach(row => {
+
                     const role = row.children[2].textContent.toLowerCase();
+
                     const year = row.children[3].textContent;
+
                     const qualification = row.children[4].textContent.toLowerCase();
 
+
+
                     if (
+
                         (selectedRole === '' || role.includes(selectedRole)) &&
+
                         (selectedYear === '' || year.includes(selectedYear)) &&
+
                         (selectedQualification === '' || qualification.includes(selectedQualification))
+
                     ) {
+
                         row.style.display = '';
+
                     } else {
+
                         row.style.display = 'none';
+
                     }
+
                 });
+
             }
+
             const images = document.querySelectorAll('.story-image');
+
             let currentIndex = 0;
 
+
+
             function nextImage() {
+
                 images[currentIndex].classList.remove('visible');
+
                 currentIndex = (currentIndex + 1) % images.length;
+
                 images[currentIndex].classList.add('visible');
+
             }
 
+
+
             setInterval(nextImage, 3000);
+
         }
+
     </script>
+
 </body>
 
+
+
 </html>
+
 <!--
+
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
 
 Page Caching using disk: enhanced
 
+
+
 Served from: www.imagetechnologies.com @ 2023-10-19 20:11:48 by W3 Total Cache
+
 -->
