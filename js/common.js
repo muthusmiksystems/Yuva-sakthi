@@ -1,10 +1,10 @@
-// var siteUrl = "https://yuvasakthiacademy.com/";
-var siteUrl = "localhost";
-console.log(typeof jQuery);
+var siteUrl = "https://yuvasakthiacademy.com/";
+// var siteUrl = "localhost";
+// console.log(typeof jQuery);
 $(document).ready(function () {
-  console.log("Document ready");
   $(".wpcf7-form").submit(function (e) {
     e.preventDefault();
+
     var validate = validateEmail();
 
     if (validate) {
@@ -82,6 +82,8 @@ function saveEnquiry(formData) {
 }
 
 function showToastLoader(message, status) {
+  console.log("called");
+
   // Your AJAX call goes here
   // For simplicity, let's simulate a successful AJAX call
   var color = "green";
@@ -186,13 +188,18 @@ function saveCorporate(corporateData) {
     data: corporateData,
     dataType: "json",
     success: function (response) {
-      window.location.reload();
+      // window.location.reload();
       console.log("Response received:", response); // Log the entire response object
       showToastLoader(response.message, response.status);
     },
     error: function (xhr, status, error) {
-      window.location.reload();
-      console.error("AJAX error: " + status + ": " + error);
+      console.error("Error Status:", status); // Log status (e.g., "error")
+      console.error("Error Thrown:", error); // Log the error message (e.g., "Internal Server Error")
+      console.error("XHR Object:", xhr); // Log the full XHR object for more details
+
+      // Displaying the actual response text might reveal HTML if there's an error
+      console.log("Response Text:", xhr.responseText);
+      // alert("An error occurred: " + error);
     },
   });
 }
@@ -247,25 +254,23 @@ function signupValidation() {
 }
 
 function saveSignup(signupData) {
-  console.log("console=====", signupData),
-    $.ajax({
-      type: "POST",
-      url: "signup.php",
-      data: signupData,
-      dataType: "json",
+  $.ajax({
+    type: "POST",
+    url: "signup.php",
+    data: signupData,
+    dataType: "json",
 
-      success: function (response) {
-        console.log("Response received:", response);
-        showToastLoader(response.message, response.status);
-        // Optionally reload the page here, if needed
-        // window.location.reload();
-      },
-      error: function (xhr, status, error) {
-        console.error("AJAX error: " + status + ": " + error);
-        console.log(error, "erroorrr");
+    success: function (response) {
+      console.log("Response received:", response);
+      showToastLoader(response.message, response.status);
+      // Optionally reload the page here, if needed
+      // window.location.reload();
+    },
+    error: function (xhr, status, error) {
+      console.error("AJAX error: " + status + ": " + error);
 
-        // Optionally reload the page here, if needed
-        // window.location.reload();
-      },
-    });
+      // Optionally reload the page here, if needed
+      // window.location.reload();
+    },
+  });
 }

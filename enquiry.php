@@ -8,7 +8,7 @@ include('config.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $recaptchaSecret = '6LfI4R8qAAAAAG4AYE8CDDTTgeZUO6ZYvzeG0bBz';
+    $recaptchaSecret = '6LfK7ioqAAAAAJ2XajvXB4fbk2yLV5qYk3bGopZs';
     $recaptchaResponse = $_POST['g-recaptcha-response'];
 
     // Verify reCAPTCHA response
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                // Send a copy to the owner
                $mail->clearAddresses(); // Clear previous addresses
-               $mail->addAddress("muthu@smiksystems.com", "Muthu"); // Owner's email
+               $mail->addAddress("smiksystems@gmail.com", "Muthu"); // Owner's email
                $mail->Subject = 'New Inquiry Received';
                $mail->Body = "
                <!DOCTYPE html>
